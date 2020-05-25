@@ -94,10 +94,21 @@
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 总体介绍</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. 软件包安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2.1 安装步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2.2高级设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.2 高级设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.3 安装完成效果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3.2.3软件简要介绍</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HardwareConfiguration.html">3. 硬件平台配置</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台使用:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. 实验平台总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP工具箱</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. 硬件在环仿真器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
 </ul>
 
             
@@ -171,12 +182,12 @@
 <p>（1）从官方网站 (<a class="reference external" href="https://rflysim.com">https://rflysim.com</a>) 下载得到RflySim基础版软件安装包镜像文件“RFLYExpPspSoftwarePack.iso&quot;，然后将其解压为文件夹或加载到虚拟光驱。</p>
 <p>（2）打开 MATLAB 主程序，将当前文件夹设置为刚才下载并解压(或加载在虚拟光驱)得到的“RFLYExpPspSoftwarePack&quot;文件夹。</p>
 <p>（3）在 MATLAB 的“命令行窗口&quot;中输入命令“PX4InstallScript&quot;并按下回车键来运行一键安装脚本。另外一种方法：用鼠标选中 “PX4InstallScript.p&quot;文件，按下鼠标右键，在弹出菜单中，单击“运行&quot;按钮来运行一键安装脚本。</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id7">
 <img alt="../_images/2-3.jpg" src="../_images/2-3.jpg" />
 <p class="caption"><span class="caption-text">图 2.3    多旋翼仿真软件包与一键安装脚本</span></p>
 </div>
 <p>（4）在弹出如下所示的配置窗口中，根据实际软/硬件情况选择合适配置(这里推荐初学者使用默认配置，对应 Pixhawk 1(2M闪存)版自驾仪硬件的 px4fmu-v3 default编译命令，PX4-1.7.3 版本的 PX4 固件，安装目录为 C 盘，占用 6G 左右空间)，单击右下角的“确定”按钮。</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id8">
 <img alt="../_images/2-4.jpg" src="../_images/2-4.jpg" />
 <p class="caption"><span class="caption-text">图 2.4   PX4InstallScript 脚本安装选项</span></p>
 </div>
@@ -189,47 +200,105 @@
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>2.2高级设置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>2.2 高级设置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>对于高级独立开发者，可以在配置窗口设置安装路径、PX4 固件版本、编译命令和编译环境等。配置窗口中的各项选项详细解释如下。</p>
 <p>（1）工具包安装路径。本平台的所有依赖文件都会安装在本路径下，大约需要6G 的空间。默认安装路径是“C:PX4PSP”，如果 C 盘空间不够可以选择其他盘符下的路径。需要注意的是路径名称必须正确，且只能用纯英文的路径，否则会导致编译失败。</p>
-<p>（2）PX4 固件编译命令。默认的编译命令为“px4fmu-v3_default”，在 PSP 生成控制器代码后，会自动调用编译器将其编译为“px4fmu-v3_default.px4”格式固件文件，然后将该“.px4”文件下载并烧录到支持的硬件上，就可以实现算法的部署。使用不同的 Pixhawk硬件产品，需要选择不同的 PX4 固件编译命令。“px4fmu-v3 default”可用于 mRo Pixhawk（<a class="reference external" href="https://docs.px4.io/master/en/flight">https://docs.px4.io/master/en/flight</a> controller/mro pixhawk.html）和 Cube (Pixhawk 2) （<a class="reference external" href="https://docs.px4.io/master/en/flight">https://docs.px4.io/master/en/flight</a> controller/pixhawk-2.html）两款热门产品；而常用的“px4fmu-v2 default”支持最知名的 Pixhawk 1（<a class="reference external" href="https://docs.px4.io/master/en/flight">https://docs.px4.io/master/en/flight</a> controller/pixhawk.html）自驾仪。当然，PX4 还支持其他的一些硬件(如 Intel Aero（<a class="reference external" href="https://software.intel.com/en-us/aero/drone-kit">https://software.intel.com/en-us/aero/drone-kit</a>）、Crazyfile（<a class="reference external" href="https://www.bitcraze.io/crazyflie-2/">https://www.bitcraze.io/crazyflie-2/</a>）等)，对应的编译命令（<a class="reference external" href="http://dev.px4.io/master/en/setup/building">http://dev.px4.io/master/en/setup/building</a> px4.html）如下：</p>
+<p>（2）PX4 固件编译命令。默认的编译命令为“px4fmu-v3_default”，在 PSP 生成控制器代码后，会自动调用编译器将其编译为“px4fmu-v3_default.px4”格式固件文件，然后将该“.px4”文件下载并烧录到支持的硬件上，就可以实现算法的部署。使用不同的 Pixhawk硬件产品，需要选择不同的 PX4 固件编译命令。“px4fmu-v3 default”可用于 <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/mro_pixhawk.html">mRo Pixhawk</a> 和 <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk-2.html">Cube (Pixhawk 2)</a> 两款热门产品；而常用的“px4fmu-v2 default”支持最知名的 <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk.html">Pixhawk 1</a> 自驾仪。当然，PX4 还支持其他的一些硬件(如 <a class="reference external" href="https://software.intel.com/en-us/aero/drone-kit">Intel Aero</a> 、 <a class="reference external" href="https://www.bitcraze.io/products/old-products/crazyflie-2-0/">Crazyfile</a>  等)， <a class="reference external" href="http://dev.px4.io/master/en/setup/building_px4.html">对应的编译命令</a>  如下：</p>
 <ul class="simple">
-<li>Pixhawk 1: px4fmu-v2 default</li>
-<li>Pixhawk 1 (2M flash): px4fmu-v3 default.</li>
-<li>Pixhawk 4: px4fmu-v5 default</li>
-<li>Pixracer: px4fmu-v4 default</li>
-<li>Pixhawk 3 Pro: px4fmu-v4pro default</li>
-<li>Pixhawk Mini: px4fmu-v3 default</li>
-<li>Pixhawk 2: px4fmu-v3 default</li>
-<li>mRo Pixhawk: px4fmu-v3 default</li>
-<li>HKPilot32: px4fmu-v2 default</li>
-<li>Pixfalcon: px4fmu-v2 default</li>
-<li>Dropix: px4fmu-v2 default</li>
-<li>MindPX/MindRacer: mindpx-v2 default</li>
-<li>mRo X-2.1: auav-x21 default</li>
-<li>Crazyflie 2.0: crazyflie default</li>
-<li>Intel Aero Ready to Fly Drone: aerofc-v1 default</li>
+<li>Pixhawk 1: <code class="docutils literal notranslate"><span class="pre">px4fmu-v2</span> <span class="pre">default</span></code></li>
+<li>Pixhawk 1 (2M flash): <code class="docutils literal notranslate"><span class="pre">px4fmu-v3</span> <span class="pre">default</span></code>.</li>
+<li>Pixhawk 4: <code class="docutils literal notranslate"><span class="pre">px4fmu-v5</span> <span class="pre">default</span></code></li>
+<li>Pixracer: <code class="docutils literal notranslate"><span class="pre">px4fmu-v4</span> <span class="pre">default</span></code></li>
+<li>Pixhawk 3 Pro: <code class="docutils literal notranslate"><span class="pre">px4fmu-v4pro</span> <span class="pre">default</span></code></li>
+<li>Pixhawk Mini: <code class="docutils literal notranslate"><span class="pre">px4fmu-v3</span> <span class="pre">default</span></code></li>
+<li>Pixhawk 2: <code class="docutils literal notranslate"><span class="pre">px4fmu-v3</span> <span class="pre">default</span></code></li>
+<li>mRo Pixhawk: <code class="docutils literal notranslate"><span class="pre">px4fmu-v3</span> <span class="pre">default</span></code></li>
+<li>HKPilot32: <code class="docutils literal notranslate"><span class="pre">px4fmu-v2</span> <span class="pre">default</span></code></li>
+<li>Pixfalcon: <code class="docutils literal notranslate"><span class="pre">px4fmu-v2</span> <span class="pre">default</span></code></li>
+<li>Dropix: <code class="docutils literal notranslate"><span class="pre">px4fmu-v2</span> <span class="pre">default</span></code></li>
+<li>MindPX/MindRacer: <code class="docutils literal notranslate"><span class="pre">mindpx-v2</span> <span class="pre">default</span></code></li>
+<li>mRo X-2.1: <code class="docutils literal notranslate"><span class="pre">auav-x21</span> <span class="pre">default</span></code></li>
+<li>Crazyflie 2.0: <code class="docutils literal notranslate"><span class="pre">crazyflie</span> <span class="pre">default</span></code></li>
+<li>Intel Aero Ready to Fly Drone: <code class="docutils literal notranslate"><span class="pre">aerofc-v1</span> <span class="pre">default</span></code></li>
 </ul>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id9">
 <img alt="../_images/2-5.jpg" src="../_images/2-5.jpg" />
 <p class="caption"><span class="caption-text">图 2.5    Pixhawk 硬件产品系列和对应编译命令</span></p>
 </div>
 <p>（3）PX4 固件版本。PX4 源代码版本一直在更新，目前最新的固件版本为 1.10。随着固件版本的升级，功能会逐渐增加，支持的新产品也越多，但是对旧的一些自驾仪硬件的兼容性就会变差。由于本书使用的是经典的 Pixhawk 1 版本自驾仪硬件(应用广泛价格实惠，且有 LED 模块便于观察实验效果)，推荐选用较旧的固件版本 PX4-1.7.3 以获取更好的使用效果。</p>
 <p>（4）PX4 固件编译器。由于 PX4 源代码的编译依赖于 Linux 编译环境，本软件包提供了三套编译工具链来实现 Windows 平台下对Linux 编译环境的模拟，它们分别是：</p>
-<p>①基于Windows Subsystem for Linux(WSL)（<a class="reference external" href="https://en.wikipedia.org/wiki/Windows">https://en.wikipedia.org/wiki/Windows</a> Subsystem for Linux） 的编译环境 Win10WSL 编译器；</p>
-<p>②基于Msys2（<a class="reference external" href="https://baike.baidu.com/item/MSYS2">https://baike.baidu.com/item/MSYS2</a>）的Msys2Toolchain 编译环境；</p>
-<p>③基于Cygwin（<a class="reference external" href="https://www.cygwin.com/">https://www.cygwin.com/</a>）的CygwinToolchain 编译器。
-其中，CygwinToolchain和Msys2Toolchain编译器都支持Windows7及以上系统，部署方便且兼容性强，但是编译速度较慢。其中CygwinToolchain编译器支持PX4-1.8版本及以上固件，Msys2Toolchain编译器支持PX4-1.8版本及以下固件。对于 Windows10 1809 及以上的系统版本，RflySim高级版平台还可以按照“0.UbuntuWSLWin10UbuntuInstallation- Step.docx＂的方法选择安装 Ubuntu 子系统，然后在配置窗口中选择Win10WSL 编译器，这种方式可以大大加快编译速度，而且兼容所有版本的 PX4 固件。</p>
-<p>（5）是否重新安装 PSP 工具箱。若该选项设置为“是＂，则会将 PSP 工具箱安装在本地MATLAB 软件中。若 PSP 工具箱已经安装过，则会对 PSP 工具箱进行全新安装。若选择“否＂，则脚本对 PSP 工具箱不做任何更改(不会卸载掉安装的 PSP 工具箱或有其他动作)。</p>
-<p>（6）是否重新安装其他依赖程序包。若该选项设置为“是＂，则会将 FlightGear、QGC地面站、CopterSim、3DDisplay 等软件部署在设定的安装路径上，并安装 Pixhawk 硬件的相关驱动程序，以及在桌面生成这些软件的快捷方式。若安装路径上已经部署过相关依
-赖软件，选择“是＂，则会删除旧的安装包并进行全新重新安装。若该选项设置为“否＂，则不做任何修改。</p>
-<p>（7）是否重新配置固件编译器编译环境。若该选项设置为“是＂，则会将选定的编译器(Win10WSL、CygwinToolchain 或Msys2Toolchain)部署在设定的安装路径上，若环境已经存在，则会清空旧的编译环境，进行还原与全新部署。反之，若该选项设置为“否＂，则不会进行任何更改。</p>
-<p>（8）是否重新部署 PX4 固件代码。若该选项设置为“是＂，则会将选定的 PX4 Firmware源代码部署在设定的安装路径上，若 PX4 Firmware 固件存在，则会删除旧的固件文件夹，并进行全新部署。若该选项设置为“否＂，则不会进行任何更改。</p>
-<p>（9）是否预先用选定命令编译固件。若该选项设置为“是＂，则会对部署固件进行预编译，这样可以大大节省后续代码生成与编译的时间，同时可以检测环境安装是否正常。若该选项设置为“否＂，则不会进行任何更改。</p>
-<p>（10）是否屏蔽 PX4 自身控制器输出。若该选项设置为“是＂，则会对 PX4 自身的控制器输出信号进行屏蔽，防止其与 Simulink 生成的控制器发生冲突。在本书的仿真与实际飞行实验中，这一项必须设置为“是＂。若选择“否＂，则不会对 PX4 自身的控制输出进行屏蔽，这种模式可以用于测试 PX4 自带的控制算法。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">①基于 <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">Windows Subsystem for Linux (WSL)</a> 的编译环境 Win10WSL 编译器；</div>
+<div class="line">②基于 <a class="reference external" href="https://baike.baidu.com/item/MSYS2">Msys2</a> 的Msys2Toolchain 编译环境；</div>
+<div class="line">③基于 <a class="reference external" href="https://www.cygwin.com/">Cygwin</a> 的CygwinToolchain 编译器。</div>
+</div>
+<p>其中，CygwinToolchain和Msys2Toolchain编译器都支持Windows7及以上系统，部署方便且兼容性强，但是编译速度较慢。其中CygwinToolchain编译器支持PX4-1.8版本及以上固件，Msys2Toolchain编译器支持PX4-1.8版本及以下固件。对于 Windows10 1809 及以上的系统版本，RflySim高级版平台还可以按照 <code class="docutils literal notranslate"><span class="pre">0.UbuntuWSL\Win10UbuntuInstallation-Step.docx</span></code> 的方法选择安装 Ubuntu 子系统，然后在配置窗口中选择Win10WSL 编译器，这种方式可以大大加快编译速度，而且兼容所有版本的 PX4 固件。</p>
+</div></blockquote>
+<p>（5）是否重新安装 PSP 工具箱。若该选项设置为“是”，则会将 PSP 工具箱安装在本地MATLAB 软件中。若 PSP 工具箱已经安装过，则会对 PSP 工具箱进行全新安装。若选择“否”，则脚本对 PSP 工具箱不做任何更改(不会卸载掉安装的 PSP 工具箱或有其他动作)。</p>
+<p>（6）是否重新安装其他依赖程序包。若该选项设置为“是”，则会将 FlightGear、QGC地面站、CopterSim、3DDisplay 等软件部署在设定的安装路径上，并安装 Pixhawk 硬件的相关驱动程序，以及在桌面生成这些软件的快捷方式。若安装路径上已经部署过相关依
+赖软件，选择“是”，则会删除旧的安装包并进行全新重新安装。若该选项设置为“否”，则不做任何修改。</p>
+<p>（7）是否重新配置固件编译器编译环境。若该选项设置为“是”，则会将选定的编译器(Win10WSL、CygwinToolchain 或Msys2Toolchain)部署在设定的安装路径上，若环境已经存在，则会清空旧的编译环境，进行还原与全新部署。反之，若该选项设置为“否”，则不会进行任何更改。</p>
+<p>（8）是否重新部署 PX4 固件代码。若该选项设置为“是”，则会将选定的 PX4 Firmware源代码部署在设定的安装路径上，若 PX4 Firmware 固件存在，则会删除旧的固件文件夹，并进行全新部署。若该选项设置为“否”，则不会进行任何更改。</p>
+<p>（9）是否预先用选定命令编译固件。若该选项设置为“是”，则会对部署固件进行预编译，这样可以大大节省后续代码生成与编译的时间，同时可以检测环境安装是否正常。若该选项设置为“否”，则不会进行任何更改。</p>
+<p>（10）是否屏蔽 PX4 自身控制器输出。若该选项设置为“是”，则会对 PX4 自身的控制器输出信号进行屏蔽，防止其与 Simulink 生成的控制器发生冲突。在本书的仿真与实际飞行实验中，这一项必须设置为“是”。若选择“否”，则不会对 PX4 自身的控制输出进行屏蔽，这种模式可以用于测试 PX4 自带的控制算法。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">注意：PX4 固件版本从 1.9 开始，固件编译命令由“px4fmu-v3_default.px4＂变更为了 “px4 fmu-v3_default.px4＂格式。由于本书使用的软件包会持续更新，为确保对最新版本 PX4 固件的支持，在使用后续新版本固件(大于等于 1.9)时，需要注意修改编译命令的格式。</p>
+<p class="last">注意：PX4 固件版本从 1.9 开始，固件编译命令由 <code class="docutils literal notranslate"><span class="pre">px4fmu-v3_default.px4</span></code> 变更为了 <code class="docutils literal notranslate"><span class="pre">px4</span> <span class="pre">fmu-v3_default.px4</span></code> 格式。由于本书使用的软件包会持续更新，为确保对最新版本 PX4 固件的支持，在使用后续新版本固件(大于等于 1.9)时，需要注意修改编译命令的格式。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2.3 安装完成效果<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>当上述一键安装脚本成功执行后，可以查看是否包含以下内容：
+（1）桌面上能够看到生成的核心工具的快捷方式；</p>
+<div class="figure align-center" id="id10">
+<img alt="../_images/2-6.jpg" src="../_images/2-6.jpg" />
+<p class="caption"><span class="caption-text">图 2.6 仿真软件包桌面快捷方式</span></p>
+</div>
+<p>（2）在安装路径(默认是“C:PX4PSP”)会出现所有软件的存储文件夹。需要注意的是，本平台所有软件都是完全绿色的(或称可携式软件，最大特点是和系统其他软件完全独立)，且独立于原来安装的软件(如官方版的 QGroundControl 或FlightGear 等）。 “Firmware”文件夹中存储的是 PX4 的源代码；“examples”文件夹是 PSP 工具箱附带的 Simulink 例程；“drivers”文件夹存储着 Pixhawk 系列自驾仪的驱动程序；“Python27”文件夹存储着一个 Python 环境，用于实现 PSP 工具箱中的自动代码下载功能。</p>
+<div class="figure align-center" id="id11">
+<img alt="../_images/2-7.jpg" src="../_images/2-7.jpg" />
+<p class="caption"><span class="caption-text">图 2.7 仿真软件包安装目录下所有文件</span></p>
+</div>
+<p>（3）在 MATLAB 主界面的“附加功能&quot;-“管理附加功能&quot;页面，可以看到新安装的 PSP 工具箱图标。在该页面可以对 PSP 工具箱进行一些管理设置，如禁用、卸载、查看安装目录等。需要注意的是，本软件包安装脚本只需运行一次即可给本计算机上所有 R2017b 及以上版本的MATLAB 使用。</p>
+<div class="figure align-center" id="id12">
+<img alt="../_images/2-8.jpg" src="../_images/2-8.jpg" />
+<p class="caption"><span class="caption-text">图 2.8 MATLAB 中 PSP 工具箱管理页面</span></p>
+</div>
+<p>（4）任意打开一个 Simulink 文件，单击“库浏览器&quot;(Simulink Library Brower)按钮，可以在其中找到 PSP 工具箱的“Pixhawk Target Blocks&quot;模块库。</p>
+<div class="figure align-center" id="id13">
+<img alt="../_images/2-9.jpg" src="../_images/2-9.jpg" />
+<p class="caption"><span class="caption-text">图 2.9 Simulink 库浏览器中的 PSP 工具箱模块</span></p>
+</div>
+<p>如果想卸载本平台软件，只需要简单执行下列步骤：</p>
+<ul class="simple">
+<li>删除软件安装过程中生成的所有桌面快捷方式；</li>
+<li>删除“C:PX4PSP”文件夹内的所有文件和文件夹；</li>
+<li>卸载 PSP 工具箱。</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>3.2.3软件简要介绍<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>（1）依次桌面快捷方式：“FlightGear-F450&quot;、“CopterSim&quot;、“QGround- Control&quot;和“3DDisplay&quot;，逐一确认各个软件可以正常运行。</p>
+<div class="figure align-center" id="id14">
+<img alt="../_images/2-10.jpg" src="../_images/2-10.jpg" />
+<p class="caption"><span class="caption-text">图 2.10 基本软件正常运行界面展示</span></p>
+</div>
+<p>（2）双击桌面快捷方式“Eclipse&quot;，可以打开 Eclipse 软件。</p>
+<div class="figure align-center" id="id15">
+<img alt="../_images/2-11.jpg" src="../_images/2-11.jpg" />
+<p class="caption"><span class="caption-text">图 2.11 Eclipse 导入 PX4 Firmware 源代码方法</span></p>
+</div>
+<p>在 Eclipse 菜单栏上选择“File&quot;-“import …&quot;-“C/C++&quot;-“Existing Code as Makefile Project&quot;单击下方的“next&quot;按钮。在弹出新窗口的“Existing Code Location&quot;栏目，单击“Browse&quot;按钮，浏览选择安装路径(默认是“C:PX4PSP&quot;)下的“Firmware&quot;文件夹，再选择“Cross GCC&quot;，单击“Finish&quot;按钮。
+完成上述步骤后，在“Project Explorer&quot;窗口可以看到“Firmware&quot;固件的代码和结构，可以在其中阅读 PX4 代码，并尝试修改。也可以结合 PX4 的开发者文档网站（http://dev.px4.io/master/en/index.html），更清楚地了解 PX4 中算法的构架与实现原理，加深对实际飞行控制系统的理解。注意：如果是第一次打开 Eclipse，会有一个 Welcome 欢迎标签页，因此需要先手动关闭该标签页。</p>
+<div class="figure align-center" id="id16">
+<img alt="../_images/2-12.jpg" src="../_images/2-12.jpg" />
+<p class="caption"><span class="caption-text">图 2.12   Eclipse 中代码阅读界面</span></p>
+</div>
+<p>（3）双击桌面的“Win10WSL&quot;、“Msys2Toolchain&quot;或“CygwinToolchain&quot;快捷方式，可以弹出如下图所示的命令窗口界面（原界面为纯黑背景，这里图片己做反色处理）。由 于本编译环境本质上是一个 Linux 模拟系统，因此可以在其中输入基本的 Linux 指令（如 “ls&quot;“pwd&quot;“gcc--version&quot;等），查看运行效果。因此对于不熟悉 Linux 操作的读者来说，本编译器软件也可以作为一个 Linux 的学习与练习工具。该编译器最重要的功能是编译PX4 的源代码，生成“.px4&quot;固件文件。可以在命令行中输入“make clean&quot;来清除旧的编译信息，以及输入“make px4fmu-v3_default&quot;指令来编译适用于 Pixhawk 1 的固件文件“C:PX4PSPFirmwarebuildpx4fmu-v3_defaultpx4fmu-v3_default.px4&quot;。由于 PSP在代码生成后会自动调用本编译环境，因此普通读者不需要掌握其使用方法。</p>
+<div class="figure align-center" id="id17">
+<img alt="../_images/2-13.jpg" src="../_images/2-13.jpg" />
+<p class="caption"><span class="caption-text">图 2.13   编译器命令窗口界面</span></p>
 </div>
 </div>
 </div>
