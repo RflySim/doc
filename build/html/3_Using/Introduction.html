@@ -98,8 +98,8 @@
 <p class="caption"><span class="caption-text">实验平台使用:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. 实验平台总体介绍</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">1.1 实验平台组成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">1.2 实验平台优势</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. 实验平台组成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. 实验平台优势</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
@@ -107,6 +107,10 @@
 <li class="toctree-l1"><a class="reference internal" href="PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id16">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">10. 下载和支持</a></li>
 </ul>
 
             
@@ -174,7 +178,7 @@
   <div class="section" id="id1">
 <h1>1. 实验平台总体介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
-<h2>1.1 实验平台组成<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>1.1. 实验平台组成<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>依托Rflysim平台，本实验平台是一个基于 MATLAB/Simulink 和Pixhawk 的多旋翼飞行器控制算法快速开发平台。它主要由以下五大部分组成：基于 Simulink 的控制器设计与仿真平台、硬件在环仿真平台、<a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk_series.html">Pixhawk 自驾仪系统</a> 、多旋翼硬件系统和实验指导包。</p>
 <p>（1）基于 Simulink 的控制器设计与仿真平台</p>
 <p>本平台包含了一个高逼真的多旋翼模型可以用来仿真多旋翼飞行器的各种动态特性，并用 FlightGear 图形化展示多旋翼飞行器实时飞行的轨迹与姿态等状态信息。在基于 Simulink 的平台上，读者可以方便地设计多旋翼飞行器的控制算法，然后进行软件在环仿真验证。进一步，可以通过 Pixhawk Support Package (PSP) 工具箱将控制算法生成 C/C++ 代码，然后将其编译并下载到真实的 Pixhawk 自驾仪中。</p>
@@ -204,7 +208,7 @@
 <p>包括视频教程、课件和例程源码等，主题紧扣《全权著. 多旋翼飞行器设计与控制[M]. 杜光勋, 赵峙尧, 戴训华, 等译. 北京: 电子工业出版社, 2017》 与 <a class="reference external" href="https://www.icourse163.org/course/BUAA-1205700805">网上在线课程MOOC</a> 。</p>
 </div>
 <div class="section" id="id3">
-<h2>1.2 实验平台优势<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>1.2. 实验平台优势<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>本实验平台在MATLAB/Simulink 中提供了多旋翼控制器设计的相关接口，读者(初学者、学生或者工程师)可以利用自己所学知识快速进行控制器的设计与验证。在控制器设计完成后，本平台提供代码生成与下载功能，可以将设计的 Simulink 控制算法生成 C/C++ 代码，然后将其编译进入 PX4 自驾仪固件中，并自动下载到 Pixhawk 自驾仪中。本平台还提供硬件在环仿真测试功能，读者可以在真实 Pixhawk 自驾仪系统上对飞行效果进行初步模拟测试，排除实飞实验可能存在的各种问题。测试通过之后，将 Pixhawk 自驾仪装在一个多旋翼硬件系统上，就可以进行室内和室外的飞行实验，通过实验验证来评估设计控制算法的性能。</p>
 </div>
 </div>

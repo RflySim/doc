@@ -7,38 +7,43 @@ Welcome to RflySimDoc's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
+   :maxdepth: 3
    :caption: 介绍:
 
-   0_Start/WhatIsRflysim
-   0_Start/GettingStarted
+   什么是Rflysim <0_Start/WhatIsRflysim>
+   快速开始 <0_Start/GettingStarted>
 
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
+   :maxdepth: 3
    :caption: 建模:
 
-   1_Modeling/Modeling
+   建模 <1_Modeling/Modeling>
 
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
+   :maxdepth: 3
    :caption: 实验平台配置:
 
-   2_Configuration/Introduction
-   2_Configuration/SoftwareInstallation
-   2_Configuration/HardwareConfiguration
+   总体介绍 <2_Configuration/Introduction>
+   软件包安装 <2_Configuration/SoftwareInstallation>
+   硬件平台配置 <2_Configuration/HardwareConfiguration>
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
+   :maxdepth: 3
    :caption: 实验平台使用:
 
-   3_Using/Introduction
-   3_Using/ControllerDesignAndSimulationPlatform
-   3_Using/PSPToolbox
-   3_Using/PixhawkHardwareSystem
-   3_Using/HILSimulator
-   3_Using/Examples
+   实验平台总体介绍 <3_Using/Introduction>
+   控制器设计与仿真平台 <3_Using/ControllerDesignAndSimulationPlatform>
+   PSP工具箱 <3_Using/PSPToolbox>
+   Pixhawk硬件系统 <3_Using/PixhawkHardwareSystem>
+   硬件在环仿真器 <3_Using/HILSimulator>
+   Examples <3_Using/Examples>
+   高级功能 <3_Using/Pro>
 
 
 .. Indices and tables

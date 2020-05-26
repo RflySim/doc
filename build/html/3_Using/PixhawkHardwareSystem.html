@@ -100,9 +100,21 @@
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 实验平台总体介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PSPToolbox.html">3. PSP工具箱</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Pixhawk硬件系统</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Pixhawk硬件系统</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. 硬件系统组成与连线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.2. 遥控器基本操作方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.3. 地面站下载固件方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4.4. Pixhawk 自驾仪半物理仿真模式设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">4.5. 遥控器配置与校准</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">4.6. 飞行模式设置</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id16">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">10. 下载和支持</a></li>
 </ul>
 
             
@@ -169,6 +181,105 @@
             
   <div class="section" id="pixhawk">
 <h1>4. Pixhawk硬件系统<a class="headerlink" href="#pixhawk" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>4.1. 硬件系统组成与连线<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>硬件组件包括遥控器、接收机、JR 接口线（连接 Pixhawk自驾仪与接收机）、Pixhawk 自驾仪（本书推荐 Pixhawk 1 用于课程学习，更高版本硬件用于室外飞行测试）以及 USB 数据线（连接计算机与 Pixhawk 自驾仪，为自驾仪供电并进行数据传输）。</p>
+<div class="figure align-center" id="id7">
+<img alt="../_images/3-41.jpg" src="../_images/3-41.jpg" />
+<p class="caption"><span class="caption-text">图 3.41 Pixhawk 自驾仪、遥控器与接收机硬件系统</span></p>
+</div>
+<div class="figure align-center" id="id8">
+<img alt="../_images/3-42.jpg" src="../_images/3-42.jpg" />
+<p class="caption"><span class="caption-text">图 3.42 Pixhawk 自驾仪和乐迪 R9DS 接收机硬件系统连线图</span></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>4.2. 遥控器基本操作方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>“美国手”遥控器，左侧摇杆对应油门与偏航控制最，右侧摇杆对应滚转与俯仰。滚转、俯仰、油门和偏航分别对应了接收机的 CH1∼CH4 通道；左上侧拨杆对应了 CH5 通道，用于触发自驾仪切换飞行模态；右上侧拨杆对应了 CH6 通道，可以用于触发飞行模态切换或其他功能。</p>
+<div class="figure align-center" id="id9">
+<img alt="../_images/3-43.jpg" src="../_images/3-43.jpg" />
+<p class="caption"><span class="caption-text">图 3.43 遥控器原理图</span></p>
+</div>
+<p>在设计控制器处理遥控器 PWM 输入数据时，需要用到以下知识：</p>
+<ul class="simple">
+<li>油门(CH3 通道）摇杆从最下端到最上端对应了 Pixhawk 自驾仪接收到 CH3 通道的PWM 值范围为 1100∼1900 微秒；</li>
+<li>滚转(CH1 通道）和偏航(CH4 通道）摇杆从最左端到最右端对应 PWM 值范围从1100∼1900 微秒；</li>
+<li>俯仰(CH2 通道)摇杆从最下端到最上端对应 PWM 范围为 1900∼1100 微秒；</li>
+<li>模式切换通道 CH5 和 CH6 为三段开关，拨杆置于顶部(最远离使用者的档位)、中部和底部(最靠近使用者的档位)档位，依次对应的 PWM 值为 1100、1500 和 1900微秒。</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>4.3. 地面站下载固件方法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在桌面找到 QGroundControl 图标并打开 QGC 地面站软件，</p>
+<div class="figure align-center" id="id10">
+<img alt="../_images/3-44.jpg" src="../_images/3-44.jpg" />
+<p class="caption"><span class="caption-text">图 3.44 QGC 地面站软件界面</span></p>
+</div>
+<p>依次按图中标号进行下列操作：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）单击“设置&quot;按钮进入 QGC 地面站设置页面；</div>
+<div class="line">（2）单击“Firmware&quot;标签，此时用 USB 数据线连接Pixhawk 自驾仪。QGC 地面站软件会自动检测 Pixhawk 自驾仪；</div>
+<div class="line">（3）勾选“Advanced settings&quot;选择框；</div>
+<div class="line">（4）单击“Standard Version (stable)&quot;标签；</div>
+<div class="line">（5）在弹出标签页中选择“Custom firmware file ...&quot;选项；</div>
+<div class="line">（6）单击“Ok&quot;按钮；</div>
+<div class="line">（7）在弹出的 Windows文件选择界面中，选择“e02.PSPOﬃcial- Expspx4fmu-v3default-1.7.3Stable.px4&quot;文件，并单击“打开&quot;按钮，此时地面站会将固件下载并烧录到 Pixhawk 自驾仪中。</div>
+</div>
+</div></blockquote>
+<div class="figure align-center" id="id11">
+<img alt="../_images/3-45.jpg" src="../_images/3-45.jpg" />
+<p class="caption"><span class="caption-text">图 3.45 QGC 地面站自定义固件选择页面</span></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4.4. Pixhawk 自驾仪半物理仿真模式设置<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>打开 QGC 地面站，然后用 USB 数据线连接 Pixhawk 自驾仪，此时 QGC 地面站会自动识别 Pixhawk 自驾仪并与之建立连接来设置参数和传输数据。</p>
+<div class="figure align-center" id="id12">
+<img alt="../_images/3-46.jpg" src="../_images/3-46.jpg" />
+<p class="caption"><span class="caption-text">图 3.46 Pixhawk 自驾仪连接 QGC 地面站示意图</span></p>
+</div>
+<p>单击 QGC 地面站设置页面的“Airframe&quot;标签，确认目前处于“HIL Quadcopter X&quot;机架模式。</p>
+<div class="figure align-center" id="id13">
+<img alt="../_images/3-47.jpg" src="../_images/3-47.jpg" />
+<p class="caption"><span class="caption-text">图 3.47 QGC 地面站机架设置页面</span></p>
+</div>
+<p>这一项设置对后续的硬件在环仿真至关重要，如果不处于该模式需要手动设置。设置方法为：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）选中“Airframe”-“HIL Quadcopter X&quot;机架图标；</div>
+<div class="line">（2）此时可以 QGC 地面站右上角会弹出一个“Apply and Restart&quot;标签窗口，在其中单击“Apply&quot;按钮后自驾仪会进行设置并重新启动；</div>
+<div class="line">（3）等待几秒钟，QGC 地面站会再次连接到自驾仪，此时查看是否正确设置。</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>4.5. 遥控器配置与校准<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>连接自驾仪与接收机，再连接 Pixhawk 自驾仪与计算机。打开遥控器，并打开 QGC 地面站软件。当 QGC 地面站成功连接上Pixhawk 自驾仪后，单击 QGC 地面站设置页面的“Radio&quot;标签就可以查看与遥控器的连接情况。</p>
+<p>拨动遥控器的摇杆，观察QGC内 CH1∼CH6 通道的变化趋势，确认是否满足本实验设定需求。首先，根据摇杆与通道定义，依次进行如下操作：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）从下到上拨动遥控器油门杆(CH3 通道），数字 3对应的滑块从左移动到右(对应 PWM 值从 1100 微秒变化到 1900 微秒）。</div>
+<div class="line">（2）从左到右拨动滚转摇杆(CH1 通道）和偏航摇杆(CH4 通道），数字 1 对应的滑块和数字 4 对应的滑块从左移动到右(对应 PWM 值从 1100 微秒变化到 1900 微秒）。</div>
+<div class="line">（3）从下到上拨动俯仰摇杆(CH2 通道），数字 2 对应的滑块从右移动到左(对应 PWM 值从 1900 微秒变化到 1100 微秒）。</div>
+<div class="line">（4）从上(前）到下(后）拨动遥控器左上角(CH5 通道）和右上角(CH6 通道）的三段开关，数字 5 对应的滑块和数字 6 对应的滑块从左移动到右(对应 PWM 值从 1100 微秒变化到 1900 微秒）。</div>
+</div>
+</div></blockquote>
+<p>如果不满足上述规律，说明遥控器没有正确配置，需要重新配置遥控器。此外，如果地面站提示遥控器未校准，可以 “Calibrate&quot;按钮，按文字提示拨动摇杆完成遥控器的校准。</p>
+<div class="figure align-center" id="id14">
+<img alt="../_images/3-48.jpg" src="../_images/3-48.jpg" />
+<p class="caption"><span class="caption-text">图 3.48 QGC 地面站遥控器设置与校准页面</span></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>4.6. 飞行模式设置<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>经过上面的遥控器校准步骤后，单击 “Flight Modes&quot;（飞行模式）设置页面，选择“Mode channel&quot;（模式通道）为“Channel 6&quot;（CH6 通道）。</p>
+<div class="figure align-center" id="id15">
+<img alt="../_images/3-49.jpg" src="../_images/3-49.jpg" />
+<p class="caption"><span class="caption-text">图 3.49 Pixhawk 自驾仪飞行模式设置</span></p>
+</div>
+<p>由于 CH6 通道是遥控器上的一个三段开关，拨杆置于顶部（最远离使用者的档位）、中部和底部（最靠近使用者的档位）档位分别对应了“Flight Mode 1&quot;“Flight Mode 2&quot;“Flight Mode 3&quot;三个模式。将这三个标签分别设置为“Stabilized&quot;（自稳模式，只有姿态控制）、“Altitude&quot;（定高模式，姿态和高度控制）和“Position&quot;（定点模式，有姿态、定高和水平位置控制）。</p>
+</div>
 </div>
 
 

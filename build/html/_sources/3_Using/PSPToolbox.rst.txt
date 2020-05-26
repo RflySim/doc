@@ -1,4 +1,5 @@
-3. PSP工具箱
+=============================
+PSP工具箱
 =============================
 .. figure:: /images/3-13.jpg
     :align: center
@@ -38,7 +39,7 @@ Simulink 生成的代码与 Pixhawk 自驾仪系统的关系总结如下：
     | ②在其中屏蔽掉"ORB_ID(vehicle_attitude)"消息相关的发送代码。例如，搜索关键字"_att_pub"的代码行，并找到其中含有"publish"和"att"的发送代码行，将其替换为“UNUSED(att);”。
     | ③ 在Simulink中编写姿态滤波器，并用"uORB Write"模块发送"vehicle_attitude"消息即可实现姿态滤波器功能的替换。
 
-3.1 Simulink Pixhawk Target Blocks 模块库介绍
+Simulink Pixhawk Target Blocks 模块库介绍
 --------------------------------------------------------
 在安装完成 PSP 工具箱之后，可以在 Simulink 中看到“Pixhawk Target Blocks"模块库，其中提供了一些 Simulink 接口模块来访问Pixhawk 的硬件系统和 PX4 软件系统的内部消息。这些接口模块可以在 Simulink 的模块库“Pixhawk Target Blocks"中查看，它由四个子库组成：“ADC and Serial"（数模转换与串口库）、“Miscellaneous Utility Blocks"（辅助工具库）、“Sensors and Actuators"（传感器和执行器接口库）和“uORB Read and Write"（uORB 消息读写库）。
 
@@ -61,7 +62,7 @@ Simulink 生成的代码与 Pixhawk 自驾仪系统的关系总结如下：
   
     图 3.17 PSP 工具箱官方例程及官方使用手册
 
-3.2 工具箱内各个模块的使用说明
+工具箱内各个模块的使用说明
 ------------------------------------
 
 （1）遥控输入模块
@@ -190,7 +191,7 @@ PX4 自驾仪软件系统的开发者网站提供了 `自定义 uORB 消息的�
 访问 Pixhawk 内部参数是通过 Pixhawk CSC.Parameter({`*`, `*`}) 函数实现的，需要将该函数放入Simulink菜单栏的"File"-"Model Properties"-"Callbacks"-"InitFcn"中。
 
 
-3.3 Simulink 配置实现 PSP 工具箱自动代码生成
+Simulink 配置实现 PSP 工具箱自动代码生成
 ---------------------------------------------------------
 
 (1)Simulink 控制器代码生成前准备工作

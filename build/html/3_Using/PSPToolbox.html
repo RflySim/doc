@@ -100,14 +100,18 @@
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 实验平台总体介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. PSP工具箱</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#simulink-pixhawk-target-blocks">3.1 Simulink Pixhawk Target Blocks 模块库介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.2 工具箱内各个模块的使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#simulink-psp">3.3 Simulink 配置实现 PSP 工具箱自动代码生成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-pixhawk-target-blocks">3.1. Simulink Pixhawk Target Blocks 模块库介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.2. 工具箱内各个模块的使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-psp">3.3. Simulink 配置实现 PSP 工具箱自动代码生成</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id16">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">10. 下载和支持</a></li>
 </ul>
 
             
@@ -225,7 +229,7 @@
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="simulink-pixhawk-target-blocks">
-<h2>3.1 Simulink Pixhawk Target Blocks 模块库介绍<a class="headerlink" href="#simulink-pixhawk-target-blocks" title="永久链接至标题">¶</a></h2>
+<h2>3.1. Simulink Pixhawk Target Blocks 模块库介绍<a class="headerlink" href="#simulink-pixhawk-target-blocks" title="永久链接至标题">¶</a></h2>
 <p>在安装完成 PSP 工具箱之后，可以在 Simulink 中看到“Pixhawk Target Blocks&quot;模块库，其中提供了一些 Simulink 接口模块来访问Pixhawk 的硬件系统和 PX4 软件系统的内部消息。这些接口模块可以在 Simulink 的模块库“Pixhawk Target Blocks&quot;中查看，它由四个子库组成：“ADC and Serial&quot;（数模转换与串口库）、“Miscellaneous Utility Blocks&quot;（辅助工具库）、“Sensors and Actuators&quot;（传感器和执行器接口库）和“uORB Read and Write&quot;（uORB 消息读写库）。</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/3-15.jpg" src="../_images/3-15.jpg" />
@@ -243,7 +247,7 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h2>3.2 工具箱内各个模块的使用说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>3.2. 工具箱内各个模块的使用说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="docutils">
 <dt>（1）遥控输入模块</dt>
 <dd>通过这个模块可以选择接收遥控器的通道数量和其他的一些信息。每个选项的含义可单击对话框的“Help&quot;按钮查看或者查阅官方文档。同时 PSP 工具箱还提供了学习这一模块的例子（详见文件“e02.PSPOﬃcialExpspx4demo input rc.slx&quot;)。</dd>
@@ -360,7 +364,7 @@
 <p>访问 Pixhawk 内部参数是通过 Pixhawk CSC.Parameter({<cite>*</cite>, <cite>*</cite>}) 函数实现的，需要将该函数放入Simulink菜单栏的&quot;File&quot;-&quot;Model Properties&quot;-&quot;Callbacks&quot;-&quot;InitFcn&quot;中。</p>
 </div>
 <div class="section" id="simulink-psp">
-<h2>3.3 Simulink 配置实现 PSP 工具箱自动代码生成<a class="headerlink" href="#simulink-psp" title="永久链接至标题">¶</a></h2>
+<h2>3.3. Simulink 配置实现 PSP 工具箱自动代码生成<a class="headerlink" href="#simulink-psp" title="永久链接至标题">¶</a></h2>
 <dl class="docutils">
 <dt>(1)Simulink 控制器代码生成前准备工作</dt>
 <dd><p class="first">准备工作的步骤如下：</p>

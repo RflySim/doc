@@ -94,13 +94,13 @@
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 总体介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SoftwareInstallation.html">2. 软件包安装</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. 硬件平台配置</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.1 遥控器配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#at9s">3.1.1 乐迪 AT9S 遥控器配置方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#futaba-t14sg">3.1.2 Futaba T14SG 遥控器配置方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.1. 遥控器配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at9s">3.1.1. 乐迪 AT9S 遥控器配置方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#futaba-t14sg">3.1.2. Futaba T14SG 遥控器配置方法</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#pixhawk">3.2 Pixhawk 自驾仪系统配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">3.3 机架和动力系统配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pixhawk">3.2. Pixhawk 自驾仪系统配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.3. 机架和动力系统配置</a></li>
 </ul>
 </li>
 </ul>
@@ -112,6 +112,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. 硬件在环仿真器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id16">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id17">10. 下载和支持</a></li>
 </ul>
 
             
@@ -180,10 +184,10 @@
 <h1>3. 硬件平台配置<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>下面将依次介绍遥控器配置、Pixhawk 自驾仪系统配置、机架和动力系统配置。</p>
 <div class="section" id="id2">
-<h2>3.1 遥控器配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>3.1. 遥控器配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>下面介绍两款遥控器的配置，分别是乐迪 AT9S 遥控器和Futaba T14SG 遥控器。这两款遥控器的接收机都具备 S.BUS 输出功能，可以通过一根数据线将所有通道的 PWM 信号传输给自驾仪，使用较为简单。乐迪 AT9S 价格较为便宜，适合室内课程使用；而 Futaba T14SG 的性能和可靠性更强，价格也更昂贵，适合用于室外实验验证。本书实验需要选择“左手油门（美国手，Mode2)&quot;的遥控器产品，即左侧摇杆为油门杆，没有自动回中功能。“右手油门（日本手，Mode1)&quot;遥控器和“左手油门&quot;遥控器在硬件构造上有区别，不能简单的通过遥控器软件设置来改变，因此需要在购买时注意。下文将详细描述两种遥控器针对本书的设置方法。其余遥控器的设置也可以参考这两款遥控器的设置方法。</p>
 <div class="section" id="at9s">
-<h3>3.1.1 乐迪 AT9S 遥控器配置方法<a class="headerlink" href="#at9s" title="永久链接至标题">¶</a></h3>
+<h3>3.1.1. 乐迪 AT9S 遥控器配置方法<a class="headerlink" href="#at9s" title="永久链接至标题">¶</a></h3>
 <p>乐迪 AT9S 遥控器包含一个发射器和配套的 R9DS 接收机，必要的附件包括：电池（LiPo 捚聚合物电池，3S，11.1V)和配套充电器；JR 线（也可用杜邦线代替)，用于连接接收机与 Pixhawk 自驾仪；USB 数据线，用于连接 Pixhawk 自驾仪和计算机。</p>
 <p>（1）电池和充电器使用说明
 下图左侧为电池和充电器的实物图，将电池的四口充电头插在充电器右下侧的插口上，即可开始充电。处于充电状态时，充电器的指示灯为红色；当电池电量充满时，指示灯变为绿色。遥控器电池安装方式为：打开遥控器后侧下方电池槽，将电池供电头（红色电线对应正极)插在遥控器的电池槽左侧二口排插上即可。</p>
@@ -249,7 +253,7 @@
 </ul>
 </div>
 <div class="section" id="futaba-t14sg">
-<h3>3.1.2 Futaba T14SG 遥控器配置方法<a class="headerlink" href="#futaba-t14sg" title="永久链接至标题">¶</a></h3>
+<h3>3.1.2. Futaba T14SG 遥控器配置方法<a class="headerlink" href="#futaba-t14sg" title="永久链接至标题">¶</a></h3>
 <p>Futaba 接收机与 Pixhawk 自驾仪的连接方式与乐迪接收机有一些区别，具体连接方式如下图所示。下面介绍 Futaba T14SG 遥控器的配置方法。</p>
 <div class="figure align-center" id="id11">
 <img alt="../_images/2-21.jpg" src="../_images/2-21.jpg" />
@@ -274,7 +278,7 @@
 </div>
 </div>
 <div class="section" id="pixhawk">
-<h2>3.2 Pixhawk 自驾仪系统配置<a class="headerlink" href="#pixhawk" title="永久链接至标题">¶</a></h2>
+<h2>3.2. Pixhawk 自驾仪系统配置<a class="headerlink" href="#pixhawk" title="永久链接至标题">¶</a></h2>
 <p>为了使 Pixhawk 自驾仪的配置满足本实验需求，需要进行一些基本的固件烧录与模式配置操作，确保自驾仪功能正常且配置正确。方法如下：</p>
 <p>（1）打开 QGC 地面站软件。</p>
 <p>（2）如下图(a), 单击工具栏齿轮图标进入设置页面，再单击“Firmware&quot;标签进入固件烧录页面。</p>
@@ -291,7 +295,7 @@
 <p>（5）重启后 QGC 地面站会自动寻找串口并连接到Pixhawk 自驾仪，此时查看各个配置页，确保 Pixhawk 自驾仪进入硬件在环仿真模式。</p>
 </div>
 <div class="section" id="id3">
-<h2>3.3 机架和动力系统配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>3.3. 机架和动力系统配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>本实验提供的软件在环和硬件在环仿真模型是一个轴距(对侧电机轴心距离）为 450mm 的小型四旋翼，重量为 1.4kg。为了顺利进行后续的飞行实验，需要确保多旋翼飞行器的配置与提供模型尽量接近。本书实验选择目前最受欢迎的 F450 多旋翼飞行器配置，读者可以自行购买零件组装，或者直接购买整机。F450具体组成如下：</p>
 <p>（1）机架：DJI 风火轮 F450 机架。</p>
 <ul class="simple">

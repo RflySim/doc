@@ -99,15 +99,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 实验平台总体介绍</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. 控制器设计与仿真平台</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.1 控制器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2.2 多旋翼模型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#flightgear">2.3 FlightGear 接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.1. 控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.2. 多旋翼模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flightgear">2.3. FlightGear 接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="PSPToolbox.html">3. PSP工具箱</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id16">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">10. 下载和支持</a></li>
 </ul>
 
             
@@ -210,7 +214,7 @@
 </div>
 </div></blockquote>
 <div class="section" id="id2">
-<h2>2.1 控制器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>2.1. 控制器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>&quot;控制器&quot;子系统的内部结构如下图。本例程展示的是一个简单的俯仰和滚转姿态的控制器。它会接收遥控器的控制输入，将多旋翼飞行器控制到指定的俯仰和滚转角度。</p>
 <div class="figure align-center" id="id7">
 <img alt="../_images/3-8.jpg" src="../_images/3-8.jpg" />
@@ -242,7 +246,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="id3">
-<h2>2.2 多旋翼模型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>2.2. 多旋翼模型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div>“多旋翼模型&quot;子系统的内部结构如下。该模块模拟真实的多旋翼系统，以电机的 PWM 控制量为输入，以多旋翼的状态和传感器信息为输出。</div></blockquote>
 <div class="figure align-center" id="id8">
@@ -269,7 +273,7 @@
 <p>多旋翼模型需要用到的所有参数都存储在文件“ <a class="reference external" href="https://github.com/RflySim/RflyExpCode/blob/master/code/e0/1.SoftwareSimExps/icon/Init.m">e01.SoftwareSimExpsiconInit.m</a> &quot;中。这个文件在执行 “Init_control.m” 脚本的时候会被自动调用，并将模型参数(自动运行 “icon/Init.m&quot;脚本)自动导入工作空间，保证仿真正常运行。</p>
 </div>
 <div class="section" id="flightgear">
-<h2>2.3 FlightGear 接口<a class="headerlink" href="#flightgear" title="永久链接至标题">¶</a></h2>
+<h2>2.3. FlightGear 接口<a class="headerlink" href="#flightgear" title="永久链接至标题">¶</a></h2>
 <p>FlightGear 接口模块有三个输入分别对应：多旋翼位置，多旋翼姿态欧拉角和电机的 PWM 信号。该模块会自动向本地的 FlightGear 相关接口发送多旋翼飞行器的飞行数据，打开 FlightGear 之后就能在三维场景中看到多旋翼飞行器的飞行状态。运行步骤如下：</p>
 <blockquote>
 <div><div class="line-block">
