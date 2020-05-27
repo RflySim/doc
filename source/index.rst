@@ -9,24 +9,24 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 3
-   :caption: 介绍:
+   :caption: Introduction
 
-   什么是Rflysim <0_Start/WhatIsRflysim>
-   快速开始 <0_Start/GettingStarted>
-
-
-.. toctree::
-   :numbered:
-   :maxdepth: 3
-   :caption: 建模:
-
-   建模 <1_Modeling/Modeling>
+   What is RflySim <0_Start/WhatIsRflysim>
+   Getting Started <0_Start/GettingStarted>
 
 
 .. toctree::
    :numbered:
    :maxdepth: 3
-   :caption: 实验平台配置:
+   :caption: Modeling
+
+   Modeling <1_Modeling/Modeling>
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 3
+   :caption: 实验平台配置
 
    总体介绍 <2_Configuration/Introduction>
    软件包安装 <2_Configuration/SoftwareInstallation>
@@ -35,7 +35,7 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 3
-   :caption: 实验平台使用:
+   :caption: 实验平台使用
 
    实验平台总体介绍 <3_Using/Introduction>
    控制器设计与仿真平台 <3_Using/ControllerDesignAndSimulationPlatform>
