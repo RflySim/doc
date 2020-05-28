@@ -26,11 +26,11 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 3
-   :caption: 实验平台配置
+   :caption: Experimental Process
 
-   总体介绍 <2_Configuration/Introduction>
-   软件包安装 <2_Configuration/SoftwareInstallation>
-   硬件平台配置 <2_Configuration/HardwareConfiguration>
+   Overall Introduction <2_Configuration/Introduction>
+   Software Package Installation <2_Configuration/SoftwareInstallation>
+   Hardware Platform Configuration <2_Configuration/HardwareConfiguration>
 
 .. toctree::
    :numbered:

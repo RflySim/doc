@@ -1,155 +1,308 @@
-==================
-软件包安装
-==================
+==============================
+Software Package Installation
+==============================
 
-整个多旋翼仿真软件包的安装流程已经高度自动化，可以运行我们的一键安装脚，实现快速全自动的部署。
+The installation process of the Simulation Software Package is highly automated
+and readers can run a one-click installation script to achieve rapid and automatic
+deployment.
 
-安装步骤
+Installation Steps
 --------------------
 
-整体的安装步骤可以总结为以下几个步骤。
+The installation steps are summarized below.
 
- | （1）从官方网站 (https://rflysim.com) 下载得到RflySim基础版软件安装包镜像文件“RFLYExpPspSoftwarePack.iso"，然后将其解压为文件夹或加载到虚拟光驱。
- | （2）打开 MATLAB 主程序，将当前文件夹设置为刚才下载并解压(或加载在虚拟光驱)得到的“RFLYExpPspSoftwarePack"文件夹。
- | （3）在 MATLAB 的“命令行窗口"中输入命令“PX4InstallScript"并按下回车键来运行一键安装脚本。另外一种方法：用鼠标选中 “PX4InstallScript.p"文件，按下鼠标右键，在弹出菜单中，单击“运行"按钮来运行一键安装脚本。
+(1) Download the installation image file “RFLYExpPspSoftwarePack.iso” of the
+Simulation Software Package from the official website: https://flyeval.com/
+course, and then unzip it or mount it to a virtual drive folder.
 
-    .. figure:: /images/2-3.jpg
+(2) Open MATLAB and click the “Browse for Folder” button (see Fig. 2.3). On the
+folder selection window, select the folder “RFLYExpPspSoftwarePack” obtained
+in the previous step.
+
+(3) As shown in Fig. 2.3, tap the command “PX4InstallScript” in the “Command
+Window” of MATLAB and press the “Enter” key on the keyboard to run the
+one-key installation script. Note that another convenient way to run the one-key
+script is to select the “PX4InstallScript.p” file (see Fig. 2.3) with the mouse right
+key, and click the “Run” button on the pop-up menu.
+
+    .. figure:: /images/Quan-ch2-Fig2.3.jpg
         :align: center
 
-        图 2.3    多旋翼仿真软件包与一键安装脚本
+        Fig. 2.3 Installing multicopter simulation software package with one-click installation script
 
- | （4）在弹出如下所示的配置窗口中，根据实际软/硬件情况选择合适配置(这里推荐初学者使用默认配置，对应 Pixhawk 1(2M闪存)版自驾仪硬件的 px4fmu-v3 default编译命令，PX4-1.7.3 版本的 PX4 固件，安装目录为 C 盘，占用 6G 左右空间)，单击右下角的“确定”按钮。
+(4) In the pop-up configuration window shown in Fig. 2.4, select the required 
+configuration according to the actual hardware and software requirements (the default
+configuration is recommended for beginners, where the compiling command is
+px4fmu-v3_default, the PX4 firmware version is 1.7.3, and the installation 
+directory is the C disk, which may occupy around 6G storage), and click the “OK”
+button in Fig. 2.4.
 
-    .. figure:: /images/2-4.jpg
+    .. figure:: /images/Quan-ch2-Fig2.4.jpg
         :align: center
 
-        图 2.4   PX4InstallScript 脚本安装选项
+        Fig. 2.4 Options of PX4InstallScript
 
- | (5)耐心等待软件包安装部署完成，总共需要大约 30 分钟。
+(5) Wait patiently for the package to be successfully installed and deployed, which
+may take around 30 min.
 
-需要注意的是：
+**Noteworthy** :
 
-    * 杀毒软件可能会阻止本脚本生成桌面快捷方式。如果脚本提示快捷方式生成失败，请关闭杀毒软件(Win10系统还需要暂时关闭“实时保护”开关），并手动单击安装目录(默认为 C:\PX4PSP)下的“GenerateShortcutCMD. bat”脚本，自动生成所有软件快捷方式。
-    * 如果想更改固件编译版本或还原编译环境，可以再次运行“PX4InstallScript"命令，更改对应选项即可。
-    * 读者可以查看“RFLYExpPspSoftwarePack"文件夹内的“readme.txt"文件查看更详细的注意事项。
+(1) Antivirus software may prevent this script from generating desktop shortcuts.
+If the script prompts that the shortcut generation has failed, please close the
+antivirus software (Windows 10 should also turn off the “Real-time protection”
+option in the Settings page) and manually click the “GenerateShortcutCMD.bat”
+script in the installation directory (the default directory is C:\PX4PSP) to 
+automatically generate all the software shortcuts.
 
-高级设置
+(2) If readers want to change the firmware configurations or restore the 
+compiling environment, just run the “PX4InstallScript” command again and select the
+required options.
+
+(3) Readers can check the document “readme.txt” in the folder “RFLYExpPspSoftwarePack” 
+for more detailed notes.
+
+
+Advanced Settings
 --------------------
 
-对于高级独立开发者，可以在配置窗口设置安装路径、PX4 固件版本、编译命令和编译环境等。配置窗口中的各项选项详细解释如下。
+For advanced independent developers, Fig. 2.4 provides options to select the installation directory, Pixhawk hardware version, PX4 firmware version, compiling command, compiling environment, etc. The options in Fig. 2.4 are explained in detail
+below.
 
- | （1）工具包安装路径。本平台的所有依赖文件都会安装在本路径下，大约需要6G 的空间。默认安装路径是“C:\PX4PSP”，如果 C 盘空间不够可以选择其他盘符下的路径。需要注意的是路径名称必须正确，且只能用纯英文的路径，否则会导致编译失败。
- | （2）PX4 固件编译命令。默认的编译命令为“px4fmu-v3_default”，在 PSP 生成控制器代码后，会自动调用编译器将其编译为“px4fmu-v3_default.px4”格式固件文件，然后将该“.px4”文件下载并烧录到支持的硬件上，就可以实现算法的部署。使用不同的 Pixhawk硬件产品，需要选择不同的 PX4 固件编译命令。“px4fmu-v3 default”可用于 `mRo Pixhawk <https://docs.px4.io/master/en/flight_controller/mro_pixhawk.html>`_ 和 `Cube (Pixhawk 2) <https://docs.px4.io/master/en/flight_controller/pixhawk-2.html>`_ 两款热门产品；而常用的“px4fmu-v2 default”支持最知名的 `Pixhawk 1 <https://docs.px4.io/master/en/flight_controller/pixhawk.html>`_ 自驾仪。当然，PX4 还支持其他的一些硬件(如 `Intel Aero <https://software.intel.com/en-us/aero/drone-kit>`_ 、 `Crazyfile <https://www.bitcraze.io/products/old-products/crazyflie-2-0/>`_  等)， `对应的编译命令 <http://dev.px4.io/master/en/setup/building_px4.html>`_  如下：
+(1) **Software package installation directory** . All dependent files on the software
+package are installed in this directory, which requires around 6G storage. The
+default installation directory is “C: \PX4PSP”. If the C disk space is not suffi-
+cient, readers should choose a directory in other disks; the directory name must
+be correct and only in English to prevent compilation failures.
 
+(2) **PX4 firmware compiling command** . The default compiling command for PX4
+is “px4fmu-v3_default”. By selecting this compiling command, the compiling
+toolchain is automatically called to compile the PX4 source code to a firmware
+file “px4fmu-v3_default.px4” after the PSP generates the controller code. Then,
+the file “.px4” is uploaded to the supported hardware to realize the deployment
+of the control algorithms. Different Pixhawk hardware products must select
+different PX4 firmware compiling commands. Figure 2.5 shows some Pixhawk
+hardware products, where “px4fmu-v3_default” can be used for three popular
+products: Pixhawk 1 (2MB flash version), mRo `Pixhawk <https://docs.px4.io/master/en/flight_controller/mro_pixhawk.html.>`_ 
+and Cube (`Pixhawk 2 <https://docs.px4.io/master/en/flight_controller/pixhawk-2.html>`_ ). 
+The command “px4fmu-v2_default” corresponds to the most famous `Pixhawk 1 <https://docs.px4.io/master/en/flight_controller/pixhawk.html>`_ . 
+PX4 also supports other hardware (for example, `Intel Aero <https://software.intel.com/en-us/aero/drone-kit>`_ , 
+`Crazy-flie <https://www.bitcraze.io/crazyflie-2/>`_ , and so on). 
+The corresponding compiling `commands <http://dev.px4.io/master/en/setup/building_px4.html>`_ 
+are listed below. 
 
-    * Pixhawk 1: ``px4fmu-v2 default``
-    * Pixhawk 1 (2M flash): ``px4fmu-v3 default``.
-    * Pixhawk 4: ``px4fmu-v5 default``
-    * Pixracer: ``px4fmu-v4 default``
-    * Pixhawk 3 Pro: ``px4fmu-v4pro default``
-    * Pixhawk Mini: ``px4fmu-v3 default``
-    * Pixhawk 2: ``px4fmu-v3 default``
-    * mRo Pixhawk: ``px4fmu-v3 default``
-    * HKPilot32: ``px4fmu-v2 default``
-    * Pixfalcon: ``px4fmu-v2 default``
-    * Dropix: ``px4fmu-v2 default``
-    * MindPX/MindRacer: ``mindpx-v2 default``
-    * mRo X-2.1: ``auav-x21 default``
-    * Crazyflie 2.0: ``crazyflie default``
-    * Intel Aero Ready to Fly Drone: ``aerofc-v1 default``
+* Pixhawk 1: px4fmu-v2_default.px4
+* Pixhawk 1 (2MB flash version): px4fmu-v3_default.px4
+* Pixhawk 4: px4fmu-v5_default
+* Pixracer: px4fmu-v4_default
+* Pixhawk 3 Pro: px4fmu-v4pro_default
+* Pixhawk Mini: px4fmu-v3_default
+* Pixhawk 2: px4fmu-v3_default
+* mRo Pixhawk: px4fmu-v3_default
+* HKPilot32: px4fmu-v2_default
+* Pixfalcon: px4fmu-v2_default
+* Dropix: px4fmu-v2_default
+* MindPX/MindRacer: mindpx-v2_default
+* mRo X-2.1: auav-x21_default
+* Crazyflie 2.0: crazyflie_default
+* Intel Aero Ready to Fly Drone: aerofc-v1_default.
 
-    .. figure:: /images/2-5.jpg
+    .. figure:: /images/Quan-ch2-Fig2.5.jpg
         :align: center
 
-        图 2.5    Pixhawk 硬件产品系列和对应编译命令
+        Fig. 2.5 Pixhawk hardware series products with compiling commands
 
- | （3）PX4 固件版本。PX4 源代码版本一直在更新，目前最新的固件版本为 1.10。随着固件版本的升级，功能会逐渐增加，支持的新产品也越多，但是对旧的一些自驾仪硬件的兼容性就会变差。由于本书使用的是经典的 Pixhawk 1 版本自驾仪硬件(应用广泛价格实惠，且有 LED 模块便于观察实验效果)，推荐选用较旧的固件版本 PX4-1.7.3 以获取更好的使用效果。
- | （4）PX4 固件编译器。由于 PX4 源代码的编译依赖于 Linux 编译环境，本软件包提供了三套编译工具链来实现 Windows 平台下对Linux 编译环境的模拟，它们分别是：
+(3) **PX4 firmware version** . The version of the PX4 source code is updated 
+constantly, and the latest firmware version was 1.10 when this book was written. As
+the firmware version is upgraded, new features may be introduced, and more
+new products will be supported, but the compatibility with some old 
+autopilot hardware will be affected. Because the Pixhawk 1 (2MB flash version, or
+mRo Pixhawk) hardware selected in this book is an old Pixhawk product with
+LED for better experimental observation effect, the older PX4 firmware 
+version 1.7.3 was selected with the compiling command “px4fmu-v3_default” to
+achieve better-using effect.
 
-    | ①基于 `Windows Subsystem for Linux (WSL) <https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>`_ 的编译环境 Win10WSL 编译器；
-    | ②基于 `Msys2 <https://baike.baidu.com/item/MSYS2>`_ 的Msys2Toolchain 编译环境；
-    | ③基于 `Cygwin <https://www.cygwin.com/>`_ 的CygwinToolchain 编译器。
+(4) **PX4 firmware compiling toolchain** . Because the compilation of PX4 source
+code depends on the Linux compiling environment, the software package provides three sets of compiling toolchains to realize the simulation of the Linux
+compiling environment under the Windows environment.
 
-    其中，CygwinToolchain和Msys2Toolchain编译器都支持Windows7及以上系统，部署方便且兼容性强，但是编译速度较慢。其中CygwinToolchain编译器支持PX4-1.8版本及以上固件，Msys2Toolchain编译器支持PX4-1.8版本及以下固件。对于 Windows10 1809 及以上的系统版本，RflySim高级版平台还可以按照 ``0.UbuntuWSL\Win10UbuntuInstallation-Step.docx`` 的方法选择安装 Ubuntu 子系统，然后在配置窗口中选择Win10WSL 编译器，这种方式可以大大加快编译速度，而且兼容所有版本的 PX4 固件。
+    1) `Win10WSL <https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>`_ based on the Windows Subsystem compiler environment for Linux (WSL);
+    2) the Msys2Toolchain based on `Msys2 <https://baike.baidu.com/item/MSYS2>`_ toolchain;
+    3) the CygwinToolchain based on the `Cygwin <https://www.cygwin.com/>`_ toolchain.
 
- | （5）是否重新安装 PSP 工具箱。若该选项设置为“是”，则会将 PSP 工具箱安装在本地MATLAB 软件中。若 PSP 工具箱已经安装过，则会对 PSP 工具箱进行全新安装。若选择“否”，则脚本对 PSP 工具箱不做任何更改(不会卸载掉安装的 PSP 工具箱或有其他动作)。
- | （6）是否重新安装其他依赖程序包。若该选项设置为“是”，则会将 FlightGear、QGC地面站、CopterSim、3DDisplay 等软件部署在设定的安装路径上，并安装 Pixhawk 硬件的相关驱动程序，以及在桌面生成这些软件的快捷方式。若安装路径上已经部署过相关依赖软件，选择“是”，则会删除旧的安装包并进行全新重新安装。若该选项设置为“否”，则不做任何修改。
- | （7）是否重新配置固件编译器编译环境。若该选项设置为“是”，则会将选定的编译器(Win10WSL、CygwinToolchain 或Msys2Toolchain)部署在设定的安装路径上，若环境已经存在，则会清空旧的编译环境，进行还原与全新部署。反之，若该选项设置为“否”，则不会进行任何更改。
- | （8）是否重新部署 PX4 固件代码。若该选项设置为“是”，则会将选定的 PX4 Firmware源代码部署在设定的安装路径上，若 PX4 Firmware 固件存在，则会删除旧的固件文件夹，并进行全新部署。若该选项设置为“否”，则不会进行任何更改。
- | （9）是否预先用选定命令编译固件。若该选项设置为“是”，则会对部署固件进行预编译，这样可以大大节省后续代码生成与编译的时间，同时可以检测环境安装是否正常。若该选项设置为“否”，则不会进行任何更改。
- | （10）是否屏蔽 PX4 自身控制器输出。若该选项设置为“是”，则会对 PX4 自身的控制器输出信号进行屏蔽，防止其与 Simulink 生成的控制器发生冲突。在本书的仿真与实际飞行实验中，这一项必须设置为“是”。若选择“否”，则不会对 PX4 自身的控制输出进行屏蔽，这种模式可以用于测试 PX4 自带的控制算法。
+    .. note:: the CygwinToolchain only supports PX4 firmware with version
+        1.8 or above; the Msys2Toolchain only supports PX4 firmware with version
+        1.8 or below. Both the CygwinToolchain and the Msys2Toolchain support
+        Windows 7 and above, which are easy to deploy, but the compiling speed
+        is slow. For Windows10 1809 and above, readers can follow the tutorial in
+        “0.UbuntuWSL\Win10UbuntuInstallationStep.docx” to install an Ubuntu subsystem in
+        Windows and then choose theWin10WSL toolchain shown in Fig. 2.4.
+        The Win10WSL toolchain can greatly accelerate the compiling speed and support 
+        all versions of PX4 firmware.
+
+(5) **Whether to reinstall the PSP Toolbox (yes or no)** . If this option is set to
+“yes”, the PSP Toolbox is installed on MATLAB/Simulink. If the PSP toolbox
+has already been installed, a new installation of the PSP Toolbox is performed.
+If this option is set to “no”, the script does not do anything on the existing PSP
+toolbox (it will not uninstall the PSP toolbox or carry out other actions).
+
+(6) **Whether to reinstall the dependent software packages** . If this option is set
+to “yes”, software tools (such as FlightGear, QGC, CopterSim, and 3DDisplay)
+are deployed to the selected installation directory and shortcuts for them are
+generated on the desktop. The related drivers for Pixhawk hardware are also
+installed. If the software tools have already been installed, selecting “yes” will
+remove the old installation files and reinstall them. If this option is set to “no”,
+then no change will be made.
+
+(7) **Whether to reinstall the selected compiling toolchain** . If this option is set
+to “yes”, the selected compiling toolchain (Win10WSL, CygwinToolchain, or
+Msys2Toolchain) will be deployed to the selected installation directory. If the
+toolchain already installed, the script will remove the old toolchain files and
+reinstall it. In contrast, if this option is set to “no”, then no change will be made.
+
+(8) **Whether to reinstall the selected PX4 firmware source code** . If this option
+is set to “yes”, the selected PX4 firmware source code will be deployed to
+the selected installation directory. If the firmware files already exist, the old
+firmware folder will be deleted, and a new copy of the source code will be
+deployed. If this option is set to “no”, then no change will be made.
+
+(9) **Whether to pre-compile the selected firmware** . If this option is set to “yes”,
+the PX4 source code will be pre-compiled. This can greatly save the compiling
+time of the subsequent code generation process; whether the compiling environment 
+is installed properly can also be checked. If this option is set to “no”,
+then no change will be made.
+
+(10) **Whether to block the actuator outputs of the PX4 original controller** . If
+this option is set to “yes”, the control signals of the PX4 original controller will
+be blocked to prevent them from conflicting with the generated controller in
+Simulink. This option must be set to “yes” for the simulations and experiments
+in this book. If this option is set to “no”, the PX4 outputs will not be blocked,
+and this mode can be used to test the PX4 original controller.
 
     .. note::
 
-        注意：PX4 固件版本从 1.9 开始，固件编译命令由 ``px4fmu-v3_default.px4`` 变更为了 ``px4 fmu-v3_default.px4`` 格式。由于本书使用的软件包会持续更新，为确保对最新版本 PX4 固件的支持，在使用后续新版本固件(大于等于 1.9)时，需要注意修改编译命令的格式。
+        For the firmware versions 1.9 and above, the PX4 starts to use new compiling 
+        commands with the form “px4_fmu-v3_default.px4” instead of “px4fmu-v3_default.px4”.
+        Because the simulation software package of this book will be continuously updated
+        for the latest PX4 firmware when using the latest version of the firmware (1.9 and
+        above), readers need to modify the compiling command in Fig. 2.4 to the correct
+        format.
 
 
-安装完成效果
+Installation Completion
 -------------------------
 
-当上述一键安装脚本成功执行后，可以查看是否包含以下内容：
-（1）桌面上能够看到生成的核心工具的快捷方式；
+When the above one-key installation scripted is successfully executed, readers can
+check the installed content with the following procedure.
 
-.. figure:: /images/2-6.jpg
+(1) As shown in Fig. 2.6, the shortcuts for the core software tools will be generated
+on the desktop.
+
+.. figure:: /images/Quan-ch2-Fig2.6.jpg
     :align: center
 
-    图 2.6 仿真软件包桌面快捷方式
+    Fig. 2.6 Desktop shortcuts of simulation software package
 
-（2）在安装路径(默认是“C:\PX4PSP”)会出现所有软件的存储文件夹。需要注意的是，本平台所有软件都是完全绿色的(或称可携式软件，最大特点是和系统其他软件完全独立)，且独立于原来安装的软件(如官方版的 QGroundControl 或FlightGear 等）。 “Firmware”文件夹中存储的是 PX4 的源代码；“examples”文件夹是 PSP 工具箱附带的 Simulink 例程；“drivers”文件夹存储着 Pixhawk 系列自驾仪的驱动程序；“Python27”文件夹存储着一个 Python 环境，用于实现 PSP 工具箱中的自动代码下载功能。
+(2) As shown in Fig. 2.7, the folders of all software tools are stored in the selected
+installation directory (the default is “C:\PX4PSP”). Note that all the software
+tools are completely portable and independent of the original software (e.g.,
+official versions of QGC and FlightGear) on Windows. In Fig. 2.7, the folder
+“Firmware” stores the PX4 source code. The folder “examples” stores Simulink
+source code examples of the PSP toolbox; the folder “drivers” stores Pixhawk
+drivers. The folder “Python27” stores a Python environment for the automatic
+firmware uploading of the PSP toolbox. The names of other folders are the same
+as the software names, whose detailed introduction can be found in Sect. 2.1.2.
 
-.. figure:: /images/2-7.jpg
+.. figure:: /images/Quan-ch2-Fig2.7.jpg
     :align: center
 
-    图 2.7 仿真软件包安装目录下所有文件
+    Fig. 2.7 All files in installation directory of simulation software package
 
-（3）在 MATLAB 主界面的“附加功能"-“管理附加功能"页面，可以看到新安装的 PSP 工具箱图标。在该页面可以对 PSP 工具箱进行一些管理设置，如禁用、卸载、查看安装目录等。需要注意的是，本软件包安装脚本只需运行一次即可给本计算机上所有 R2017b 及以上版本的MATLAB 使用。
+(3) As shown in Fig. 2.8, the installed PSP toolbox can be found on the “Add-Ons” -
+“Manage Add-Ons” page of MATLAB. On this page, some management operations can 
+be performed for the PSP toolbox that includes disabling, uninstalling,
+and viewing the installation directory. Note that the PSP toolbox can be installed
+once for all the MATLAB applications on a computer whose versions are higher
+than or equal to MATLAB R2017b.
 
-.. figure:: /images/2-8.jpg
+.. figure:: /images/Quan-ch2-Fig2.8.jpg
     :align: center
 
-    图 2.8 MATLAB 中 PSP 工具箱管理页面
+    Fig. 2.8 PSP Toolbox management page in MATLAB
 
-（4）任意打开一个 Simulink 文件，单击“库浏览器"(Simulink Library Brower)按钮，可以在其中找到 PSP 工具箱的“Pixhawk Target Blocks"模块库。
+(4) As shown in Fig. 2.9, readers can open any Simulink file and click the “Simulink
+Library Brower” button to open the Simulink library browser, and then find the
+“Pixhawk Target Blocks” library generated by the PSP toolbox.
 
-.. figure:: /images/2-9.jpg
+.. figure:: /images/Quan-ch2-Fig2.9.jpg
     :align: center
 
-    图 2.9 Simulink 库浏览器中的 PSP 工具箱模块
+    Fig. 2.9 PSP toolbox in Simulink library browser
 
-如果想卸载本平台软件，只需要简单执行下列步骤：
+If readers want to uninstall the simulation software package, they can carry out
+the following steps:
 
-* 删除软件安装过程中生成的所有桌面快捷方式；
-* 删除“C:\PX4PSP”文件夹内的所有文件和文件夹；
-* 卸载 PSP 工具箱。
+(1) Delete all the desktop shortcuts presented in Fig. 2.6;
+(2) Delete all files and folders in the installation directory presented in Fig. 2.7;
+(3) In the “Management Additional Functions” page of MATLAB presented in Fig. 2.8, click the “Uninstall” button to uninstall the PSP toolbox.
 
-软件简要介绍
----------------------------
 
-（1）依次桌面快捷方式：“FlightGear-F450"、“CopterSim"、“QGround- Control"和“3DDisplay"，逐一确认各个软件可以正常运行。
+Brief Introduction to Software
+-------------------------------
 
-.. figure:: /images/2-10.jpg
+(1) Double-click the desktop shortcuts shown in Fig. 2.6, which include 
+“FlightGearF450”, “CopterSim”, “QGroundControl” and “3DDisplay”. Then, check the
+software User Interface (UI) one by one with Fig. 2.10 to confirm that each
+software can operate correctly.
+
+.. figure:: /images/Quan-ch2-Fig2.10.jpg
     :align: center
 
-    图 2.10 基本软件正常运行界面展示
+    Fig. 2.10 Basic software UIs for simulation tools
 
-（2）双击桌面快捷方式“Eclipse"，可以打开 Eclipse 软件。
+(2) Double-click the desktop shortcut “Eclipse” in Fig. 2.6 to open the Eclipse 
+software. As shown in Fig. 2.11, click “File” – “Import...” – “C/C++”—“Existing
+Code as Makefile Project” from the menu bar of the Eclipse, and then click
+“Next”. In the “Existing Code Location” section of the pop-up window, click
+the “Browse” button to locate the “Firmware” folder in the installation directory
+(default is “C:\PX4PSP”), then choose “Cross GCC” and click the “Finish” button.
 
-.. figure:: /images/2-11.jpg
+.. figure:: /images/Quan-ch2-Fig2.11.jpg
     :align: center
 
-    图 2.11 Eclipse 导入 PX4 Firmware 源代码方法
+    Fig. 2.11 Importing PX4 Firmware source code into Eclipse
 
-在 Eclipse 菜单栏上选择“File"-“import …"-“C/C++"-“Existing Code as Makefile Project"单击下方的“next"按钮。在弹出新窗口的“Existing Code Location"栏目，单击“Browse"按钮，浏览选择安装路径(默认是“C:\PX4PSP")下的“Firmware"文件夹，再选择“Cross GCC"，单击“Finish"按钮。
-完成上述步骤后，在“Project Explorer"窗口可以看到“Firmware"固件的代码和结构，可以在其中阅读 PX4 代码，并尝试修改。也可以结合 PX4 的开发者文档网站（http://dev.px4.io/master/en/index.html），更清楚地了解 PX4 中算法的构架与实现原理，加深对实际飞行控制系统的理解。注意：如果是第一次打开 Eclipse，会有一个 Welcome 欢迎标签页，因此需要先手动关闭该标签页。
+After completing the above steps, as shown in Fig. 2.12, the source code and
+directory structure of the “Firmware” can be found in the “Project Explorer” 
+window, where readers can read the PX4 source code and try to modify it. Readers
+can also view the PX4 developer documentation `website <http://dev.px4.io/master/en/index.html>`_ 
+to clearly understand
+the architecture and implementation principles of the PX4 algorithms and deepen
+the understanding of an actual flight control system. Note that: a “Welcome” tab
+will cover the content shown in Fig. 2.12 when readers first open Eclipse, it must
+be closed manually.
 
-.. figure:: /images/2-12.jpg
+.. figure:: /images/Quan-ch2-Fig2.12.jpg
     :align: center
 
-    图 2.12   Eclipse 中代码阅读界面
+    Fig. 2.12 Eclipse code reading interface
 
-（3）双击桌面的“Win10WSL"、“Msys2Toolchain"或“CygwinToolchain"快捷方式，可以弹出如下图所示的命令窗口界面（原界面为纯黑背景，这里图片己做反色处理）。由 于本编译环境本质上是一个 Linux 模拟系统，因此可以在其中输入基本的 Linux 指令（如 “ls"“pwd"“gcc--version"等），查看运行效果。因此对于不熟悉 Linux 操作的读者来说，本编译器软件也可以作为一个 Linux 的学习与练习工具。该编译器最重要的功能是编译PX4 的源代码，生成“.px4"固件文件。可以在命令行中输入“make clean"来清除旧的编译信息，以及输入“make px4fmu-v3_default"指令来编译适用于 Pixhawk 1 的固件文件“C:\PX4PSP\Firmware\build\px4fmu-v3_default\px4fmu-v3_default.px4"。由于 PSP在代码生成后会自动调用本编译环境，因此普通读者不需要掌握其使用方法。
+(3) Double-click one of the three shortcuts “Win10WSL”, “Msys2Toolchain” or
+“CygwinToolchain” on the desktop to pop up the command window interface
+shown in Fig. 2.13 (the original UI has a pure black background, and the image
+color has been reversed for reading). Because the compiling toolchains are 
+essentially Linux emulation software, the basic Linux commands (such as “ls”, “pwd”,
+and “gcc—version”) can be tapped on the command line. For readers who are
+unfamiliar with Linux operations, this compiling toolchain can also be used as a
+Linux learning and practice tool. The most important function of this toolchain
+is to compile the source code of PX4 and generate the “.px4” firmware file.
+As shown in Fig. 2.13, “make clean” can be tapped on the command line to
+clear the old compiling files, and the “make px4fmu-v3_default” command is
+used to compile the source code to the firmware file “C:\PX4PSP\Firmware\
+build\px4fmu-v3_default\px4fmu-v3_default.px4” for Pixhawk 1 (2MB flash
+version). Because the PSP toolbox will automatically call this compiling 
+command after the code is generated, readers do not need to know how to use it.
 
-.. figure:: /images/2-13.jpg
+.. figure:: /images/Quan-ch2-Fig2.13.jpg
     :align: center
 
-    图 2.13   编译器命令窗口界面
+    Fig. 2.13 Commands tapped in compiling toolchains

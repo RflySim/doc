@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. 硬件在环仿真器 &mdash; RflySimDoc 1.0 文档</title>
+  <title>5. 硬件在环仿真器 &mdash; RflySimDoc 1.0 documentation</title>
   
 
   
@@ -33,8 +33,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Examples" href="Examples.html" />
     <link rel="prev" title="4. Pixhawk硬件系统" href="PixhawkHardwareSystem.html" /> 
 </head>
@@ -80,22 +80,22 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Modeling:</span></p>
+<p class="caption"><span class="caption-text">Modeling</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实验平台配置:</span></p>
+<p class="caption"><span class="caption-text">Experimental Process</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. 总体介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. 软件包安装</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. 硬件平台配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. Overall Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. Software Package Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. Hardware Platform Configuration</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实验平台使用:</span></p>
+<p class="caption"><span class="caption-text">实验平台使用</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 实验平台总体介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
@@ -177,40 +177,40 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><span class="section-number">5. </span>硬件在环仿真器<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">5. </span>硬件在环仿真器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>硬件在环仿真器包括一个实时运动仿真软件——CopterSim 和一个三维可视化视景软件——3DDisplay。下面分别对这两个软件进行介绍。</p>
 <div class="section" id="coptersim">
-<h2><span class="section-number">5.1. </span>CopterSim<a class="headerlink" href="#coptersim" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.1. </span>CopterSim<a class="headerlink" href="#coptersim" title="Permalink to this headline">¶</a></h2>
 <p>双击桌面的 CopterSim 快捷方式打开 CopterSim。CopterSim的仿真模型和参数与多旋翼软件在环模型相同,因为 CopterSim 是通过 Simulink多旋翼模型代码生成整合而成的。模拟器软件运行在 Windows 64 位计算机平台下，通过USB 数据线与Pixhawk 自驾仪进行串口通信。</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/3-50.jpg" src="../_images/3-50.jpg" />
-<p class="caption"><span class="caption-text">图 3.50 Coptersim 的主界面</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">图 3.50 Coptersim 的主界面</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>CopterSim 会发送传感器数据给Pixhawk 自驾仪，然后自驾仪会计算得到的电机 PWM控制信号并返回给 CopterSim。因此 Pixhawk 自驾仪可以实时控制 CopterSim 中的模拟多旋翼，实现和真实飞行同样的效果。与此同时，飞机的姿态与位置信息会以 UDP 协议向本地网络中发送，而 3DDisplay 软件会接收这些信息来完成实时三维视景显示。</p>
 <p>CopterSim 程序的主界面分为两大部分，上半部分是读者自定义选择多旋翼模型的输入界面，下半部分是连接自驾仪进行仿真的界面。注意：本软件仅开放了基本功能，还有许多实用的高级功能（如多机仿真、UE4 高逼真场景、固定翼等其他机型仿真等）需要注册之后才能使用，详见 <a class="reference internal" href="Pro.html#rflysim-label"><span class="std std-ref">RflySim高级版安装方法</span></a> .</p>
 <p>直接单击CopterSim 界面中间位置的“模型参数”按钮，就会弹出模型参数配置页面，这里会显示上一次仿真存储的模型参数。该界面主要包含了悬停信息（悬停时间、油门、输出功率、电机转速等）和飞机模型的基本参数（总质量、转动惯量、尺寸、拉力系数和阻力系数等）。</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/3-51.jpg" src="../_images/3-51.jpg" />
-<p class="caption"><span class="caption-text">图 3.51 模型参数配置界面</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">图 3.51 模型参数配置界面</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>单击 “还原默认参数”按钮，可以将模型参数还原到默认值；单击“存储并使用参数”按钮可以将当前参数存储到数据库中，作为本次和后续硬件在环仿真的参数。
 CopterSim 也允许在模型参数配置页面中直接修改模型参数，例如，输入与 Simulink 软件在环仿真的多旋翼模型同样的参数（存储在“e01.SoftwareSimExpsiconInit. m”文件中），然后单击 “存储并使用参数”按钮来存储并使用输入的模型参数。 “噪声水平（0-1）”按钮用于设置传感器仿真噪声水平：“0”是不启用噪声，“1”是噪声水平与实际 Pixhawk 自驾仪传感器噪声一致。当然也可以输入 0 到 1 之间的数或大于 1 的数，来表示仿真传感器噪声与实际噪声的比例关系，以便测试控制算法的抗干扰能力。</p>
 <p>当多旋翼配置并且计算完成后，将 Pixhawk 自驾仪插入到计算机的 USB 口上，在主界面的“飞控选择”下拉菜单中就会出现可连接的 Pixhawk 自驾仪串口。选中需要的 Pixhawk自驾仪串口（通常名字中包含字符串“FMU”），单击“开始仿真”按钮，就可以开始硬件在环仿真。CopterSim 可以接收到 Pixhawk 自驾仪回传的消息，说明硬件仿真正常运行。在仿真过程中也可以单击“停止仿真”来停止硬件在环仿真，或者单击“重新仿真”来初始化多旋翼到原始位置。</p>
 <div class="figure align-center" id="id5">
 <img alt="../_images/3-52.jpg" src="../_images/3-52.jpg" />
-<p class="caption"><span class="caption-text">图 3.52 CopterSim 的硬件在环仿真界面</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">图 3.52 CopterSim 的硬件在环仿真界面</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="ddisplay">
-<h2><span class="section-number">5.2. </span>3DDisplay<a class="headerlink" href="#ddisplay" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.2. </span>3DDisplay<a class="headerlink" href="#ddisplay" title="Permalink to this headline">¶</a></h2>
 <p>双击桌面的 3DDisplay 快捷方式即可打开 3DDisplay。3DDisplay 主界面界面窗口左侧以 3D 图形的方式展示多旋翼当前的飞行状态；3DDisplay 主界面右上角窗口展示了基本的飞行数据，包括电机转速，位置信息，姿态信息等；3DDisplay 主界面右下角窗口显示多旋翼的飞行轨迹。</p>
 <div class="figure align-center" id="id6">
 <img alt="../_images/3-53.jpg" src="../_images/3-53.jpg" />
-<p class="caption"><span class="caption-text">图 3.53 3DDisplay 的主界面</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">图 3.53 3DDisplay 的主界面</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">5.3. </span>硬件在环飞行测试<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.3. </span>硬件在环飞行测试<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>在硬件在环仿真中，可以和控制真实飞机一样，通过遥控器仿真的多旋翼完成解锁、起飞、手动飞行、降落等动作。具体步骤如下：</p>
 <blockquote>
 <div><div class="line-block">
@@ -221,15 +221,15 @@ CopterSim 也允许在模型参数配置页面中直接修改模型参数，例�
 <blockquote>
 <div><div class="figure align-center" id="id7">
 <img alt="../_images/3-54.jpg" src="../_images/3-54.jpg" />
-<p class="caption"><span class="caption-text">图 3.54 通过遥控器解锁与上锁 Pixhawk 自驾仪示意图</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">图 3.54 通过遥控器解锁与上锁 Pixhawk 自驾仪示意图</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
 <div class="line-block">
-<div class="line">（4）此时可以看到 Pixhawk 自驾仪上的 LED 灯变为常亮，且 CopterSim 左下角的消息框收到“Detect Px4 Armed&quot;消息，说明解锁成功。若解锁不成功，则断开所有软/硬件连接，重复上述步骤；</div>
+<div class="line">（4）此时可以看到 Pixhawk 自驾仪上的 LED 灯变为常亮，且 CopterSim 左下角的消息框收到“Detect Px4 Armed”消息，说明解锁成功。若解锁不成功，则断开所有软/硬件连接，重复上述步骤；</div>
 </div>
 <blockquote>
 <div><div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>高版本 Pixhawk 硬件（例如 Pixhawk2/3/4/5)开始不自带 LED 灯模块，需要使用外置LED 灯观察效果。</p>
 </div>
 </div></blockquote>

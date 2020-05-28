@@ -1,72 +1,118 @@
-============================
-硬件平台配置
-============================
+=================================
+Hardware Platform Configuration
+=================================
 
-下面将依次介绍遥控器配置、Pixhawk 自驾仪系统配置、机架和动力系统配置。
+This chapter will introduce the RC system configuration, Pixhawk autopilot system
+configuration, airframe, and propulsion system configuration.
 
-遥控器配置
----------------------
+RC System Configuration
+--------------------------
 
-下面介绍两款遥控器的配置，分别是乐迪 AT9S 遥控器和Futaba T14SG 遥控器。这两款遥控器的接收机都具备 S.BUS 输出功能，可以通过一根数据线将所有通道的 PWM 信号传输给自驾仪，使用较为简单。乐迪 AT9S 价格较为便宜，适合室内课程使用；而 Futaba T14SG 的性能和可靠性更强，价格也更昂贵，适合用于室外实验验证。本书实验需要选择“左手油门（美国手，Mode2)"的遥控器产品，即左侧摇杆为油门杆，没有自动回中功能。“右手油门（日本手，Mode1)"遥控器和“左手油门"遥控器在硬件构造上有区别，不能简单的通过遥控器软件设置来改变，因此需要在购买时注意。下文将详细描述两种遥控器针对本书的设置方法。其余遥控器的设置也可以参考这两款遥控器的设置方法。
+There are two RC system products presented in this book, which are RadioLink AT9S
+and Futaba T14SG. The receivers of these RC systems have the S.BUS output function 
+that can transmit the PWM signals of all channels to the flight control through
+one data line. Radio Link AT9S is relatively inexpensive, and it is suitable for indoor
+experiments; Futaba T14SG is relatively expensive, but it offers better performance
+and reliability, which makes it more suitable for actual outdoor flight tests. RC 
+transmitters with “Left-hand throttle (Mode 2)” configuration are selected in this book,
+whose left stick is the throttle lever without the auto-return function. RC transmitters
+with “Right-hand throttle (Mode 1)” and “Left-hand throttle” configurations have
+different hardware structures that cannot be modified through the software setting
+page; thus, readers need to pay attention to this. The following subsections detail the
+configuration steps of the two RC systems. Other RC systems can be configured in
+a similar way.
 
-乐迪 AT9S 遥控器配置方法
+RadioLink AT9S Configuration Method
 ***********************************
 
-乐迪 AT9S 遥控器包含一个发射器和配套的 R9DS 接收机，必要的附件包括：电池（LiPo 捚聚合物电池，3S，11.1V)和配套充电器；JR 线（也可用杜邦线代替)，用于连接接收机与 Pixhawk 自驾仪；USB 数据线，用于连接 Pixhawk 自驾仪和计算机。
+RadioLink AT9S includes an RC transmitter and an R9DS RC receiver. Other 
+necessary accessories include a battery (LiPo lithium polymer battery, 3S, 11.1V), a
+battery charger, a JR line (or DuPont line) for connecting the RC receiver to the 
+Pixhawk autopilot, and a MicroUSB cable for connecting the Pixhawk autopilot with
+the computer.
 
-（1）电池和充电器使用说明
-下图左侧为电池和充电器的实物图，将电池的四口充电头插在充电器右下侧的插口上，即可开始充电。处于充电状态时，充电器的指示灯为红色；当电池电量充满时，指示灯变为绿色。遥控器电池安装方式为：打开遥控器后侧下方电池槽，将电池供电头（红色电线对应正极)插在遥控器的电池槽左侧二口排插上即可。
+ | (1) Battery and charger instructions
 
-.. figure:: /images/2-14.jpg
-    :align: center
+ The left side of Fig. 2.14 shows the battery and the charger. The battery begins
+ to charge when the four-port charging head of the battery is inserted into the
+ socket on the charger. Red and green indicator colors represent the “charging”
+ and “fully charged” status, respectively. The RC transmitter battery is installed
 
-    图 2.14 遥控器、电池和充电器连接图
+    .. figure:: /images/Quan-ch2-Fig2.14.jpg
+        :align: center
 
-（2）接收机初次设置
+        Fig. 2.14 RC transmitter, battery, and charger
 
-1）按下图进行连线，接收机尾部下侧横向排针通过 JR 线连接到Pixhawk尾部最左侧“RC"排针，将 Pixhawk 的 USB 数据线与计算机 USB Type A 接口连接，给接收机供电。
+ | (2) RC receiver initial setting
 
-.. figure:: /images/2-15.jpg
-    :align: center
+    1) Connect the RC receiver and the Pixhawk according to Fig. 2.15. The 
+    horizontal pin on the downside of the tail face of the receiver must be connected
+    to the left-most RC pin on the tail face of the Pixhawk with a three-line JR
+    line, and the Pixhawk MicroUSB port must be connected to the computer
+    USB Type-A interface to supply power to the receiver and the Pixhawk.
 
-    图 2.15 遥控器接收机配置示意图
+    .. figure:: /images/Quan-ch2-Fig2.15.jpg
+        :align: center
 
-2）遥控器与接收机重新配对（默认情况已经连接完毕，只有连接出现问题时才需要重新配对)。打开遥控器电源（将其他所有遥控器关闭)，并按上一步方法正确连接接收机、Pixhawk 和计算机，用笔尖（或其他针状物)长按接收机右侧面的对码开关超过 1 秒，此时接收机 LED 灯闪烁，表示正在寻找距离最近的遥控器，并开始对码。接收机 LED 灯闪烁 7∼8 次后变为常亮，说明对码完毕，遥控器与接收机建立连接。
+        Fig. 2.15 RC transmitter and receiver configuration
 
-3）S.BUS 信号模式选择（接收机默认情况下已经处于该模式，通常不需要设置)。S.BUS 模式使得 Pixhawk 可以通过一根 JR 线完成所有通道 PWM 信号的传输。如果在 Pixhawk 上电且连上接收机的情况下，接收机上的 LED 灯为蓝白色，说明此时已经处于 S.BUS 模式，不需要进行设置。若接收机 LED 灯为红色，则需要将接收机右侧面对码开关短按两次（1 秒内按两次)，接收机 LED 灯变为蓝白色，说明 S.BUS 模式切换完毕。
+    2) How to rematch the RC transmitter with an RC receiver (the connection has
+    been completed by default, and this step needs to be performed only when
+    problems occur in the connection of the receiver and the transmitter). Turn on
+    the power of the RC transmitter (all other RC transmitters should be turned
+    off), and correctly connect the receiver with the Pixhawk and the computer.
+    Then, press the matching switch on the right side of the receiver with a pen
+    tip or needle (see Fig. 2.15) for more than one second. At this time, the LED
+    of the receiver starts to flash, which indicates that it is searching for the
+    nearest RC transmitter. When the receiver LED flashes seven or eight times
+    and then remains constant, it means that the matching process is finished and
+    a connection has been successfully established between the RC transmitter
+    and receiver.
 
-（3）遥控器设置
+    3) S.BUS signal mode selection (the receiver is in this mode by default; thus,
+    this step is typically not performed). The S.BUS mode allows the Pixhawk
+    to transmit all channel PWM signals through one JR line. If the Pixhawk
+    is powered up and connected to the receiver, the LED on the receiver is
+    blue-white, which indicates that it is already in S.BUS mode and no setup is
+    required. If the receiver LED is red, readers need to double-press (press twice
+    within one second) the matching switch on the right side of the receiver. If the
+    receiver LED turns blue-white, then the S.BUS mode has been successfully
+    set.
 
-1）向上拨遥控器“开关”按钮，打开遥控器。
+ | (3) RC transmitter setting
 
-2）设置语言和声音。
+    1) Pull up the “POWER” switch shown in Fig. 2.15 to open the RC transmitter.
 
-（a）长按遥控器按钮面板的“模式”按钮，弹出如下图所示的 “BASIC MENU”（基础菜单)页面。滚动遥控器面板上的“方向滚轮”，将光标移动到 “PARAMETER”上，按下遥控器面板的“确 定”按钮，即可进入遥控器参数设置页面。
+    2) Setting the Language and Turning off the Sound
 
-.. figure:: /images/2-16.jpg
-    :align: center
+    * Press the “Mode” button on the RC transmitter shown in Fig. 2.15 for several seconds to enter the model setting page shown in Fig. 2.16. Roll the “Selection Wheel” on the RC transmitter shown in Fig. 2.15, move the cursor to “PARAMETER”, and press the “OK” button on the RC transmitter shown in Fig. 2.15 to enter the RC transmitter parameter setting page.
+    * Scroll the “Selection Wheel” to select the “English” item, click the “OK” button, and then scroll the “Direction Wheel” again to select the desired display language. Then click the “OK” button to confirm the selection.
+    * Because this experiment is mainly performed indoor, it is recommended to turn off the speakers of the RC transmitter to prevent disturbing people nearby. As shown in Fig. 2.16, modify the “Sound” option from “ON” to “OFF”.
 
-    图 2.16 遥控器参数设置页面
+    .. figure:: /images/Quan-ch2-Fig2.16.jpg
+        :align: center
 
-（b）滚动遥控器面板的“方向滚轮”，选中“LANGUAGE”条目，单击遥控器“确定”按钮，然后再滚动“方向滚轮”，将语言改变为自己熟悉的语言（如简体中文)，然后再单击遥控器“确定”按钮，确认选定的语言。
+        Fig. 2.16 RC transmitter parameter setting page
 
-（c）由于本实验主要在室内进行仿真，为了防止遥控器声音打扰他人，建议关闭遥控
-器声音。将声音“Sound"选项从“ON"（打开）调整为“OFF"（关闭）即可。
+    3) Multicopter mode setting
 
-3）控制模式设置。
+    * Press the “Mode” button for several seconds to enter the “BASIC MENU” page, and click the “MODEL TYPE” item to enter the model type selection page shown in Fig. 2.17.
+    * Change the “TYPE” item from “HELICOPTER” to “MULTICOPTER”, and then press the “OK” button for several seconds to set the control mode to “Multicopter”.
 
-（a）长按遥控器面板的“模式"按钮，进入“BASIC MENU"（基础菜单）设置界面，单击“MODEL TYPE"（机型选择），进入机型选择页面。
+    .. figure:: /images/Quan-ch2-Fig2.17.jpg
+        :align: center
 
-.. figure:: /images/2-26.jpg
-    :align: center
+        Fig. 2.17 Multicopter control mode switching of RC transmitter
 
-    图 2.17 遥控器多旋翼控制模式切换
+    4) Throttle channel reverse setting
 
-（b）在“TYPE"（机型）选项中，将“HELICOPTER"（直升机模型）更改为“MULTICO- PTER"（多旋翼模型），然后长按遥控器面板的“确定"按钮，将控制模式设置为多旋翼。
+    * The throttle channel of the RadioLink transmitter is opposite to normal RC transmitters, and the throttle channel reverse needs to be set. Press the “Mode” button for several seconds to enter the “REVERSE” setting page shown in Fig. 2.18, and change the throttle channel from “NOR” to “REV”.
 
-4）油门通道反向设置。
+    5) CH5-CH6 mode switching channel setting
 
-乐迪遥控器的多旋翼模式的油门通道与常规遥控器的定义是相反的，因此需要进行调整。长按遥控器面板的“模式"按钮，进入 “REVERSE"（舵机相位）设置页面，将油门从“NOR"（正向）修改为“REV"（反向）。
+    * Because of experimental requirements, CH5 shown in Fig. 2.15 of the RC transmitter needs to be mapped to a three-position switch for mode switching of the Pixhawk. Press the “Mode” button for several seconds, and click the “AUX-CH” item next to the “REVERSE” item shown in Fig. 2.18.
+    * As shown in Fig. 2.19, on the “AUX-CH” setting page, click the “CH5” item to enter the channel setting page, and map CH5 to a three-position switch “SwE” on the RC transmitter (switch “E” is located in the top-left corner of the RC transmitter in Fig. 2.15).
+    * Similarly, the “CH6” item in Fig. 2.19 must be modified to a three-position switch “SwG” of the RC transmitter (switch “G” is located in the upperright corner of the RC transmitter in Fig. 2.15).
 
 5）CH5∼CH6 模式切换通道设置。
 

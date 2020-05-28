@@ -18,7 +18,7 @@ has many open-source software and tools we design especially.
 .. figure:: /images/0-1.jpg
     :align: center
 
-    Fig 1 Experiment process in RflySim platform
+    Fig. 0.1 Experiment process in RflySim platform
 
 The development based on RflySim generally includes the following five phases: 
 modeling phase, controller design phase, Software-In-the-Loop (SIL) simulation 
@@ -36,7 +36,7 @@ commercial-level RflySim, depending on how to perform the HIL simulation.
 .. figure:: /images/0-2.jpg
     :align: center
 
-    Fig 2 Distributed structure of RflySim Vision&Swarm Platform
+    Fig. 0.2 Distributed structure of RflySim Vision&Swarm Platform
 
 
 Features
@@ -50,7 +50,7 @@ education-level RflySim platform has the following advantages:
 
 1). **Ease of Use** . One-key installation and simulation in the Windows platform, which is convenient and easy to use for users to focus on algorithm development and test.
 
-2). **Distributed Structure** . As shown in Fig 2, the structure of RflySim platform is completely distributed. All applications in RflySim platform can run multiple instances in the same computer or multiple computers, and each application can receive other applications’ information through UDP network. The distributed structure is flexible and reliable for large scale UAV swarm simulation tests with vision.
+2). **Distributed Structure** . As shown in Fig. 0.2, the structure of RflySim platform is completely distributed. All applications in RflySim platform can run multiple instances in the same computer or multiple computers, and each application can receive other applications’ information through UDP network. The distributed structure is flexible and reliable for large scale UAV swarm simulation tests with vision.
 
 3). **UAV Swarm Simulation** . We provide interfaces to perform HIL/SIL simulations for multiple Pixhawk with computers in the same local area network. Mavlink communications through serial (Radio telemetry) or network (WIFI) to control Pixhawk by Simulink or C++ programs are also supported.
 
@@ -63,7 +63,7 @@ education-level RflySim platform has the following advantages:
 .. figure:: /images/0-3.jpg
     :align: center
 
-    Fig 3 Unified test framework for different vehicle types
+    Fig. 0.3 Unified test framework for different vehicle types
 
 Advantages of commercial-level RflySim platform
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -71,10 +71,10 @@ Advantages of commercial-level RflySim platform
 The commercial-level RflySim platform uses a high-performance real-time 
 simulation computer to simulate the vehicle motion and use FPGA to simulate 
 and replace all sensor chips on the autopilot (control) system. As shown in 
-Fig 3, the goal of commercial-level RflySim platform is to build a unified 
+Fig. 0.3, the goal of commercial-level RflySim platform is to build a unified 
 test framework for different types of vehicles and autopilot systems. The 
 hardware and software structures of the commercial-level RflySim platform 
-are presented in Fig 4 and Fig 5 respectively. Compared with the 
+are presented in Fig. 0.4 and Fig. 0.5 respectively. Compared with the 
 education-level RflySim platform or other simulators in the world, it has the 
 following advantages
 
@@ -89,9 +89,9 @@ following advantages
 .. figure:: /images/0-4.jpg
     :align: center
 
-    Fig 4 Hardware structure of the commercial-level RflySim platform
+    Fig. 0.4 Hardware structure of the commercial-level RflySim platform
 
 .. figure:: /images/0-5.jpg
     :align: center
 
-    Fig 5 Software structure of the commercial-level RflySim platform
+    Fig. 0.5 Software structure of the commercial-level RflySim platform
