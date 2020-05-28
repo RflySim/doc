@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 实验平台总体介绍 &mdash; RflySimDoc 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. 控制器设计与仿真平台" href="ControllerDesignAndSimulationPlatform.html" />
+    <link rel="prev" title="3. 硬件平台配置" href="../2_Configuration/HardwareConfiguration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台配置:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. 总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. 软件包安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. 硬件平台配置</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台使用:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 实验平台总体介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. 实验平台组成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. 实验平台优势</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PSPToolbox.html">3. PSP工具箱</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id18">10. 下载和支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>实验平台总体介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/3_Using/Introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1. </span>实验平台总体介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">1.1. </span>实验平台组成<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>依托Rflysim平台，本实验平台是一个基于 MATLAB/Simulink 和Pixhawk 的多旋翼飞行器控制算法快速开发平台。它主要由以下五大部分组成：基于 Simulink 的控制器设计与仿真平台、硬件在环仿真平台、<a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk_series.html">Pixhawk 自驾仪系统</a> 、多旋翼硬件系统和实验指导包。</p>
+<p>（1）基于 Simulink 的控制器设计与仿真平台</p>
+<p>本平台包含了一个高逼真的多旋翼模型可以用来仿真多旋翼飞行器的各种动态特性，并用 FlightGear 图形化展示多旋翼飞行器实时飞行的轨迹与姿态等状态信息。在基于 Simulink 的平台上，读者可以方便地设计多旋翼飞行器的控制算法，然后进行软件在环仿真验证。进一步，可以通过 Pixhawk Support Package (PSP) 工具箱将控制算法生成 C/C++ 代码，然后将其编译并下载到真实的 Pixhawk 自驾仪中。</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/3-1.jpg" src="../_images/3-1.jpg" />
+<p class="caption"><span class="caption-text">图 3.1 基于 Simulink 的控制器设计与仿真平台示意图</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+</div>
+<p>（2）硬件在环仿真平台</p>
+<p>硬件在环仿真平台包括实时运动仿真软件——CopterSim （见下图 (a))和三维可视化视景软件——3DDisplay（见下图 (b))。CopterSim 的仿真模型是直接从 Simulink 仿真平台中导入的。CopterSim 和 3DDisplay 两个软件都需要运行在 Windows 平台（Win7 以上，64 位系统)的计算机上，然后通过 USB 数据线与 Pixhawk 自驾仪相连构成闭环控制系统，进行硬件在环仿真。</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/3-2.jpg" src="../_images/3-2.jpg" />
+<p class="caption"><span class="caption-text">图 3.2 硬件在环仿真平台</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+</div>
+<p>（3）Pixhawk 自驾仪系统</p>
+<p>Pixhawk 自驾仪系统包括 Pixhawk 自驾仪、遥控器、接收机和地面站。其中，本书推荐使用的 Pixhawk 自驾仪实际上由 <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk.html">Pixhawk 1</a> 自驾仪硬件和 PX4 自驾仪软件组成。PX4 自驾仪软件内置的实时操作系统用来实现多线程分配、底层驱动和算法执行等功能。Pixhawk 自驾仪可以通过接收机与遥控器建立无线连接，从而接收地面操控者通过遥控器发出的操纵指令。此外，Pixhawk 自驾仪也可以通过数传模块与地面站相连，进行飞行数据和任务指令的实时通信。</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/3-3.jpg" src="../_images/3-3.jpg" />
+<p class="caption"><span class="caption-text">图 3.3 Pixhawk 自驾仪系统</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+</div>
+<p>（4）多旋翼硬件系统</p>
+<p>多旋翼硬件系统通常包括机架系统、动力系统、外部传感器和测试台架等。多旋翼硬件系统装上 Pixhawk 自驾仪组成了一个完整的多旋翼飞行平台，可以完成特定的飞行任务。根据实际的飞行性能需求，多旋翼机架系统可以设计成不同的布局，例如四旋翼、六旋翼、共轴八旋翼等。本例程以一个小型的四旋翼为例子，研究其硬件系统（如机架设计和动力系统选型等)的设计方法。然后，在得到的多旋翼硬件系统上完成自驾仪控制算法的开发。</p>
+<div class="figure align-center" id="id7">
+<img alt="../_images/3-4.jpg" src="../_images/3-4.jpg" />
+<p class="caption"><span class="caption-text">图 3.4 多旋翼硬件系统</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+</div>
+<p>（5）实验指导包</p>
+<p>包括视频教程、课件和例程源码等，主题紧扣《全权著. 多旋翼飞行器设计与控制[M]. 杜光勋, 赵峙尧, 戴训华, 等译. 北京: 电子工业出版社, 2017》 与 <a class="reference external" href="https://www.icourse163.org/course/BUAA-1205700805">网上在线课程MOOC</a> 。</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">1.2. </span>实验平台优势<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>本实验平台在MATLAB/Simulink 中提供了多旋翼控制器设计的相关接口，读者(初学者、学生或者工程师)可以利用自己所学知识快速进行控制器的设计与验证。在控制器设计完成后，本平台提供代码生成与下载功能，可以将设计的 Simulink 控制算法生成 C/C++ 代码，然后将其编译进入 PX4 自驾仪固件中，并自动下载到 Pixhawk 自驾仪中。本平台还提供硬件在环仿真测试功能，读者可以在真实 Pixhawk 自驾仪系统上对飞行效果进行初步模拟测试，排除实飞实验可能存在的各种问题。测试通过之后，将 Pixhawk 自驾仪装在一个多旋翼硬件系统上，就可以进行室内和室外的飞行实验，通过实验验证来评估设计控制算法的性能。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ControllerDesignAndSimulationPlatform.html" class="btn btn-neutral float-right" title="2. 控制器设计与仿真平台" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../2_Configuration/HardwareConfiguration.html" class="btn btn-neutral float-left" title="3. 硬件平台配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

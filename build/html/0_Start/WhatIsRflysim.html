@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. What is RflySim &mdash; RflySimDoc 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. Getting Started" href="GettingStarted.html" />
+    <link rel="prev" title="Welcome to RflySimDoc&#39;s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. What is RflySim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about-rflysim">1.1. About RflySim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">1.2. Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#advantages-of-education-level-rflysim-platform">1.2.1. Advantages of education-level RflySim platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advantages-of-commercial-level-rflysim-platform">1.2.2. Advantages of commercial-level RflySim platform</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台配置:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. 总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. 软件包安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. 硬件平台配置</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台使用:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. 实验平台总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP工具箱</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. 硬件在环仿真器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id17">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id18">10. 下载和支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>What is RflySim</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/0_Start/WhatIsRflysim.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="what-is-rflysim">
+<h1><span class="section-number">1. </span>What is RflySim<a class="headerlink" href="#what-is-rflysim" title="永久链接至标题">¶</a></h1>
+<div class="section" id="about-rflysim">
+<h2><span class="section-number">1.1. </span>About RflySim<a class="headerlink" href="#about-rflysim" title="永久链接至标题">¶</a></h2>
+<p>RflySim, launched by BUAA Reliable Flight Control Group, is an ecosystem or a
+toolchain mainly for unmanned systems’ control and safety testing following the
+idea of Model-Based Design (MBD). MATLAB/Simulink, supporting the full design
+phase of MBD, is chosen as the core programming platform for
+control/vision/swarm algorithms. Python is supported by RflySim platform for
+top-level vision/swarm control because it is free and has a rich library of
+vision processing. Besides MATLAB/Simulink and Python, the RflySim ecosystem
+has many open-source software and tools we design especially.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/0-1.jpg" src="../_images/0-1.jpg" />
+<p class="caption"><span class="caption-text">Fig 1 Experiment process in RflySim platform</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
+</div>
+<p>The development based on RflySim generally includes the following five phases:
+modeling phase, controller design phase, Software-In-the-Loop (SIL) simulation
+test phase, Hardware-In-the-Loop (HIL) simulation test phase, and experimental
+test phase. By using code-generation technology by MATLAB/Simulink, the
+controller can be easily uploaded to hardware automatically for the HIL
+simulation and real test phase.</p>
+<p>So far, RflySim has two types, namely education-level RflySim and
+commercial-level RflySim, depending on how to perform the HIL simulation.</p>
+<ul class="simple">
+<li><p>The education-level RflySim focuses on the ease-to-access, using personal computers to run the model and the serial port for communication with the control board.</p></li>
+<li><p>The commercial-level RflySim focuses on reliable performance, using real-time simulator with FPGA to run the models, sensors chips, and high-speed communication interfaces with the control board.</p></li>
+</ul>
+<div class="figure align-center" id="id2">
+<img alt="../_images/0-2.jpg" src="../_images/0-2.jpg" />
+<p class="caption"><span class="caption-text">Fig 2 Distributed structure of RflySim Vision&amp;Swarm Platform</span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+<div class="section" id="features">
+<h2><span class="section-number">1.2. </span>Features<a class="headerlink" href="#features" title="永久链接至标题">¶</a></h2>
+<div class="section" id="advantages-of-education-level-rflysim-platform">
+<h3><span class="section-number">1.2.1. </span>Advantages of education-level RflySim platform<a class="headerlink" href="#advantages-of-education-level-rflysim-platform" title="永久链接至标题">¶</a></h3>
+<p>Compared with other simulators (AirSim, Gazebo, etc.) in the world, our
+education-level RflySim platform has the following advantages:</p>
+<p>1). <strong>Ease of Use</strong> . One-key installation and simulation in the Windows platform, which is convenient and easy to use for users to focus on algorithm development and test.</p>
+<p>2). <strong>Distributed Structure</strong> . As shown in Fig 2, the structure of RflySim platform is completely distributed. All applications in RflySim platform can run multiple instances in the same computer or multiple computers, and each application can receive other applications’ information through UDP network. The distributed structure is flexible and reliable for large scale UAV swarm simulation tests with vision.</p>
+<p>3). <strong>UAV Swarm Simulation</strong> . We provide interfaces to perform HIL/SIL simulations for multiple Pixhawk with computers in the same local area network. Mavlink communications through serial (Radio telemetry) or network (WIFI) to control Pixhawk by Simulink or C++ programs are also supported.</p>
+<p>4). <strong>Multiple Vehicle Types</strong> . Compatible to different vehicle models, such as cars, fixed-wing, or VTOL aircraft. Users can build the vehicle models in Simulink with given interfaces and auto-generate DLL model files for the HIL simulation platform; then, the experimental platform can be applied to any other unmanned vehicle systems.</p>
+<p>5). <strong>High-fidelity 3D Environment</strong> . We provide source code and instruction to develop 3D environments in Unreal Engine 4 (UE4), so users can quickly develop an indoor or outdoor 3D environment for simulation or vision-based algorithm development.</p>
+<p>6). <strong>Vision-based control</strong> . Our 3D environments based on UE4 can send real-time images for other programs (Python/C or C++/Simulink) to process the images and feedback the control signals to HIL/SIL simulation platform to achieve vision-based control.</p>
+<div class="figure align-center" id="id3">
+<img alt="../_images/0-3.jpg" src="../_images/0-3.jpg" />
+<p class="caption"><span class="caption-text">Fig 3 Unified test framework for different vehicle types</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+<div class="section" id="advantages-of-commercial-level-rflysim-platform">
+<h3><span class="section-number">1.2.2. </span>Advantages of commercial-level RflySim platform<a class="headerlink" href="#advantages-of-commercial-level-rflysim-platform" title="永久链接至标题">¶</a></h3>
+<p>The commercial-level RflySim platform uses a high-performance real-time
+simulation computer to simulate the vehicle motion and use FPGA to simulate
+and replace all sensor chips on the autopilot (control) system. As shown in
+Fig 3, the goal of commercial-level RflySim platform is to build a unified
+test framework for different types of vehicles and autopilot systems. The
+hardware and software structures of the commercial-level RflySim platform
+are presented in Fig 4 and Fig 5 respectively. Compared with the
+education-level RflySim platform or other simulators in the world, it has the
+following advantages</p>
+<p>1). <strong>Extensibility</strong> : Models are developed in Simulink with module form, so by changing the parameters of specific subsystem modules, it is easy to extend to other types of vehicles, such as UAVs (multicopters, fixed-wings, VTOLs), unmanned cars or boats.</p>
+<p>2). <strong>Practicability</strong> : plug and test for different autopilot products; only need to know the sensor models used by the autopilot with no requirement to access or modify the source code of control systems, then the platform can perform black-box tests for different autopilot products.</p>
+<p>3). <strong>Standardization</strong> : The platform uses a modular/visual programming approach, so the system model standardization can be ensured by using certified standard modules or subsystems. Besides, the whole simulation software is obtained by automatic code generation technique, which ensures the standardization of the development process and minimizes the effect of manual differences and bugs.</p>
+<p>4). <strong>Automation</strong> : With the simulation model comprehensive and accurate enough, this platform can simulate normal and failure cases of outdoor flight tests. What's more automatic testing, case traversing, and assessment can be performed to ensure system safety and reliability.</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/0-4.jpg" src="../_images/0-4.jpg" />
+<p class="caption"><span class="caption-text">Fig 4 Hardware structure of the commercial-level RflySim platform</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="../_images/0-5.jpg" src="../_images/0-5.jpg" />
+<p class="caption"><span class="caption-text">Fig 5 Software structure of the commercial-level RflySim platform</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GettingStarted.html" class="btn btn-neutral float-right" title="2. Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to RflySimDoc&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

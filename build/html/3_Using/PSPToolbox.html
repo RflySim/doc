@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. PSP工具箱 &mdash; RflySimDoc 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="4. Pixhawk硬件系统" href="PixhawkHardwareSystem.html" />
+    <link rel="prev" title="2. 控制器设计与仿真平台" href="ControllerDesignAndSimulationPlatform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台配置:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. 总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. 软件包安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. 硬件平台配置</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实验平台使用:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. 实验平台总体介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. PSP工具箱</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-pixhawk-target-blocks">3.1. Simulink Pixhawk Target Blocks 模块库介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.2. 工具箱内各个模块的使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-psp">3.3. Simulink 配置实现 PSP 工具箱自动代码生成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HILSimulator.html">5. 硬件在环仿真器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">6. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html">7. 高级功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#course">8. Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id17">9. 应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pro.html#id18">10. 下载和支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>PSP工具箱</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/3_Using/PSPToolbox.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="psp">
+<h1><span class="section-number">3. </span>PSP工具箱<a class="headerlink" href="#psp" title="永久链接至标题">¶</a></h1>
+<div class="figure align-center" id="id2">
+<img alt="../_images/3-13.jpg" src="../_images/3-13.jpg" />
+<p class="caption"><span class="caption-text">图 3.13 Simulink 与 Pixhawk 自驾仪代码生成关系图</span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
+</div>
+<p>上图展示了 PSP 工具箱、PX4 软件系统与 Pixhawk 硬件系统之间的关系。该工具箱的主要功能包括：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）能在 Simulink 中对不同的飞机模型和自驾仪算法进行仿真和测试，并能自动将算法部署到 Pixhawk 自驾仪系统中；</div>
+<div class="line">（2）PSP 工具箱提供了一些实用实例，包括灯光控制、遥控器数据处理和姿态控制器等；</div>
+<div class="line">（3）PSP 工具箱中提供了很多接口模块，用于访问 Pixhawk 硬件系统的软/硬件组件；</div>
+<div class="line">（4)能自动记录传感器、执行机构以及部署进去的控制器的飞行数据；</div>
+<div class="line">（5)能订阅和发布 uORB 话题消息。PX4 软件系统的所有数据都暂存在一个 uORB消息池中，通过 uORB 订阅功能可以从消息池中读取感兴趣的话题，通过 uORB 模块的发布功能可以将特定的话题发布到消息池中供其他模块使用。</div>
+</div>
+</div></blockquote>
+<p>Simulink 生成的代码与 Pixhawk 自驾仪系统的关系总结如下：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）Pixhawk 自驾仪系统的软/硬件结构包括：Pixhawk 硬件系统（类似于计算机主机）和 PX4 自驾仪软件系统（类似于主机上运行的操作系统和应用程序）。</div>
+<div class="line">（2）整个 PX4 自驾仪软件系统可以分为若干个小模块，每个模块独立运行（多线程并行），各个模块通过 uORB 模块的订阅与发布功能实现数据的传输与交互。</div>
+<div class="line">（3）Simulink 生成的代码部署到 PX4 自驾仪软件系统之后，不会影响原生 PX4 自驾仪软件系统的运行，而是新增一个名为“px4  simulink app&quot;的独立模块（独立线程）并行于其他模块运行。</div>
+<div class="line">（4）整个代码生成与部署过程如下：</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>PSP 工具箱将在 Simulink 中设计的控制算法生成 C 代码；</p></li>
+<li><p>将代码导入到 PX4 自驾仪软件系统的源代码中，生成一个“px4 simulink app&quot;独立运行的程序；</p></li>
+<li><p>PSP 工具箱调用编译工具将所有代码编译为“.px4&quot;的 PX4 自驾仪软件固件文件（类似于系统镜像文件）；</p></li>
+<li><p>将得到的固件文件下载到 Pixhawk 自驾仪系统中并烧录，由 Pixhawk 自驾仪系统执行带有生成算法代码的 PX4 软件。</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">（5）由于原生 PX4 控制算法可能需要访问和“px4_simulink_app&quot;同样的硬件输出资源，这会产生读写冲突。因此，平台一键部署脚本提供了自动屏蔽 PX4 原生固件对执行器的选项，以确保只有“px4_simulink_app&quot;模块能够输出电机控制量。</div>
+</div>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<img alt="../_images/3-14.jpg" src="../_images/3-14.jpg" />
+<p class="caption"><span class="caption-text">图 3.14 Simulink 与 Pixhawk 自驾仪代码生成关系图</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">(6)生成的 Simulink 代码也可以用于替换PX4 软件系统的某些原生模块（位置控制器、卡尔曼滤波器、姿态控制器等），但是需要手动修改 PX4 固件代码来屏蔽原始模块的输出接口（另一种可行方法是修改PX4模块启动脚本文件 &quot;FirmwareROMFSpx4fmu_commoninit.drcS&quot;，并注释掉想要屏蔽的模块）。例如，想用 Simulink 实现一个姿态滤波器模块（输入传感器数据，输出状态滤波数据）来替换 PX4 原始的滤波器，需要手动屏蔽 “Position &amp; Attitude Estimator&quot;滤波器模块向 uORB 消息池发布滤波后姿态数据（对应名为vehicle_attitude的uORB消息）的代码。具体操作示例为：</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">① 打开“Firmwaresrcmodulesekf2ekf2 main.cpp&quot;文件（扩展卡尔曼滤波器模块对应代码）；</div>
+<div class="line">②在其中屏蔽掉&quot;ORB_ID(vehicle_attitude)&quot;消息相关的发送代码。例如，搜索关键字&quot;_att_pub&quot;的代码行，并找到其中含有&quot;publish&quot;和&quot;att&quot;的发送代码行，将其替换为“UNUSED(att);”。</div>
+<div class="line">③ 在Simulink中编写姿态滤波器，并用&quot;uORB Write&quot;模块发送&quot;vehicle_attitude&quot;消息即可实现姿态滤波器功能的替换。</div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="simulink-pixhawk-target-blocks">
+<h2><span class="section-number">3.1. </span>Simulink Pixhawk Target Blocks 模块库介绍<a class="headerlink" href="#simulink-pixhawk-target-blocks" title="永久链接至标题">¶</a></h2>
+<p>在安装完成 PSP 工具箱之后，可以在 Simulink 中看到“Pixhawk Target Blocks&quot;模块库，其中提供了一些 Simulink 接口模块来访问Pixhawk 的硬件系统和 PX4 软件系统的内部消息。这些接口模块可以在 Simulink 的模块库“Pixhawk Target Blocks&quot;中查看，它由四个子库组成：“ADC and Serial&quot;（数模转换与串口库）、“Miscellaneous Utility Blocks&quot;（辅助工具库）、“Sensors and Actuators&quot;（传感器和执行器接口库）和“uORB Read and Write&quot;（uORB 消息读写库）。</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/3-15.jpg" src="../_images/3-15.jpg" />
+<p class="caption"><span class="caption-text">图 3.15 Simulink Pixhawk Target Blocks 模块库</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+</div>
+<p>下图为“Sensors and Actuators&quot;（传感器和执行器接口库）中的几个关键的输入和输出模块。通过这些模块可以方便地获取 Pixhawk 的传感器数据或滤波后的状态数据，并控制电机、LED 灯和蜂鸣器的输出。</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/3-16.jpg" src="../_images/3-16.jpg" />
+<p class="caption"><span class="caption-text">图 3.16 PSP 工具箱中传感器和执行器接口库示意图</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+</div>
+<p>同时PSP 工具箱还提供了大量的官方例程（详见文件夹“e02.PSPOﬃ- cialExps&quot;）以及官方使用手册（详见文档“e02.PSPOﬃcialExpsPixhawk Pilot Support  Pack- age.pdf&quot;）。通过上述例程和文档，读者可以快速掌握各个关键模块的使用方式，以及代码生成与下载流程。</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/3-17.jpg" src="../_images/3-17.jpg" />
+<p class="caption"><span class="caption-text">图 3.17 PSP 工具箱官方例程及官方使用手册</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">3.2. </span>工具箱内各个模块的使用说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>（1）遥控输入模块</dt><dd><p>通过这个模块可以选择接收遥控器的通道数量和其他的一些信息。每个选项的含义可单击对话框的“Help&quot;按钮查看或者查阅官方文档。同时 PSP 工具箱还提供了学习这一模块的例子（详见文件“e02.PSPOﬃcialExpspx4demo input rc.slx&quot;)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id7">
+<img alt="../_images/3-18.jpg" src="../_images/3-18.jpg" />
+<p class="caption"><span class="caption-text">图 3.18 遥控器输入模块及其参数设置框</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（2）PWM 输出模块</dt><dd><p>PWM 输出模块用于发送 PWM 信号到 PX4IO 的输出端口以控制电机转动，在配置页面中可以选择 PWM 的更新率及输出通道。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id8">
+<img alt="../_images/3-19.jpg" src="../_images/3-19.jpg" />
+<p class="caption"><span class="caption-text">图 3.19 PWM 输出模块及其参数设置框</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（3）FMU 输出模块</dt><dd><p>FMU 输出模块用于发送 PWM 信号到 PX4FMU 的输出端口以控制舵机的偏转，在配置页面中可以选择 PWM 的更新率及输出通道。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id9">
+<img alt="../_images/3-20.jpg" src="../_images/3-20.jpg" />
+<p class="caption"><span class="caption-text">图 3.20 FMU 输出模块及其参数设置框</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（4）蜂鸣器模块</dt><dd><p>通过这个模块可以控制蜂鸣器发出提示音。PSP 工具箱还提供了学习这一模块的例子（详见文档“e02.PSPOﬃcialExpspx4demo tune.slx&quot;)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id10">
+<img alt="../_images/3-21.jpg" src="../_images/3-21.jpg" />
+<p class="caption"><span class="caption-text">图 3.21 蜂鸣器模块及其参数设置框</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（5）RGB LED 模块</dt><dd><p>通过这个模块可以控制 LED 灯闪烁的模式和颜色。该模块接收有两个输入，一个是模式（Mode)，另一个是颜色（Color)。PSP 工具箱还提供了学习这一模块的例子（详见文档“e0PSPOﬃcialExpspx4demo_rgbled.slx&quot;)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id11">
+<img alt="../_images/3-22.jpg" src="../_images/3-22.jpg" />
+<p class="caption"><span class="caption-text">图 3.22 RGB LED 模块及其参数设置框</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（6）传感器数据组合模块</dt><dd><p>通过传感数据组合模块可以获取 Pixhawk 中可用的传感器数据，然后这些数据可以用于 Simulink 控制器的设计。可获取的传感器数据包括磁力计、加速度计、陀螺仪、气压计和时间戳。在模块的设置页面可以配置采样频率和想要输出的传感器信号。PSP 工具箱还提供了学习这一模块的例子（详见文档“e02.PSPOﬃcialExpspx4demo_attitude_control.slx&quot;)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id12">
+<img alt="../_images/3-23.jpg" src="../_images/3-23.jpg" />
+<p class="caption"><span class="caption-text">图 3.23 传感器数据组合模块及其参数设置框</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（7）姿态数据模块</dt><dd><p>姿态数据模块提供了经过滤波的姿态数据（欧拉角和四元数)。PSP工具箱还提供了学习这一模块的例子（详见文档“e02.PSPOﬃcialExpspx4demo_attitude_control.slx”)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id13">
+<img alt="../_images/3-24.jpg" src="../_images/3-24.jpg" />
+<p class="caption"><span class="caption-text">图 3.24 姿态数据模块及其参数设置框</span><a class="headerlink" href="#id13" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（8）GPS 数据模块</dt><dd><p>通过该模块可以获取 Pixhawk 的 GPS 数据，它是通过订阅 uORB 话题“vehicle_gps&quot;实现的。因此，在实际运行时需要 Pixhawk 上插入 GPS模块才能保证正确发布该话题，从而获取正确的 GPS 数据。PSP 工具箱还提供了学习这一模块的例子（详见文档“e02.PSPOﬃcialExpspx4demo_gps.slx&quot;)。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id14">
+<img alt="../_images/3-25.jpg" src="../_images/3-25.jpg" />
+<p class="caption"><span class="caption-text">图 3.25 GPS 数据模块及其参数设置框</span><a class="headerlink" href="#id14" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（9）电池数据模块</dt><dd><p>通过这个模块可以获取电池的实时数据，它是通过订阅uORB 话题“battery status&quot;实现的，所以在实际运行时需要保证 Pixhawk 上插入电源模块才能获取正确数据。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id15">
+<img alt="../_images/3-26.jpg" src="../_images/3-26.jpg" />
+<p class="caption"><span class="caption-text">图 3.26 电池数据模块及其参数设置框</span><a class="headerlink" href="#id15" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（10）uORB 模块</dt><dd><p>通过uORB 模块可以从 PX4 自驾仪软件系统中读取或发送 uORB 消息，其中 PX4 自驾仪软件系统支持的所有 uORB 消息类型可以在软件包安装目录（默认路径是“C:PX4PSP&quot;)下的“Firmwaremsg&quot;目录中查看。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id16">
+<img alt="../_images/3-27.jpg" src="../_images/3-27.jpg" />
+<p class="caption"><span class="caption-text">图 3.27 用于消息读写的 uORB 模块</span><a class="headerlink" href="#id16" title="永久链接至图片">¶</a></p>
+</div>
+<p>双击“uORB Write&quot;模块可以打开uORB 消息配置界面，在其中可以选择发送的 uORB 消息名称和数据。</p>
+<div class="figure align-center" id="id17">
+<img alt="../_images/3-28.jpg" src="../_images/3-28.jpg" />
+<p class="caption"><span class="caption-text">图 3.28 uORB 消息配置界面</span><a class="headerlink" href="#id17" title="永久链接至图片">¶</a></p>
+</div>
+<p>单击uORB 消息配置界面中的“Open .msg file&quot;按钮可以打开选定的 uORB消息文件；单击“Open .msg folder&quot;按钮打开消息目录。</p>
+<div class="figure align-center" id="id18">
+<img alt="../_images/3-29.jpg" src="../_images/3-29.jpg" />
+<p class="caption"><span class="caption-text">图 3.29 uORB 消息文件</span><a class="headerlink" href="#id18" title="永久链接至图片">¶</a></p>
+</div>
+<p>下面为两个高级的“uORB Write&quot;模块，提供更为简单的发送 uORB 消息的接口。</p>
+<div class="figure align-center" id="id19">
+<img alt="../_images/3-30.jpg" src="../_images/3-30.jpg" />
+<p class="caption"><span class="caption-text">图 3.30 uORB 模块参数设置框“Open .msg folder&quot;消息目录</span><a class="headerlink" href="#id19" title="永久链接至图片">¶</a></p>
+</div>
+<p>实际上，前面提到的所有模块（如 PWM 输出模块、RGB LED 模块等）在底层均是通过uORB 消息的读写来实现的。理论上，通过 uORB 消息的读写，Simulink 可以获取并发送 PX4 自驾仪软件系统内所有消息和中间变量，来实现更高级的控制器功能。同时，PSP 工具箱还提供了学习这一模块的例子（详见文档“e02.PSPOﬃcialExpspx4demo_fcn_call_uorb_example.slx&quot;和“e02.PSPOﬃcialExpspx4demo_write_uorb_example.slx&quot;）。</p>
+<p>PX4 自驾仪软件系统的开发者网站提供了 <a class="reference external" href="http://dev.px4.io/master/en/middleware/uorb.html">自定义 uORB 消息的教程</a> ，以及`通过MAVLink 协议与外部设备进行数据交互的教程 &lt;<a class="reference external" href="http://dev.px4.io/master/en/middleware/mavlink.html">http://dev.px4.io/master/en/middleware/mavlink.html</a>&gt;`_ 。通过以上教程，可以实现从外部设备接收数据，并解码为自定义的 uORB 消息。结合PSP中的uORB 模块，可以实现生成的&quot;px4_simulink_app&quot;与外部硬件的通信。</p>
+<div class="figure align-center" id="id20">
+<img alt="../_images/3-31.jpg" src="../_images/3-31.jpg" />
+<p class="caption"><span class="caption-text">图 3.31 高级 uORB Write 模块及它们之间的区别</span><a class="headerlink" href="#id20" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（11）Pixhawk 内部参数</dt><dd><p>为了方便调参与测试，PSP 工具箱还提供了读取 Pixhawk 内部参数的方法。这样可以在飞行测试实验中，直接通过地面站软件来修改 Simulink 生成控制器的参数，而不需要在 Simulink 中修改参数，再生成代码并重新下载 Pixhawk。访问内部参数的例程展示在 &quot;e02.PSPOﬃcialExpspx4demo_Parameter_CSC_example.slx&quot;文件中。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id21">
+<img alt="../_images/3-32.jpg" src="../_images/3-32.jpg" />
+<p class="caption"><span class="caption-text">图 3.32 PX4 内部参数读取例程</span><a class="headerlink" href="#id21" title="永久链接至图片">¶</a></p>
+</div>
+<div class="figure align-center" id="id22">
+<img alt="../_images/3-33.jpg" src="../_images/3-33.jpg" />
+<p class="caption"><span class="caption-text">图 3.33   参数初始化脚本设置</span><a class="headerlink" href="#id22" title="永久链接至图片">¶</a></p>
+</div>
+<p>访问 Pixhawk 内部参数是通过 Pixhawk CSC.Parameter({<cite>*</cite>, <cite>*</cite>}) 函数实现的，需要将该函数放入Simulink菜单栏的&quot;File&quot;-&quot;Model Properties&quot;-&quot;Callbacks&quot;-&quot;InitFcn&quot;中。</p>
+</div>
+<div class="section" id="simulink-psp">
+<h2><span class="section-number">3.3. </span>Simulink 配置实现 PSP 工具箱自动代码生成<a class="headerlink" href="#simulink-psp" title="永久链接至标题">¶</a></h2>
+<dl>
+<dt>(1)Simulink 控制器代码生成前准备工作</dt><dd><p>准备工作的步骤如下：</p>
+<div class="line-block">
+<div class="line">1)在 Simulink 中设计一个控制器，并进行软件在环仿真验证；</div>
+<div class="line">2)将验证通过的控制器复制到一个新的 Simulink 文件中；</div>
+<div class="line">3)将控制器的输入接口和输出接口与 PSP 工具箱模块库中的输入(如传感器模块、遥控器模块等)与输出(如 PWM 输出模块、RGB LED 模块等)接口进行连接；</div>
+</div>
+<p>下图是一个完成连线的 Simulink 控制器的例子，该例子可以参考“e02.PSPOﬃcialExpspx4demo_attitude_system.slx&quot;文件。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id23">
+<img alt="../_images/3-34.jpg" src="../_images/3-34.jpg" />
+<p class="caption"><span class="caption-text">图 3.34 完成连线的 Simulink 控制器</span><a class="headerlink" href="#id23" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（2）打开 Simulink 设置面板</dt><dd><p>新创建的 Simulink 文件需要经过一定的设置，才能支持 PSP 工具箱的代码生成功能。首先在 Simulink 单击“设置&quot;按钮来打开 Simulink 设置面板。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id24">
+<img alt="../_images/3-35.jpg" src="../_images/3-35.jpg" />
+<p class="caption"><span class="caption-text">图 3.35 不同版本 MATLAB 的“设置”按钮</span><a class="headerlink" href="#id24" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（3）PSP 工具箱代码生成设置</dt><dd><p>在“Hardware Implementation&quot;标签页的“Hardware board&quot;下拉框中设置硬件板卡为“Pixhawk PX4&quot;。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id25">
+<img alt="../_images/3-36.jpg" src="../_images/3-36.jpg" />
+<p class="caption"><span class="caption-text">图 3.36 选择目标硬件标签页</span><a class="headerlink" href="#id25" title="永久链接至图片">¶</a></p>
+</div>
+<dl class="simple">
+<dt>（4）源代码编译与固件生成</dt><dd><p>单击 “编译&quot;按钮即可进实现 C/C++ 代码的生成和 PX4 固件的编译。也可以单击 Simulink 的“诊断&quot;按钮来查看代码的生成与编译过程。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id26">
+<img alt="../_images/3-37.jpg" src="../_images/3-37.jpg" />
+<p class="caption"><span class="caption-text">图 3.37 不同版本 MATLAB 的“编译”按钮</span><a class="headerlink" href="#id26" title="永久链接至图片">¶</a></p>
+</div>
+<div class="figure align-center" id="id27">
+<img alt="../_images/3-38.jpg" src="../_images/3-38.jpg" />
+<p class="caption"><span class="caption-text">图 3.38 不同版本 MATLAB 的”诊断”按钮</span><a class="headerlink" href="#id27" title="永久链接至图片">¶</a></p>
+</div>
+<p>一次成功的编译过程在“Diagnostic Viewer&quot;窗口中的状态下图(a) 所示，可以看到编译进度条完成，同时显示“Successfully generated all binary outputs&quot;消息。此外，在编译完成之后，Simulink 会自动弹出如下图(b) 所示的“Code Generation Report&quot;代码生成文档。</p>
+<div class="figure align-center" id="id28">
+<img alt="../_images/3-39.jpg" src="../_images/3-39.jpg" />
+<p class="caption"><span class="caption-text">图 3.39 代码生成与固件编译进度显示窗口</span><a class="headerlink" href="#id28" title="永久链接至图片">¶</a></p>
+</div>
+<dl>
+<dt>（5）下载 PX4 固件到 Pixhawk 硬件</dt><dd><blockquote>
+<div><p>利用 PSP 工具箱提供的一键下载功能实现固件的下载与烧录，具体步骤如：</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">1) 用 USB 数据线连接Pixhawk 自驾仪侧面 USB 口和计算机上的 USB 。</div>
+<div class="line">2）对于 MATLAB 2017b∼2019a 版本，单击 Simulink 的菜单栏的“Code&quot;标签，在弹出的下拉菜单中单击“PX4 PSP:Upload code to Px4FMU&quot;即可；对于 MATLAB 2019b 及更高版本，由于 Simulink 菜单栏被取消，读者可以在 MATLAB 的“命令行窗口&quot;输入“PX4Upload&quot;命令来下载固件。</div>
+</div>
+<blockquote>
+<div><div class="figure align-center" id="id29">
+<img alt="../_images/3-40.jpg" src="../_images/3-40.jpg" />
+<p class="caption"><span class="caption-text">图 3.40 不同 MATLAB 版本的固件下载功能</span><a class="headerlink" href="#id29" title="永久链接至图片">¶</a></p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">3）认真查看弹出窗口提示，有时需要重新插拔 Pixhawk 自驾仪才能开始下载流程。</div>
+</div>
+</dd>
+</dl>
+<p>经过上述步骤，读者已经实现将自己编写的自驾仪代码烧录到 Pixhawk 自驾仪系统中。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PixhawkHardwareSystem.html" class="btn btn-neutral float-right" title="4. Pixhawk硬件系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ControllerDesignAndSimulationPlatform.html" class="btn btn-neutral float-left" title="2. 控制器设计与仿真平台" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
