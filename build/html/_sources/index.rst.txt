@@ -44,8 +44,6 @@ Welcome to RflySimDoc's documentation!
    HIL Simulation Platform <3_Using/HILSimulator>
    Examples <3_Using/Examples>
 
-.. note:: RflySim平台只开放了一些基本功能，本平台还支持一些 **高级功能（目前不免费公开）**，如多机仿真、UE4 高逼真场景和其他机型仿真（固定翼、小车等）等。若想获取高级功能可以联系 Email: buaarfly@163.com。
-
 
 .. toctree::
    :numbered:
