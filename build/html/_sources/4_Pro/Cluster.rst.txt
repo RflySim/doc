@@ -1,83 +1,181 @@
 ==============================
-集群
+Swarm
 ==============================
 
-多机集群仿真
+Swarm Simulation
 *******************************
-CopterSim 还支持多机集群仿真功能。只需开启多个 CopterSim，并设置好每个飞机的 ID 值即可。在硬件在环仿真模式下，每个 CopterSim 需要连接一个 Pixhawk 自驾仪，然后分别单击“开始仿真”按钮，即可分别开始仿真。三维视景显示软件（只支持 UE4 开发的视景）会自动从局域网中接收所有的飞机数据，并集中显示在同一个场景中。因此，目前这种分布式仿真构架理论上支持任意多个飞机的硬件在环仿真。限制因素主要在以下几个方面：计算机 USB 接口数量（每个 Pixhawk 自驾仪会占用一个 USB 接口）、计算机内存大小（每个 CopterSim 会占用一定的内存空间）、计算机处理器速度（性能需要保证每个 CopterSim 都能实时运算）。
 
-.. figure:: /images/A-18.jpg
+CopterSim also supports swarm simulations. As shown in Fig.A.18, open multiple
+CopterSim programs and set the ID value of each aircraft to the desired value. Each
+CopterSim needs to connect to a Pixhawk autopilot, and then click the “Start Simulation” 
+button to start the HIL simulation separately. The 3D display programs (only
+supports the vision developed by UE4) will automatically receive all vehicle data
+from the local network and display them in the same 3D display software.
+
+.. figure:: /images/Quan-app1-FigA.18.jpg
     :align: center
 
-    图 4.1 CopterSim 多机集群仿真
+    Fig. A.18 CopterSim swarm simulation
 
-目前，CopterSim 支持两种方式多开运行。
+The current distributed simulation architecture theoretically supports HIL simulation 
+for any number of vehicles. The limitation mainly depends on the following
+factors: the number of computer USB interfaces (each Pixhawk will occupy a USB
+port), the memory size of the computer (each CopterSim will occupy a certain amount
+of memory space), the computer processor speed (need to ensure that each CopterSim
+can run in real-time).
 
- | （1）手动打开方式，每次双击 CopterSim.exe 可以打开一个仿真程序(飞机 ID 会自动累加，不需要手动设置)，重复 N 次可以打开 N 个仿真程序，依次连接串口，并单击开始仿真。
- | （2）通过 bat 脚本，一次打开任意多个 CopterSim 并完成软件配置、串口选择与自动运行。用文本编辑器打开“CopterSim\AutoStartScriptTemp.bat"脚本，可以看到如下内容：
+Currently, CopterSim supports two methods to start the swarm simulation:
 
-::
+(1). The first method is to open multiple CopterSims manually. Repeat to click the
+CopterSim.exe file to open an expected number of CopterSim programs one by
+one, each of them assigned with a unique ID automatically . Then, connect the
+serial ports and click to start the simulation.
 
-    start CopterSim.exe 1 1 20100 0 0 1 0 235 0 0 4
-    start CopterSim.exe 1 2 20102 0 0 1 0 235 0.5 0 5
-    start CopterSim.exe 1 3 20104 0 0 1 0 235.5 0 0 6
-    start CopterSim.exe 1 4 20106 0 0 1 0 235.5 1 0 7
+(2). The second method is to open an expected number of CopterSim programs
+together through a “bat” script, with automatically completing software configuration 
+and serial port selection. Open the “CopterSim\ AutoStartScriptTemp.bat”
+script with a text editor, and the following content will be observed.
 
-上述代码展示了一次打开四个CopterSim 的 Windows 批处理 bat 脚本。和下图 一一对应，CopterSim.exe 后面跟的第 0 位数字表示“是否自动开始仿真"；第 1 到 9 位对应了所示 CopterSim 主界面的高级功能的每个选项值；第 10 位对应了 Pixhawk 自驾仪的 USB 串口号。
+* start CopterSim.exe 1 1 20100 0 0 1 0 235 0 0 4
+* start CopterSim.exe 1 2 20102 0 0 1 0 235 0.5 0 5
+* start CopterSim.exe 1 3 20104 0 0 1 0 235.5 0 0 6
+* start CopterSim.exe 1 4 20106 0 0 1 0 235.5 1 0 7
 
-.. figure:: /images/A-19.jpg
+The above code shows a Windows batch bat script that opens four CopterSim
+programs at a time. As corresponding with Fig.A.19, the 0th number followed by
+CopterSim.exe means “whether the simulation starts automatically”; the 1st to
+9th numbers correspond to the options of the advanced functions in the CopterSim 
+UI shown in Fig.A.2c; the 10th number corresponds to the Pixhawk USB
+serial port number.
+
+.. figure:: /images/Quan-app1-FigA.19.jpg
     :align: center
 
-    图 4.2 CopterSim 多开脚本序号对应关系
+    Fig. A.19 Corresponding relation between CopterSim’s parameters and script’s numbers
 
-仿真模式设置
+
+Simulation Mode Settings
 ***********************************
 
-除了硬件在环仿真，CopterSim 还支持其他的仿真模式，来提高测试效率，主要支持的仿真模式有以下几种。
+In addition to HIL simulation, CopterSim also supports other simulation modes to
+improve test efficiency. As shown in Fig.A.20, there are several types of simulation
+modes supported by CopterSim.
 
- | （1）不同自驾仪系统的软硬件在环仿真。本平台不仅可以用于PX4自驾仪的仿真，也可扩展到其他自驾仪系统（例如Ardupilot），只需在这一栏选择对应的自驾仪和仿真模式即可。
- | （2）连同 Simulink 进行软件在环仿真。由于 Simulink 中每增加一个多旋翼需要复制一份多旋翼的副本，导致多机仿真的时候运行速度非常慢，不便于实时观察仿真效果。因此，可以通过代码生成的方式，将模型生成 DLL 模型文件放在 CopterSim 中运行，然后 Simulink 通过 UDP 收端口从 CopterSim 中获取传感器数据并发送控制指令，从而形成闭环。在多机集群仿真时， UDP 收端口号需要保证不同的 CopterSim 各不相同，然后 Simulink 通过设定的端口号与 CopterSim 通信。需要注意的是，在DLL 模型文件生成例程中，还提供了生成模型和控制器的完整飞行器模型，可以实现直接发送速度指令，进行顶层决策系统的软件在环仿真。
+(1). HIL simulations for different versions of PX4 firmware. Since different HIL data
+interfaces are required for different PX4 firmware versions, the best matching
+simulation mode needs to be selected for different PX4 firmware versions to
+ensure correct and efficient HIL simulation.
 
-    .. figure:: /images/A-20.jpg
+(2). SIL simulation with Simulink. The swarm simulation speed is very slow if all
+full dynamics models are running directly by Simulink. As a result, it is not
+convenient to observe the simulation results in real-time. Therefore, readers can
+convert the Simulink model into a DLL model file which can be imported to
+CopterSim by the code generation method mentioned in the previous section.
+Then, Simulink controller can exchange sensor data and control signals with
+CopterSim programs through the UDP to form a closed-loop swarm SIL simulation 
+platform. In swarm simulations, the UDP port number in Fig.A.20 needs to
+be different among CopterSim programs, and then Simulink can communicate
+with each CopterSim program through the corresponding port number. It should
+be noted that the DLL model source code presented in Fig.A.15 also supports
+to simulate a complete closed-loop system with both model and controller. This
+makes it possible to directly send the speed commands to DLL models, and
+perform the SIL simulations to test the top-level decision-making algorithms.
+
+    .. figure:: /images/Quan-app1-FigA.20.jpg
         :align: center
 
-        图 4.3 CopterSim 仿真模式的设置
+        Fig. A.20 CopterSim simulation mode setting
 
- | （3）连接 PX4 自驾仪进行软件在环仿真。PX4 自驾仪的SITL模式还支持编译成可以在计算机中虚拟运行的模式，在一台计算机中运行 N 个 PX4 自驾仪软件，同时打开 N 个 CopterSim，设置好两两之间的端口连接，即可在同一台计算机上进行多机集群的软件在环仿真。
+(3). Connecting with the PX4 autopilot software (without Pixhawk hardware) to
+perform SIL simulations on a computer. The PX4 source code also supports to
+be compiled into a firmware that can be run in a computer. Run N PX4 autopilot
+software on a computer, and then open N CopterSim programs to connect with
+them correspondingly. Then, it is possible to perform swarm SIL simulations
+with PX4 autopilot software on the same computer. Note that the PX4 software
+defaults to use the TCP port 4560. [#f1]_ Readers can manually specify the port number
+in the PX4 startup script to match with the CopterSim programs.
 
-多计算机分布式仿真
+
+Multi-computer Distributed Simulation
 ******************************************
+As mentioned in the previous section, the computing performance and memory space
+of a single computer are limited, so it is impossible to support swarm simulation for
+an unlimited amount of vehicles. Therefore, CopterSim also provides the function to
+perform distributed simulation through Local Area Network (LAN) by using multiple
+computers. As shown in Fig.A.21, enable the “Link” option on the UI of CopterSim 
+to start the network broadcast function. The flight data of each CopterSim will
+be received by all computers via the LAN. Therefore, with enough computers connecting 
+to the LAN, and a certain amount of CopterSim programs (in HIL or SIL
+simulation modes) are run on each computer, the platform can realize swarm distributed 
+simulation for any number of vehicles. At the same time, each computer can
+open multiple 3D scene programs to observe all vehicles from multiple perspectives.
+Note that if the “Link” checkbox is unchecked, the flight information of CopterSim
+can only be received by this computer, so it will not affect other computers, which
+is more suitable for the use in experimental courses.
 
-单台计算机的计算能力与内存空间等都是有限的，无法支持任意多机的集群仿真。因此，CopterSim 还提供了多台计算机实现局域网分布式仿真的功能。
-
-.. figure:: /images/A-21.jpg
+.. figure:: /images/Quan-app1-FigA.21.jpg
     :align: center
 
-    图 4.4 CopterSim 局域网分布式仿真构架
+    Fig. A.21 CopterSim distributed simulation architecture
 
-勾选 CopterSim 主界面的“联机”按钮，即可开启局域网广播功能，每个 CopterSim 的飞行状态会被局域网内所有计算机接收到。因此，只要在局域网内安置足够多的计算机，每台计算机上运行一定量的硬件在环仿真或软件在环仿真程序，本平台可以实现任意多机的集群分布式仿真。同时，每台计算机上支持开启多个三维视景程序，从多个视角观察所有飞机的飞行效果。注意，如果不勾选“联机”按钮，CopterSim 的飞行信息只能被本台计算机接收到，这样不会干扰其他计算机的仿真效果，适用于实验课程使用。
 
-多机集群的 Simulink 控制
+
+Swarm Control in Simulink
 ************************************************
 
-对于多机集群仿真而言，通信和实时控制是一件困难的事情。针对上述需求，我们在本平台的高级功能基础上，开发了一系列的课程和例程。
+For swarm simulation, communication and real-time control is a difficult task. In
+response to these needs, we have developed tutorials with source codes (see Fig.A.22)
+based on the advanced functions of this experimental platform. The main implemented 
+features are shown in the following.
 
-.. figure:: /images/A-22.jpg
+.. figure:: /images/Quan-app1-FigA.22.jpg
     :align: center
 
-    图 4.5 Simulink 多机集群控制源码
+    Fig. A.22 Source code for Simulink swarm control
 
-主要实现的功能有以下 4 个。
+(1). Open-loop Swarm SIL simulation. The advanced platform can send swarm data
+to the UE4 scene display software with the Simulink UDP interface to preview
+the trajectories of all vehicles. With this function, on the one hand, it is convenient
+to generate trajectories for static or moving obstacles, so complex swarm flight
+scenes can be visualized as shown in Fig.A.23. On the other hand, it provides the
+opportunity to preview the swarm flight performance, which helps developers to
+improve the designed trajectories.
 
- | （1）初步软件在环仿真。我们提供了 Simulink 的 UDP 接口来直接向 UE4 三维视景软件发送多个多旋翼的显示信息。通过提供的接口，一方面在单个多旋翼进行软/硬件在环仿真时，可以生成运动或静止的障碍物。另一方面，它提供预览多机飞行效果的机会，从而制定出最合理的运动轨迹。
-
-    .. figure:: /images/A-23.jpg
+    .. figure:: /images/Quan-app1-FigA.23.jpg
         :align: center
 
-        图 4.6 Simulink 异构无人系统视景
+        Fig. A.23 Example for heterogeneous unmanned systems in UE4
 
- | （2）集群控制算法的软件在环仿真。在 Simulink 中通过UDP 协议，向带有控制闭环 (由 Simulink 与模型一起生成，或者与 PX4 SITL控制模式相连接)的 CopterSim 多旋翼模型，发送顶层的速度或者位置等控制信息，同时接收运动状态信息，进行多机集群的软件在 环仿真。
- | （3）集群控制算法的硬件在环仿真。在 Simulink 中通过 UDP 协议，向所有 Copter- Sim+Pixhawk 的硬件仿真闭环系统，发送速度或位置等顶层控制的 Mavlink 消息，形成多机集群的硬件在环仿真。我们提供的源码中有在 Simulink 中实现打包和解包 Mavlink 协议的函数，然后 CopterSim 有自动转发Pixhawk 自驾仪的Mavlink 消息包的功能。因此，用户可以控制每个 Pixhawk+CopterSim 的硬件在环系统去完成任意任务。
- | （4）通过 Simulink 实时控制真实多旋翼集群。在 Simulink 中通过数据传输模块接收和发送 N  个串口的 Mavlink 消息，实现多个真实多旋翼系统的实时控制。这里 Simulink相当于一个地面控制站的功能，用于控制真实集群飞行系统。相对于用 C/C++ 开发集群控制平台，Simulink 能够更直观地观察集群的效果，且能够实时调整控制器参数。而且，Simulink 也支持生成C/C++ 代码程序，来提高运算速度。
+(2). Closed-loop Swarm SIL simulation. The advanced platform provides a Simulink
+UDP interface to exchange motion states and control signals from all CopterSim 
+SIL control models to realize the closed-loop swarm SIL simulation. The
+CopterSim SIL control model can be 1) a DLL model file including both a multicopter 
+motion model and a velocity-loop controller; or 2) CopterSim motion
+model controlled by a PX4 autopilot under the SIL simulation mode.
 
-通过上述的软件模拟 → 软件在环仿真→ 硬件在环仿真→ 实际集群系统控制，开发者可以循序渐进地实现集群控制算法的开发、仿真与真机实验，大大提高了开发效率。
+(3). Closed-loop Swarm HIL simulation. The advanced platform provides a Simulink
+UDP interface to exchange motion states and control signals from all CopterSim
+HIL control models to realize the swarm HIL simulation. The CopterSim HIL
+control model is a closed-loop control system involving real Pixhawk autopilots. 
+CopterSim can automatically forward Mavlink message packets from the
+Pixhawk autopilot serial port to Simulink. Furthermore, interfaces are also 
+developed to directly encode and decode Mavlink message in Simulink. As a result,
+users can control each Pixhawk+CopterSim HIL system by Simulink.
+
+(4). Closed-loop swarm flight by Simulink. The advanced platform provides the serial
+communication interface to directly exchange data with each Pixhawk autopilot
+via wireless radio telemetry, as well as UDP/ROS interfaces to communicate
+with vehicles in the same WIFI network. Therefore, it is convenient to realize the
+functions of GCSs to receive flight data from multiple vehicles in real-time and
+send back control signals. Compared with GCS software developed by C/C++, it
+is more convenient to tune the controller parameters on line and observe the realtime 
+control performance in Simulink. Besides, the Simulink swarm controller
+can also be converted into C/C++ to improve the running speed.
+
+Through the above procedure, developers can perform the development, simulations
+and flight tests in a step-by-step process, which may significantly improve the development 
+efficiency for swarm control systems.
+
+
+.. rubric:: Reference
+.. [#f1] http://dev.px4.io/master/en/simulation/

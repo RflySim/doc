@@ -1,15 +1,15 @@
 ==============================
-基于视觉的控制接口
+Vision-based Control Interface
 ==============================
 
-基于 UE4 的三维视景平台还支持视角切换功能，可以获取方便地获取到多个视角的图像数据。还支持通过共享内存或窗口图像抓取的方式在 Simulink、Python、C/C++ 等代码平台中实时获取到图像数据并进行处理，处理得到的视觉数据可以通过UDP 再返回给 CopterSim 或者 Simulink 控制，形成带有视觉的硬件在环仿真闭环。
+As shown in Fig.A.24, the provided UE4 3D display software also supports a view
+switching function to easily acquire image data from multiple viewing angles. The
+image data can be acquired and processed in real-time through Simulink, Python,
+C/C++, and other code platforms through shared memory inter-process communication. 
+The obtained vision data can be returned to CopterSim or Simulink control
+through the UDP network to form a HIL simulation loop with vision feedback.
 
-.. figure:: /images/A-24.jpg
+.. figure:: /images/Quan-app1-FigA.24.jpg
     :align: center
 
-    图 5.1 多视角图像获取
-
-.. figure:: /images/A-24a.jpg
-    :align: center
-
-    图 5.2 多视角图像获取（续）
+    Fig. A.24 Different views of a car

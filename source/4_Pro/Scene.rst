@@ -1,48 +1,76 @@
 
 ======================================
-场景
+Scenes
 ======================================
 
-基于 UE4 的三维视景介绍
+3D Scenes Based on UE4
 *************************************
 
-CopterSim 提供了选择三维显示场景的功能。3DDisplay默认的场景是基于 Ogre 引擎开发的小巧三维场景，对计算机配置要求低，但是加载速度慢且不够逼真。
+As shown in Fig.A.2c, CopterSim provides an ability to select different display
+scenes. The default scene is “3DDisplayprogram”, which is based on a lightweight 3D
+engine—Ogre. It has low requirements for computer configurations, but the loading
+speed is slow, and the display performance is not realistic enough. As shown in
+Fig.A.7, click the drop-down box of “3D Scene Selection” to check all other available
+3D scenes (the corresponding installation files are acquired along with the serial
+number), including “MountainTerrain” and “NeighborhoodPark”, which are more
+realistic 3D scenes based on UE4 3D engine. 
 
-.. figure:: /images/A-7.jpg
+.. figure:: /images/Quan-app1-FigA.7.jpg
     :align: center
 
-    图 3.1 选择三维场景按钮
+    Fig. A.7 3D scene selection
 
-单击“三维显示场景"的下拉框可以看到所有的三维场景，其中“MountainTerrain"和“NeighborhoodPark"两个场景是基于 UE4 开发的更逼真的三维场景。在 CopterSim 中选择相应的场景后，再打开对应三维场景程序，即可实现不同三维场景的切换。
+After selecting the corresponding scene,
+manually open the corresponding 3D scene software to switch between different 3D
+scenes. FigureA.8 presents the 3D UE4 simulation scenes, which have more powerful
+functions and more convenient extensibility.
 
-.. figure:: /images/A-8.jpg
+.. figure:: /images/Quan-app1-FigA.8.jpg
     :align: center
 
-    图 3.2 基于 UE4 的三维仿真场景
+    Fig. A.8 3D simulation scene based on UE4
 
-基于 UE4 开发三维场景
+
+Developing 3D Scenes Through UE4
 *************************************
 
-通过UE4 接口插件，读者可以在 UE4 中快速搭建飞行场景。具体方法如下：
+Through the UE4 plugin, readers can quickly build their own flight scenarios in UE4.
+The specific procedure is listed as follows.
 
- | （1）新建 UE4 场景。自定义 UE4 三维场景项目文件夹，读者自行购买或者开发一个基于UE4(引擎版本大于等于 4.22，编译器 Visual Studio 2017 以上)场景工程。这里不介绍详细的流程，请自行查看官方教程（http://api.unrealengine.com/CHN/）。
+(1). Create a new UE4 scene project. As shown in Fig.A.9, readers can purchase
+or develop a 3D scene project based on UE4 (engine version should be 4.22 or
+above, compiler version should be Visual Studio 2017 or above). The detailed
+process will be not introduced here because it can be found in the `official tutorial <http://api.unrealengine.com/>`_ .
 
-    .. figure:: /images/A-9.jpg
+(2). Get the UE4 plugin file. Unzip the “Rfly3DSimPlugin.zip” plugin file (the 
+corresponding source code can be acquired along with the serial number) and copy
+it to the “Plugins” folder (create it manually if the folder does not exist) of the
+UE4 project shown in Fig.A.9.
+
+    .. figure:: /images/Quan-app1-FigA.9.jpg
         :align: center
 
-        图 3.3 自定义 UE4 三维场景项目文件夹
+        Fig. A.9 Custom UE4 3D scene project folder
 
- | （2）获取接口插件。解压“Rfly3DSimPlugin.zip"插件文件(和安装包)，将其复制到 “Plugins"文件夹(如果没有该文件夹，则手动创建)中。
- | （3）生成“.exe"可执行程序。打开 UE4 编辑器，在 UE4 编辑器主界面可以查看自动加载的 “Rfly3DSimPlugin"插件内容。在 UE4 编辑器中简单地设置初始场景，编译代码后，就可以将其打包为“.exe"格式的 Windows 系统可执行程序。
+(3). Generate a “.exe” executable file. Click the UE4 project file ending with 
+“.uproject” (see Fig.A.9) to open the UE4 editor. As shown in Fig.A.10, the plugin
+“Rfly3DSimPlugin” will be automatically loaded to the UE4 project, and the plugin 
+contents can be viewed in the UI of the UE4 editor. In the UE4 editor, a “.exe”
+executable file can be obtained by simply setting the initial viewpoint, compiling
+the code, and package the whole project for the Windows environment.
 
-    .. figure:: /images/A-10.jpg
+    .. figure:: /images/Quan-app1-FigA.10.jpg
         :align: center
 
-        图 3.4 UE4 编辑器
+        Fig. A.10 UE4 editor
 
- | （4）导出地图地形数据。在 UE4 中选中地形文件，并导出为“.png"格式的地形文件，同时选择三个关键位置点的坐标存储到“.txt"文件中。将得到的“.png"和“.txt"文件复制到 “CopterSim\external\map”目录下。重启 CopterSim 后，就可以在场景下拉菜单中选择三维场景。
+(4). Export the map terrain data. Select the terrain file in UE4, exported to a “.png”
+format file, and store three key position points to a “.txt” file. Then, copy the
+resulting “.png” and “.txt” files to the “CopterSim\external\map” directory (see
+Fig.A.11). Finally, after restarting CopterSim, readers can select the new 
+developed 3D scene from the drop-down menu shown in Fig.A.7.
 
-    .. figure:: /images/A-11.jpg
+    .. figure:: /images/Quan-app1-FigA.11.jpg
         :align: center
 
-        图 3.5 将地形网格数据导入 CopterSim
+        Fig. A.11 Importing terrain mesh data into CopterSim

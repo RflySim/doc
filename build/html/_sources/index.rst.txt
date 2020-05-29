@@ -50,31 +50,12 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 1
-   :caption: 高级: 
+   :caption: Platform Advanced Functions: 
 
-   仿真平台 <4_Pro/SimulationPlatform>
    CopterSim <4_Pro/CopterSim>
-   场景 <4_Pro/Scene>
-   集群 <4_Pro/Cluster>
-   基于视觉的控制接口  <4_Pro/VisualInterface>
-
-
-.. toctree::
-   :numbered:
-   :maxdepth: 1
-   :caption: 课程:
-
-   教材 <5_Course/Book>
-   课程内容 <5_Course/Content>
-   线上线下课程（中文版）<5_Course/Course>
-
-
-.. toctree::
-   :numbered:
-   :maxdepth: 1
-   :caption: 示例: 
-
-   ADRC <6_Case/ADRC>
+   Scenes <4_Pro/Scene>
+   Swarm <4_Pro/Cluster>
+   Vision-based Control Interface  <4_Pro/VisualInterface>
 
 
 .. toctree::
