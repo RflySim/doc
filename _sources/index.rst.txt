@@ -61,9 +61,9 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 1
-   :caption: 下载和支持: 
+   :caption: Download & Support: 
 
-   下载和支持 <7_DownloadAndSupport/DownloadAndSupport>
+   Support <7_DownloadAndSupport/DownloadAndSupport>
 
 
 .. Indices and tables

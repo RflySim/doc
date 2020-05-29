@@ -1,17 +1,18 @@
 =========================================
-下载和支持
+Download and Support
 =========================================
 
-下载
+Download
 ----------------------------------------
 
-常见问题
+FAQ
 ----------------------------------------
 
-如果你有任何问题都可以在Github中提交: https://github.com/RflySim/RflyExpCode/issues 
+If you have any questions, you can submit them in Github: https://github.com/RflySim/RflyExpCode/issues 
 
-下面是目前搜集到的一些常见问题，希望对您有所帮助。
 
-支持
+Support
 -----------------------------------------
-如果您有任何问题请联系我们 Email: buaarfly@163.com.
+contact us 
+
+Email: buaarfly@163.com.
