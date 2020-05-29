@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. 实验平台总体介绍" href="../3_Using/Introduction.html" />
+    <link rel="next" title="1. Brief Introduction to Experimental Platforms" href="../3_Using/Introduction.html" />
     <link rel="prev" title="2. Software Package Installation" href="SoftwareInstallation.html" /> 
 </head>
 
@@ -96,26 +96,44 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Hardware Platform Configuration</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rc-system-configuration">3.1. RC System Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#radiolink-at9s-configuration-method">3.1.1. RadioLink AT9S Configuration Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#futaba-t14sg">3.1.2. Futaba T14SG 遥控器配置方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-for-futaba-t14sg">3.1.2. Configuration for Futaba T14SG</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#pixhawk">3.2. Pixhawk 自驾仪系统配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.3. 机架和动力系统配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pixhawk-autopilot-system-configuration">3.2. Pixhawk Autopilot System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#airframe-and-propulsion-system-configuration">3.3. Airframe and Propulsion System Configuration</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">实验平台使用</span></p>
+<p class="caption"><span class="caption-text">Experimental Platform Usage:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. 实验平台总体介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. 控制器设计与仿真平台</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP工具箱</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk硬件系统</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. 硬件在环仿真器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. Brief Introduction to Experimental Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. Simulink-Based Controller Design and Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk Hardware System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html">7. 高级功能</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#course">8. Course</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id17">9. 应用案例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Using/Pro.html#id18">10. 下载和支持</a></li>
+</ul>
+<p class="caption"><span class="caption-text">高级:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/SimulationPlatform.html">1. 仿真平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/CopterSim.html">2. CopterSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/Scene.html">3. 场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/Cluster.html">4. 集群</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/VisualInterface.html">5. 基于视觉的控制接口</a></li>
+</ul>
+<p class="caption"><span class="caption-text">课程:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Book.html">1. 教材</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Content.html">2. 课程内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Course.html">3. 线上线下课程（中文版）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">示例:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_Case/ADRC.html">1. ADRC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">下载和支持:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. 下载和支持</a></li>
 </ul>
 
             
@@ -206,34 +224,27 @@ necessary accessories include a battery (LiPo lithium polymer battery, 3S, 11.1V
 battery charger, a JR line (or DuPont line) for connecting the RC receiver to the
 Pixhawk autopilot, and a MicroUSB cable for connecting the Pixhawk autopilot with
 the computer.</p>
-<blockquote>
-<div><div class="line-block">
-<div class="line">(1) Battery and charger instructions</div>
-</div>
+<p>(1). Battery and charger instructions</p>
 <p>The left side of Fig. 2.14 shows the battery and the charger. The battery begins
 to charge when the four-port charging head of the battery is inserted into the
 socket on the charger. Red and green indicator colors represent the “charging”
 and “fully charged” status, respectively. The RC transmitter battery is installed</p>
-<blockquote>
-<div><div class="figure align-center" id="id2">
+<div class="figure align-center" id="id1">
 <img alt="../_images/Quan-ch2-Fig2.14.jpg" src="../_images/Quan-ch2-Fig2.14.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.14 RC transmitter, battery, and charger</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.14 RC transmitter, battery, and charger</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-</div></blockquote>
-<div class="line-block">
-<div class="line">(2) RC receiver initial setting</div>
-</div>
+<p>(2). RC receiver initial setting</p>
 <blockquote>
-<div><p>1) Connect the RC receiver and the Pixhawk according to Fig. 2.15. The
+<div><p>1). Connect the RC receiver and the Pixhawk according to Fig. 2.15. The
 horizontal pin on the downside of the tail face of the receiver must be connected
 to the left-most RC pin on the tail face of the Pixhawk with a three-line JR
 line, and the Pixhawk MicroUSB port must be connected to the computer
 USB Type-A interface to supply power to the receiver and the Pixhawk.</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <img alt="../_images/Quan-ch2-Fig2.15.jpg" src="../_images/Quan-ch2-Fig2.15.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.15 RC transmitter and receiver configuration</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.15 RC transmitter and receiver configuration</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>2) How to rematch the RC transmitter with an RC receiver (the connection has
+<p>2). How to rematch the RC transmitter with an RC receiver (the connection has
 been completed by default, and this step needs to be performed only when
 problems occur in the connection of the receiver and the transmitter). Turn on
 the power of the RC transmitter (all other RC transmitters should be turned
@@ -245,7 +256,7 @@ nearest RC transmitter. When the receiver LED flashes seven or eight times
 and then remains constant, it means that the matching process is finished and
 a connection has been successfully established between the RC transmitter
 and receiver.</p>
-<p>3) S.BUS signal mode selection (the receiver is in this mode by default; thus,
+<p>3). S.BUS signal mode selection (the receiver is in this mode by default; thus,
 this step is typically not performed). The S.BUS mode allows the Pixhawk
 to transmit all channel PWM signals through one JR line. If the Pixhawk
 is powered up and connected to the receiver, the LED on the receiver is
@@ -255,156 +266,200 @@ within one second) the matching switch on the right side of the receiver. If the
 receiver LED turns blue-white, then the S.BUS mode has been successfully
 set.</p>
 </div></blockquote>
-<div class="line-block">
-<div class="line">(3) RC transmitter setting</div>
-</div>
+<p>(3). RC transmitter setting</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li><p>Pull up the “POWER” switch shown in Fig. 2.15 to open the RC transmitter.</p></li>
-<li><p>Setting the Language and Turning off the Sound</p></li>
-</ol>
+<div><p>1). Pull up the “POWER” switch shown in Fig. 2.15 to open the RC transmitter.</p>
+<p>2). Setting the Language and Turning off the Sound</p>
 <ul class="simple">
 <li><p>Press the “Mode” button on the RC transmitter shown in Fig. 2.15 for several seconds to enter the model setting page shown in Fig. 2.16. Roll the “Selection Wheel” on the RC transmitter shown in Fig. 2.15, move the cursor to “PARAMETER”, and press the “OK” button on the RC transmitter shown in Fig. 2.15 to enter the RC transmitter parameter setting page.</p></li>
 <li><p>Scroll the “Selection Wheel” to select the “English” item, click the “OK” button, and then scroll the “Direction Wheel” again to select the desired display language. Then click the “OK” button to confirm the selection.</p></li>
 <li><p>Because this experiment is mainly performed indoor, it is recommended to turn off the speakers of the RC transmitter to prevent disturbing people nearby. As shown in Fig. 2.16, modify the “Sound” option from “ON” to “OFF”.</p></li>
 </ul>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id3">
 <img alt="../_images/Quan-ch2-Fig2.16.jpg" src="../_images/Quan-ch2-Fig2.16.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.16 RC transmitter parameter setting page</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.16 RC transmitter parameter setting page</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Multicopter mode setting</p></li>
-</ol>
+<p>3). Multicopter mode setting</p>
 <ul class="simple">
 <li><p>Press the “Mode” button for several seconds to enter the “BASIC MENU” page, and click the “MODEL TYPE” item to enter the model type selection page shown in Fig. 2.17.</p></li>
 <li><p>Change the “TYPE” item from “HELICOPTER” to “MULTICOPTER”, and then press the “OK” button for several seconds to set the control mode to “Multicopter”.</p></li>
 </ul>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch2-Fig2.17.jpg" src="../_images/Quan-ch2-Fig2.17.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.17 Multicopter control mode switching of RC transmitter</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.17 Multicopter control mode switching of RC transmitter</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>Throttle channel reverse setting</p></li>
-</ol>
+<p>4). Throttle channel reverse setting</p>
 <ul class="simple">
 <li><p>The throttle channel of the RadioLink transmitter is opposite to normal RC transmitters, and the throttle channel reverse needs to be set. Press the “Mode” button for several seconds to enter the “REVERSE” setting page shown in Fig. 2.18, and change the throttle channel from “NOR” to “REV”.</p></li>
 </ul>
-<ol class="arabic simple" start="5">
-<li><p>CH5-CH6 mode switching channel setting</p></li>
-</ol>
+<p>5). CH5-CH6 mode switching channel setting</p>
 <ul class="simple">
 <li><p>Because of experimental requirements, CH5 shown in Fig. 2.15 of the RC transmitter needs to be mapped to a three-position switch for mode switching of the Pixhawk. Press the “Mode” button for several seconds, and click the “AUX-CH” item next to the “REVERSE” item shown in Fig. 2.18.</p></li>
 <li><p>As shown in Fig. 2.19, on the “AUX-CH” setting page, click the “CH5” item to enter the channel setting page, and map CH5 to a three-position switch “SwE” on the RC transmitter (switch “E” is located in the top-left corner of the RC transmitter in Fig. 2.15).</p></li>
 <li><p>Similarly, the “CH6” item in Fig. 2.19 must be modified to a three-position switch “SwG” of the RC transmitter (switch “G” is located in the upperright corner of the RC transmitter in Fig. 2.15).</p></li>
 </ul>
-</div></blockquote>
-</div></blockquote>
-<p>5）CH5∼CH6 模式切换通道设置。</p>
-<p>（a）由于实验需求，需要将遥控器的第五通道（CH5）映射为左上角的三段开关，用于 Pixhawk 的模式切换。长按遥控器面板的“模式”按钮，单击 “REVERSE”（舵机相位）按钮旁边的“AUX-CH”（辅助通道）按钮。</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/Quan-ch2-Fig2.18.jpg" src="../_images/Quan-ch2-Fig2.18.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.18 Throttle channel reverse setting</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
 <div class="figure align-center" id="id6">
-<img alt="../_images/2-18.jpg" src="../_images/2-18.jpg" />
-<p class="caption"><span class="caption-text">图 2.18 遥控器油门通道反向设置</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<img alt="../_images/Quan-ch2-Fig2.19.jpg" src="../_images/Quan-ch2-Fig2.19.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.19 CH5-CH6 mode switching channel setting</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-<p>（b）在“AUX-CH”（辅助通道）设置页面，单击“CH5”（第五通道）按钮进入第五通道设置页面，将 CH5 映射为遥控器的三段开关“SwE”。</p>
+<p>6). Channel confirmation</p>
+<ul>
+<li><p>Restart the RC transmitter, and press the “Return” button (see Fig. 2.15) on the RC transmitter to enter the “SERVO” page (see Fig. 2.20). In this page, the PWM value of each channel can be verified by moving sticks and switches on the RC transmitter. Note that, as shown in Fig. 2.20, the channel value reaches an upper limit of 100 corresponding to the desired PWM value of 1100 µs; the channel value reaches the lower limit 100, corresponding to the desired output PWM value of 1900 µs. Note that the actual PWM value range received by the RC receiver may not equal to 1100–1900 due to various errors. So RC calibration is important for autopilots to correctly recognize the control commands from the ground pilot. For example, in Fig. 2.20, the third channel is located at an upper limit of 100, which indicates that the PWM value is about 1100 µs; the other three channels are located at 0 positions, which indicates that the corresponding PWM value is about 1500 µs.</p></li>
+<li><p>It is important to understand the correct relationship between the stick position and the PWM value of each channel. Move each channel stick in Fig. 2.15 to confirm that each channel corresponds correctly to the following rules.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>CH1: this corresponds to the horizontal movement of the right-hand stick of the RC transmitter. The right-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
+<li><p>CH2: this corresponds to the vertical movement of the right-hand stick of the RC transmitter. The right-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
+<li><p>CH3: this corresponds to the vertical movement of the left-hand stick of the RC transmitter. The left-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1900 to 1100 (opposite to CH2).</p></li>
+<li><p>CH4: this corresponds to the horizontal movement of the left-hand stick of the RC transmitter. The left-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
+<li><p>CH5: this corresponds to the three-position switch on the upper-left side of the RC transmitter. The switch moves from the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding to PWM values of 1100, 1500, and 1900, respectively.</p></li>
+<li><p>CH6: this corresponds to the three-position switch on the upper-right side of the RC transmitter. The switch moves to the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding PWM values of 1100, 1500, and 1900, respectively.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
 <div class="figure align-center" id="id7">
-<img alt="../_images/2-19.jpg" src="../_images/2-19.jpg" />
-<p class="caption"><span class="caption-text">图 2.19 遥控器多旋翼控制模式切换</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<img alt="../_images/Quan-ch2-Fig2.20.jpg" src="../_images/Quan-ch2-Fig2.20.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.20 RC transmitter stick position and direction</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-<p>（c）同理，将 “CH6”（第六通道）对应通道由“VrA”修改为遥控器的三段开关“SwG”。</p>
-<p>6）通道确认。</p>
-<p>（a）重启遥控器，按下遥控器的“返回”按钮，可以出现“SERVO”（舵量显示）界面，此时拨动各个摇杆可以看到每个通道 PWM 值的变化情况。注意：通道数值到达上侧 100，对应实际输出的 PWM 值为 1100 微秒；通道数 值到达下侧 100，对应实际输出 PWM 值为 1900 微秒。例如，下图中第三通道位于上 侧 100 位置，对应 PWM 值为 1100 微秒；其他三个通道位于 0 位置，对应 PWM 值为 1500 微秒。</p>
-<div class="figure align-center" id="id8">
-<img alt="../_images/2-20.jpg" src="../_images/2-20.jpg" />
-<p class="caption"><span class="caption-text">图 2.20 遥控器摇杆位置与方向显示页面</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div></blockquote>
 </div>
-<p>（b）弄清各个摇杆拨动方向与 PWM 值的对应关系，对正确处理遥控器指令至关重要。
-依次按下文规则拨动遥控器的各个通道摇杆，确定各个通道与下文规则正确对应：</p>
+<div class="section" id="configuration-for-futaba-t14sg">
+<h3><span class="section-number">3.1.2. </span>Configuration for Futaba T14SG<a class="headerlink" href="#configuration-for-futaba-t14sg" title="Permalink to this headline">¶</a></h3>
+<p>The connection between the Futaba receiver and the Pixhawk autopilot is slightly
+different from that of the RadioLink receiver. The specific connection is shown in
+Fig. 2.21. In the following paragraphs, the setup process for the Futaba RC transmitter
+is introduced.</p>
+<blockquote>
+<div><div class="figure align-center" id="id8">
+<img alt="../_images/Quan-ch2-Fig2.21.jpg" src="../_images/Quan-ch2-Fig2.21.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.21 Pixhawk and Futaba receiver connection diagram</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>As shown in Fig. 2.22, the Futaba T14SG RC transmitter needs to use six channels:
+the J1 stick (CH1, roll channel), J2 stick (CH2, pitch channel), J3 stick (CH3,
+throttle channel), J4 stick (CH4, yaw channel), SE three-position switch (upper-left
+switch, CH5 mode channel), and SG three-position switch (upper-right switch, CH6
+mode channel). The basic process of setting the Futaba T14SG RC transmitter is
+summarized as follows.</p>
+<blockquote>
+<div><div class="figure align-center" id="id9">
+<img alt="../_images/Quan-ch2-Fig2.22.jpg" src="../_images/Quan-ch2-Fig2.22.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.22 Futaba T14SG RC transmitter</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>(1). Double-click the “LINK” button on the RC transmitter in Fig. 2.22 to enter
+the “LINKAGE MENU” link setting page. As shown in Fig. 2.23a, enter the
+“MODEL TYPE” page and change the “TYPE” to “MULTICOPTER”;</p>
+<p>(2). Go back to the “LINKAGE MENU” page, and enter the “FUNCTION” page to
+confirm the channel mapping is the same as that shown in Fig. 2.23b, wherein
+the first to fourth channels of the RC transmitter correspond to the J1–J4 sticks;</p>
+<p>(3). Go back to the “LINKAGE MENU” page, and enter the “REVERSE” page to
+confirm that the reverse direction of the channel is as shown in Fig. 2.23c, i.e.,
+only the third channel (throttle) is reversed;</p>
+<p>(4). Go back to the “LINKAGE MENU” page, and enter the “FUNCTION”, and
+scroll to the second page for the setting of CH5 to CH8. As shown in Fig. 2.23d,
+set the “CTRL” option of the “5 MODE” channel to “SE” stick (the upper-left
+stick of the RC transmitter).</p>
+<p>(5). As in the previous step, set the “6 AUX1” channel shown in Fig. 2.23d to the
+“SG” stick (the upper-right stick of the RC transmitter).</p>
+<p>After the above settings, similar to the RadioLink AT9S in Fig. 2.20, it is also
+necessary to verify that the PWM output of each stick follows the correct definition
+required by this book.</p>
+<blockquote>
+<div><div class="figure align-center" id="id10">
+<img alt="../_images/Quan-ch2-Fig2.23.jpg" src="../_images/Quan-ch2-Fig2.23.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.23 Futaba T14SG RC transmitter</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="pixhawk-autopilot-system-configuration">
+<h2><span class="section-number">3.2. </span>Pixhawk Autopilot System Configuration<a class="headerlink" href="#pixhawk-autopilot-system-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Several basic firmware uploading and configuration operations are required for the
+brand-new Pixhawk to ensure that the Pixhawk autopilot meets the experimental
+requirements and ensure that the operation and configuration of Pixhawk are correct.
+The configuration method is summarized below.</p>
+<p>(1). Open the QGC software.</p>
+<p>(2). As shown in Fig. 2.24a, click the “gear” icon to enter the setting page; then, click
+the “Firmware” button to enter the firmware burning page.</p>
+<p>(3). Connect the Pixhawk autopilot and the computer using a USB cable. At this time,
+the software will automatically recognize the Pixhawk hardware. As shown in
+Fig. 2.24b, a firmware configuration window will pop up on the right side of the
+UI. Select the “PX4 Flight Stack” item, and click “OK”; then, QGC begins to
+automatically download (see Fig. 2.24 if the computer is not connected to the
+Internet) and burn the latest PX4 firmware into the Pixhawk autopilot hardware.</p>
+<blockquote>
+<div><div class="figure align-center" id="id11">
+<img alt="../_images/Quan-ch2-Fig2.24.jpg" src="../_images/Quan-ch2-Fig2.24.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.24 Pixhawk autopilot configuration on QGC</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>(4). After the firmware is burned, the Pixhawk will automatically restart and reconnect
+to the QGC software. Then, as shown in Fig. 2.25, enter the “Airframe” tab,
+select “HIL Quadcopter X” airframe type , and click the “Apply and Restart”
+button. Then the autopilot will automatically restart to finish the configuration
+for HIL simulation.</p>
+<blockquote>
+<div><div class="figure align-center" id="id12">
+<img alt="../_images/Quan-ch2-Fig2.25.jpg" src="../_images/Quan-ch2-Fig2.25.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.25 Selecting “HIL Quadcopter X” airframe type</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>(5). After rebooting, QGC will automatically reconnect to Pixhawk. Check each
+configuration page to ensure that the Pixhawk autopilot has been in the HIL
+simulation mode and that no warnings appear.</p>
+</div>
+<div class="section" id="airframe-and-propulsion-system-configuration">
+<h2><span class="section-number">3.3. </span>Airframe and Propulsion System Configuration<a class="headerlink" href="#airframe-and-propulsion-system-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The parameters of the multicopter simulation model in both SIL and HIL simulations
+are from a quadcopter with a diagonal size (opposite motor axis distance) of
+450 mm and a weight of 1.4 kg. For the subsequent flight experiments, it is necessary
+to ensure that the configuration of the multicopter is as close as possible to the
+simulation model. The experiments presented in this book select the most popular
+F450 multicopter (see Fig. 2.26) with the following configuration.</p>
+<p>(1). <strong>Airframe</strong> : DJI Flame Wheel F450 airframe</p>
 <ul class="simple">
-<li><p>CH1：对应遥控器右手横向摇杆，摇杆从左侧拨动到右侧，对应 PWM 值为 1100∼ 1900 微秒；</p></li>
-<li><p>CH2：对应遥控器右手竖向摇杆，摇杆从上侧拨动到下侧，对应 PWM 值为 1100∼ 1900 微秒；</p></li>
-<li><p>CH3:对应遥控器左手竖向摇杆，摇杆从上侧拨动到下侧，对应 PWM 值为 1900∼ 1100 微秒（注意，这里和第二通道是相反的）；</p></li>
-<li><p>CH4:对应遥控器左手横向摇杆，摇杆从左侧拨动到右侧，对应 PWM 值为 1100∼ 1900 微秒；</p></li>
-<li><p>CH5:对应左手最上侧的三段开关，摇杆置于顶部（最远离使用者的档位）、中部和底部（最靠近使用者的档位）档位对应 PWM 值为 1100、1500 和 1900 微秒；</p></li>
-<li><p>CH6:对应右手最上侧的三段开关，摇杆置于顶、中和底档位对应 PWM  值为1100、1500 和 1900 微秒。</p></li>
+<li><p>Airframe weight (fuselage + arm + landing gear): 282 g</p></li>
+<li><p>Protection airframe: weight: 4×32 g</p></li>
+<li><p>Diagonal size: 450 mm</p></li>
+<li><p>Take-off weight: within the range 800–1600 g</p></li>
+<li><p>Recommended propeller: 8–10inches</p></li>
 </ul>
-</div>
-<div class="section" id="futaba-t14sg">
-<h3><span class="section-number">3.1.2. </span>Futaba T14SG 遥控器配置方法<a class="headerlink" href="#futaba-t14sg" title="Permalink to this headline">¶</a></h3>
-<p>Futaba 接收机与 Pixhawk 自驾仪的连接方式与乐迪接收机有一些区别，具体连接方式如下图所示。下面介绍 Futaba T14SG 遥控器的配置方法。</p>
-<div class="figure align-center" id="id9">
-<img alt="../_images/2-21.jpg" src="../_images/2-21.jpg" />
-<p class="caption"><span class="caption-text">图 2.21 Pixhawk 自驾仪与 Futaba 接收机连线图</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
-<p>需要用到Futaba T14SG的六个通道有：J1 摇杆(CH1滚转通道）、J2 摇杆(CH2 俯仰通道）、J3 摇杆(CH3 油门通道）、J4 摇杆(CH4 偏航通道）、SE 三段开关(左上侧三段开关，CH5  模式通道）和 SG 三段开关(右上侧三段开关，CH6 模式通道）。</p>
-<div class="figure align-center" id="id10">
-<img alt="../_images/2-22.jpg" src="../_images/2-22.jpg" />
-<p class="caption"><span class="caption-text">图 2.22 Futaba T14SG 遥控器</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
-<p>Futaba T14SG 遥控器的基本设置如下：</p>
-<p>（1）双击遥控器的“链接”(LINK）按钮，进入“LINKAGE MENU”链接设置界面。选择进入“MODEL TYPE”(机型选择）页面，选择 “TYPE”为“MULTIROTOR”；</p>
-<p>（2）回到链接设置界面，选择“FUNCTION”(功能）选项，确认通道映射，即遥控器的第一到第四通道，依次对应 J1∼J4 摇杆；</p>
-<p>（3）回到链接设置界面，选择“REVERSE”(舵机相位）选项，确认通道的反向情况，只有第三通道(油门）为反向的；</p>
-<p>（4）回到链接设置界面，选择“FUNCTION”(功能）选项，翻到第二页配置页，将“5 MODE”通道的“CTRL”选项设置为“SE”摇杆(遥控器左上侧摇杆）；</p>
-<p>（5）同上一步操作，将 “6 AUX1”通道设置为“SG”摇杆(遥控器右上侧摇杆）。</p>
-<p>经过上述设置之后，和乐迪 AT9S 一样，还需要在通道数值显示界面，确定各个摇杆对应的 PWM 值输出与本书定义相符。</p>
-<div class="figure align-center" id="id11">
-<img alt="../_images/2-23.jpg" src="../_images/2-23.jpg" />
-<p class="caption"><span class="caption-text">图 2.23 Futaba T14SG 遥控器</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="pixhawk">
-<h2><span class="section-number">3.2. </span>Pixhawk 自驾仪系统配置<a class="headerlink" href="#pixhawk" title="Permalink to this headline">¶</a></h2>
-<p>为了使 Pixhawk 自驾仪的配置满足本实验需求，需要进行一些基本的固件烧录与模式配置操作，确保自驾仪功能正常且配置正确。方法如下：</p>
-<p>（1）打开 QGC 地面站软件。</p>
-<p>（2）如下图(a), 单击工具栏齿轮图标进入设置页面，再单击“Firmware”标签进入固件烧录页面。</p>
-<p>（3）用 USB 数据线连接 Pixhawk 自驾仪与计算机，此时软件会自动识别 Pixhawk 硬件，如下图(b) 所示，在界面右侧弹出固件配置窗口，勾选“PX4 Flight Stack”，然后单击“OK”按钮，QGC 开始自动下载并安装PX4官方固件到Pixhawk 自驾仪硬件中。</p>
-<div class="figure align-center" id="id12">
-<img alt="../_images/2-24.jpg" src="../_images/2-24.jpg" />
-<p class="caption"><span class="caption-text">图 2.24 通过 QGC 地面站配置 Pixhawk 自驾仪</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
-<p>（4）完成固件烧录后，自驾仪会自动重启并连接到 QGC 上；此时，进入“Airframe”标签页，选择机架类型为“HIL Quadcopter X”，然后单击右上角的“Apply and Restart”按钮，此时自驾仪会自动重启。</p>
-<div class="figure align-center" id="id13">
-<img alt="../_images/2-25.jpg" src="../_images/2-25.jpg" />
-<p class="caption"><span class="caption-text">图 2.25 选择机架类型为“HIL Quadcopter X”</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
-<p>（5）重启后 QGC 地面站会自动寻找串口并连接到Pixhawk 自驾仪，此时查看各个配置页，确保 Pixhawk 自驾仪进入硬件在环仿真模式。</p>
-</div>
-<div class="section" id="id1">
-<h2><span class="section-number">3.3. </span>机架和动力系统配置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本实验提供的软件在环和硬件在环仿真模型是一个轴距(对侧电机轴心距离）为 450mm 的小型四旋翼，重量为 1.4kg。为了顺利进行后续的飞行实验，需要确保多旋翼飞行器的配置与提供模型尽量接近。本书实验选择目前最受欢迎的 F450 多旋翼飞行器配置，读者可以自行购买零件组装，或者直接购买整机。F450具体组成如下：</p>
-<p>（1）机架：DJI 风火轮 F450 机架。</p>
+<p>(2). <strong>Propulsion system</strong> : DJI E310 propulsion suite (four motors, four ESCs, and four propellers)</p>
 <ul class="simple">
-<li><p>机架重量(机身 + 机臂+ 起落架）：282g;</p></li>
-<li><p>保护架重量：4×32g;</p></li>
-<li><p>轴距：450 mm ;</p></li>
-<li><p>起飞重量：800∼1600g;</p></li>
-<li><p>推荐螺旋桨：8∼10 英寸。</p></li>
+<li><p>Motor size: 23×12 mm, KV value: 960 RPM/V, weight: 60 g</p></li>
+<li><p>Propeller size: 24×12.7 cm (9.4×5.0in), weight: 13 g</p></li>
+<li><p>ESC size: 74×32×10 mm, maximum continuous current: 20 A, weight: 43 g</p></li>
 </ul>
-<p>（2）动力系统：DJI E310 动力套装(电机、电调、螺旋桨套装）。</p>
+<p>(3). <strong>Battery</strong> : GENS ACE LiPo battery</p>
 <ul class="simple">
-<li><p>电机尺寸：23×12mm，KV 值：960RPM/V ，重量：60g;</p></li>
-<li><p>螺旋桨尺寸：24×12.7cm(9.4x5.0 英寸），重量：13g;</p></li>
-<li><p>电调尺寸：74×32×10mm，最大持续电流：20A，重量：43g。</p></li>
+<li><p>Capacity: 4000 mAh</p></li>
+<li><p>Voltage: 3S (11.1 V)</p></li>
+<li><p>Discharge rate: 25C</p></li>
+<li><p>Weight: 300 g</p></li>
 </ul>
-<p>（3）电池：格氏 LiPo 电池。</p>
-<ul class="simple">
-<li><p>容量：4000mAh;</p></li>
-<li><p>电压：3S(11.1V);</p></li>
-<li><p>放电倍率：25C;</p></li>
-<li><p>重量：300g。</p></li>
-</ul>
-<p>（4）自驾仪：Pixhawk 自驾仪套装。</p>
-<ul class="simple">
-<li><p>Pixhawk 1 自驾仪(2M 闪存版），编译命令为px4fmu-v3_default:尺寸：81×47×16mm，重量：36g;</p></li>
-<li><p>GPS 模块：型号：UBlox NEO-M8N GPS，模块重量：14g，重量：24g;</p></li>
-<li><p>其他配件：电源模块、蜂鸣器、安全开关、连接线和减震器共 60g。</p></li>
-</ul>
-<div class="figure align-center" id="id14">
-<img alt="../_images/2-26.jpg" src="../_images/2-26.jpg" />
-<p class="caption"><span class="caption-text">图 2.26 F450 零件图与组装后的示意图</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p>(4). <strong>Autopilot</strong> : Pixhawk 1 (2MB flash version)</p>
+<ul>
+<li><p>Compiling command: px4fmu-v3_default, size: 81×47×16 mm, weight: 36 g</p></li>
+<li><p>GPS module: UBlox NEO-M8N GPS, module weight: 14 g, weight: 24 g</p></li>
+<li><p>Other accessories: power module, buzzer, safety switch, connector, and antivibration damper weighing a total of 60 g</p>
+<blockquote>
+<div><div class="figure align-center" id="id13">
+<img alt="../_images/Quan-ch2-Fig2.26.jpg" src="../_images/Quan-ch2-Fig2.26.jpg" />
+<p class="caption"><span class="caption-text">Fig. 2.26 F450 airframe and its components</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
-<p>完成组装后，可以按照 <a class="reference external" href="https://docs.px4.io/master/en/index.html">PX4 官方网站的教程</a> 进行初步的飞行测试，确保各项功能正常。</p>
+</div></blockquote>
+</li>
+</ul>
+<p>After completing the assembly of the aerial vehicle, readers can follow the PX4
+official website tutorial19 to conduct preliminary flight tests to ensure that all
+functions are normal.</p>
+<p>If you have any question, please go to <a class="reference external" href="https://flyeval.com/course">https://flyeval.com/course</a> for your information.</p>
 </div>
 </div>
 
@@ -416,7 +471,7 @@ set.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../3_Using/Introduction.html" class="btn btn-neutral float-right" title="1. 实验平台总体介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../3_Using/Introduction.html" class="btn btn-neutral float-right" title="1. Brief Introduction to Experimental Platforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="SoftwareInstallation.html" class="btn btn-neutral float-left" title="2. Software Package Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

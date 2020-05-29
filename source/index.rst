@@ -34,16 +34,55 @@ Welcome to RflySimDoc's documentation!
 
 .. toctree::
    :numbered:
-   :maxdepth: 3
-   :caption: 实验平台使用
+   :maxdepth: 1
+   :caption: Experimental Platform Usage:
 
-   实验平台总体介绍 <3_Using/Introduction>
-   控制器设计与仿真平台 <3_Using/ControllerDesignAndSimulationPlatform>
-   PSP工具箱 <3_Using/PSPToolbox>
-   Pixhawk硬件系统 <3_Using/PixhawkHardwareSystem>
-   硬件在环仿真器 <3_Using/HILSimulator>
+   Brief Introduction to Experimental Platforms <3_Using/Introduction>
+   Simulink-Based Controller Design and Simulation Platform <3_Using/ControllerDesignAndSimulationPlatform>
+   PSP Toolbox <3_Using/PSPToolbox>
+   Pixhawk Hardware System <3_Using/PixhawkHardwareSystem>
+   HIL Simulation Platform <3_Using/HILSimulator>
    Examples <3_Using/Examples>
-   高级功能 <3_Using/Pro>
+
+.. note:: RflySim平台只开放了一些基本功能，本平台还支持一些 **高级功能（目前不免费公开）**，如多机仿真、UE4 高逼真场景和其他机型仿真（固定翼、小车等）等。若想获取高级功能可以联系 Email: buaarfly@163.com。
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :caption: 高级: 
+
+   仿真平台 <4_Pro/SimulationPlatform>
+   CopterSim <4_Pro/CopterSim>
+   场景 <4_Pro/Scene>
+   集群 <4_Pro/Cluster>
+   基于视觉的控制接口  <4_Pro/VisualInterface>
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :caption: 课程:
+
+   教材 <5_Course/Book>
+   课程内容 <5_Course/Content>
+   线上线下课程（中文版）<5_Course/Course>
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :caption: 示例: 
+
+   ADRC <6_Case/ADRC>
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :caption: 下载和支持: 
+
+   下载和支持 <7_DownloadAndSupport/DownloadAndSupport>
 
 
 .. Indices and tables

@@ -1,53 +1,107 @@
-============================
-实验平台总体介绍
-============================
+===============================================
+Brief Introduction to Experimental Platforms
+===============================================
 
-实验平台组成
+Platform Composition
 ------------------------
 
-依托Rflysim平台，本实验平台是一个基于 MATLAB/Simulink 和Pixhawk 的多旋翼飞行器控制算法快速开发平台。它主要由以下五大部分组成：基于 Simulink 的控制器设计与仿真平台、硬件在环仿真平台、`Pixhawk 自驾仪系统 <https://docs.px4.io/master/en/flight_controller/pixhawk_series.html>`_ 、多旋翼硬件系统和实验指导包。
+The experimental platform is a rapid development platform for multicopter control
+algorithm design based on MATLAB/Simulink and Pixhawk. It is mainly composed
+of the following five parts: the Simulink-based Controller Design and Simulation
+Platform, the HIL Simulation Platform, the `Pixhawk Autopilot System <https://docs.px4.io/master/en/flight_controller/pixhawk_series.html>`_ ,
+the Multicopter Hardware System, and the Instructional Package.
 
-（1）基于 Simulink 的控制器设计与仿真平台
+(1). Simulink-based Controller Design and Simulation Platform
 
-本平台包含了一个高逼真的多旋翼模型可以用来仿真多旋翼飞行器的各种动态特性，并用 FlightGear 图形化展示多旋翼飞行器实时飞行的轨迹与姿态等状态信息。在基于 Simulink 的平台上，读者可以方便地设计多旋翼飞行器的控制算法，然后进行软件在环仿真验证。进一步，可以通过 Pixhawk Support Package (PSP) 工具箱将控制算法生成 C/C++ 代码，然后将其编译并下载到真实的 Pixhawk 自驾仪中。
+As shown in Fig. 3.1, this platform has a high-fidelity nonlinear model for simulating 
+various multicopter dynamics. Furthermore, there is an interface for communicating 
+with the FlightGear simulator to provide a real-time 3D display for
+the flight status (e.g., trajectory and attitude) of the simulated multicopter. 
+Multicopter control algorithms can be conveniently designed on this Simulink-based
+simulation platform and then verified with SIL simulations. Furthermore, the
+Pixhawk Support Package (PSP) toolbox can be used to generate C/C++ code
+of the control algorithms, which is then compiled and uploaded to a Pixhawk
+autopilot.
 
-.. figure:: /images/3-1.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.1.jpg
+        :align: center
 
-    图 3.1 基于 Simulink 的控制器设计与仿真平台示意图
+        Fig. 3.1 Simulink-based controller design and simulation platform
 
-（2）硬件在环仿真平台
+(2). HIL Simulation Platform
 
-硬件在环仿真平台包括实时运动仿真软件——CopterSim （见下图 (a))和三维可视化视景软件——3DDisplay（见下图 (b))。CopterSim 的仿真模型是直接从 Simulink 仿真平台中导入的。CopterSim 和 3DDisplay 两个软件都需要运行在 Windows 平台（Win7 以上，64 位系统)的计算机上，然后通过 USB 数据线与 Pixhawk 自驾仪相连构成闭环控制系统，进行硬件在环仿真。
+The HIL simulation platform includes a real-time motion simulation 
+software—CopterSim (see Fig. 3.2a) and a 3D visual display software—3DDisplay (see
+Fig. 3.2b). The simulation model of CopterSim is obtained by importing 
+parameters from the Simulink-based simulation platform mentioned earlier. Both
+CopterSim and 3DDisplay must run on a computer with Windows OS (Win7
+or higher, x64). They are connected with the Pixhawk autopilot through a USB
+cable, thereby establishing a closed-loop control system for HIL simulations.
 
-.. figure:: /images/3-2.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.2.jpg
+        :align: center
 
-    图 3.2 硬件在环仿真平台
+        Fig. 3.2 HIL simulation platform
 
-（3）Pixhawk 自驾仪系统
+(3). Pixhawk Autopilot System
 
-Pixhawk 自驾仪系统包括 Pixhawk 自驾仪、遥控器、接收机和地面站。其中，本书推荐使用的 Pixhawk 自驾仪实际上由 `Pixhawk 1 <https://docs.px4.io/master/en/flight_controller/pixhawk.html>`_ 自驾仪硬件和 PX4 自驾仪软件组成。PX4 自驾仪软件内置的实时操作系统用来实现多线程分配、底层驱动和算法执行等功能。Pixhawk 自驾仪可以通过接收机与遥控器建立无线连接，从而接收地面操控者通过遥控器发出的操纵指令。此外，Pixhawk 自驾仪也可以通过数传模块与地面站相连，进行飞行数据和任务指令的实时通信。
+Figure 3.3 illustrates the entire Pixhawk autopilot system that includes a
+Pixhawk autopilot, an RC transmitter, an RC receiver, and a Ground Control
+Station (GCS). The Pixhawk autopilot used in this book is composed of 
+Pixhawk 1 (2MB flash version) [#f2]_ autopilot hardware and PX4 autopilot software.
+The PX4 autopilot software [#f3]_ has a built-in Real-Time Operating System (RTOS)
+to ensure basic functions, such as multi-thread scheduling, low-level drivers, and
+algorithm execution. The Pixhawk autopilot uses an RC receiver to wirelessly
+connect with the corresponding RC transmitter for receiving the control commands 
+from the remote pilot on the ground. Further, the Pixhawk autopilot can
+also wirelessly connect with GCS through a pair of radio telemetry to exchange
+flight data and mission commands.
 
-.. figure:: /images/3-3.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.3.jpg
+        :align: center
 
-    图 3.3 Pixhawk 自驾仪系统
+        Fig. 3.3 Pixhawk autopilot system
 
-（4）多旋翼硬件系统
+(4). Multicopter Hardware System
 
-多旋翼硬件系统通常包括机架系统、动力系统、外部传感器和测试台架等。多旋翼硬件系统装上 Pixhawk 自驾仪组成了一个完整的多旋翼飞行平台，可以完成特定的飞行任务。根据实际的飞行性能需求，多旋翼机架系统可以设计成不同的布局，例如四旋翼、六旋翼、共轴八旋翼等。本例程以一个小型的四旋翼为例子，研究其硬件系统（如机架设计和动力系统选型等)的设计方法。然后，在得到的多旋翼硬件系统上完成自驾仪控制算法的开发。
+As shown in Fig. 3.4, a multicopter hardware system is usually composed of
+an airframe system, a propulsion system, external sensors, a test stand, etc.
+Combining the Pixhawk autopilot and a multicopter hardware system requires
+an integrated multicopter flight platform that can be used to perform specific
+flight tasks. According to the actual flight performance requirements, the 
+multicopter airframe system can be designed with different configurations, such as
+quadcopters, hexacopters, and coaxial octocopters. In this book, a small quadcopter 
+is chosen as an example to study its hardware system design, such as
+airframe design, propulsion system selection. Then, the control algorithms are
+designed for the resulting multicopter hardware system.
 
-.. figure:: /images/3-4.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.4.jpg
+        :align: center
 
-    图 3.4 多旋翼硬件系统
+        Fig. 3.4 Multicopter hardware system
 
-（5）实验指导包
+(5). Instructional Package
 
-包括视频教程、课件和例程源码等，主题紧扣《全权著. 多旋翼飞行器设计与控制[M]. 杜光勋, 赵峙尧, 戴训华, 等译. 北京: 电子工业出版社, 2017》 与 `网上在线课程MOOC <https://www.icourse163.org/course/BUAA-1205700805>`_ 。
+This book encompasses video tutorials, PowerPoint files, and source code examples. 
+The topic is closely related to our previous book [#f8]_.
 
-实验平台优势
+Platform Advantage
 ----------------------
 
-本实验平台在MATLAB/Simulink 中提供了多旋翼控制器设计的相关接口，读者(初学者、学生或者工程师)可以利用自己所学知识快速进行控制器的设计与验证。在控制器设计完成后，本平台提供代码生成与下载功能，可以将设计的 Simulink 控制算法生成 C/C++ 代码，然后将其编译进入 PX4 自驾仪固件中，并自动下载到 Pixhawk 自驾仪中。本平台还提供硬件在环仿真测试功能，读者可以在真实 Pixhawk 自驾仪系统上对飞行效果进行初步模拟测试，排除实飞实验可能存在的各种问题。测试通过之后，将 Pixhawk 自驾仪装在一个多旋翼硬件系统上，就可以进行室内和室外的飞行实验，通过实验验证来评估设计控制算法的性能。
+This experimental platform provides interfaces for multicopter controller design in
+MATLAB/Simulink. Readers (beginners, students, or engineers) can develop a rapid
+design and verify the control algorithms by SIL simulation. After the control 
+algorithms are well designed and verified, the platform also provides a code generation
+function to generate Simulink controllers to C/C++ code. Then, the code can be 
+compiled into the autopilot software firmware file; finally, it is automatically uploaded
+to the Pixhawk hardware. The platform also provides a HIL simulation platform
+for preliminary simulation tests on a Pixhawk autopilot system that may help in
+eliminating potential problems that may exist in flight tests. After all the tests are
+completed, indoor and outdoor flight tests can be carried out by assembling the Pixhawk 
+autopilot onto a real multicopter hardware system. The performance of the
+designed controllers can be evaluated through experimental tests.
+
+.. rubric:: References
+.. [#f2] corresponding to the circuit diagram version Pixhawk 2.4.6; for more details, please visit this website: https://docs.px4.io/master/en/flight_controller/pixhawk.html.
+.. [#f3] In addition to supporting the PX4 autopilot software used in this book, the Pixhawk series autopilots also support Ardupilot open-source autopilot software; see: http://ardupilot.org/dev/index.html.
+.. [#f8] © Publishing House of Electronics Industry 2020 Q. Quan et al., Multicopter Design and Control Practice, https://doi.org/10.1007/978-981-15-3138-5_3

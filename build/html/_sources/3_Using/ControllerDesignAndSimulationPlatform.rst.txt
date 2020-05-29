@@ -1,109 +1,192 @@
-===============================
-控制器设计与仿真平台
-===============================
+============================================================
+Simulink-Based Controller Design and Simulation Platform
+============================================================
 
-为了提高多旋翼飞行器的控制器设计效率，本书提供了一套基于 Simulink/FlightGear的较为完整逼真的仿真环境，环境展示例程文件如下图所示，源代码主文件见“ `e0\1. SoftwareSimExps\CopterSim3DEnvironment.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/1.SoftwareSimExps/CopterSim3DEnvironment.slx>`_ ”。
+To improve the design efficiency of multicopter controllers, as shown in Fig. 3.5, this
+book provides a high-fidelity simulation environment based on Simulink/FlightGear.
+The main source code file is presented in “e0\1.SoftwareSimExps
+\CopterSim3DEnvironment.slx”.
 
-.. figure:: /images/3-5.jpg
-    :align: center
-
-    图 3.5 环境展示例程文件示意图
-
-下面介绍正确地打开本书给定的.slx 例程文件的步骤：
-
- | （1）通过 Windows 桌面快捷方式或者开始菜单，打开 MATLAB 主程序；
- | （2）单击 MATLAB 主界面的“浏览文件夹”按钮，将当前路径定位到想要打开的.slx 文件所在目录；
-
-
-    .. figure:: /images/3-6.jpg
+    .. figure:: /images/Quan-ch3-Fig3.5.jpg
         :align: center
 
-        图 3.6 正确打开.slx 例程文件的方法
+        Fig. 3.5 Files in “SoftwareSimExps” folder
 
- | （3）在上图左下侧的“当前文件夹”窗口中，双击需要打开的.slx 文件即可。
+The following steps describe the correct way to open Simulink files (those with
+the file suffix “.slx”).
 
-按上述步骤打开 “CopterSim3DEnvironment.slx”  文件后， 可以看到Simulink 软件在环仿真系统例子。
+(1). Open MATLAB via the Windows desktop shortcut or the Windows start menu.
+(2). As shown in Fig. 3.6, click the “Browse Folder” button in the MATLAB User
+Interface (UI) to set the current directory to the folder of the “.slx” file to be
+opened.
 
-.. figure:: /images/3-7.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.6.jpg
+        :align: center
 
-    图 3.7 Simulink 软件在环仿真系统例子
+        Fig. 3.6 Method to correctly open a Simulink slx file
 
-该仿真系统包含三个子系统模块：“控制器”子系统、“多旋翼模型”子系统和“FlightGear 接口”子系统，其中的一些关键特性总结如下：
+(3). Double-click the “.slx” file in the “Current Folder” window (the lower-left side
+in Fig. 3.6) to open it.
 
- | （1）“控制器”子系统模块在输入/输出与反馈信号的形式上是与真实的自驾仪硬件保持一致的。例如，本例的输入是模拟来自遥控器的俯仰角、滚转角、偏航角和高度控制指令；输出是给多旋翼模型的电机 PWM 信号。
- | （2）控制器子系统本身使用传感器估计状态(姿态、角速度、位置、速度等状态信息）来实现多旋翼的稳定姿态控制。
- | （3）"多旋翼模型"子系统与真实的多旋翼的输入/输出接口保持一致，输入是由 Pixhawk 自驾仪定义的 八 个电机(多旋翼模型会根据选定机型选择实际使用的电机数目）的 PWM 控制信号(数据范围是 1000∼2000 微秒，对应了 0∼1 的油门指令），输出是各种传感器的数据。
- | （4）"FlightGear 接口"子系统，可以将飞行信息传输到 FlightGear 中，逼真地展现多旋翼飞行器当前的飞行轨迹与姿态信息。
+All “.slx” files should be opened in this way to ensure that the working directory is
+correct and that the initialization scripts are successfully loaded.
 
-控制器
+    .. figure:: /images/Quan-ch3-Fig3.7.jpg
+        :align: center
+
+        Fig. 3.7 Simulink SIL simulation example
+
+Open the “CopterSim3DEnvironment.slx” file according to the above procedure;
+then, a SIL simulation example will appear as shown in Fig. 3.7. The SIL simulation
+example contains three subsystems: the “Controller” subsystem, the “Multicopter
+Model” subsystem, and the “FlightGear Interface” subsystem. Their key features are
+summarized below.
+
+(1). The input, output, and feedback signals of the “Controller” subsystem are 
+consistent with the available signals in a real autopilot system. For example, the
+input signals of the controller in Fig. 3.7 are the control commands for pitch,
+roll, yaw, and altitude control from a simulated RC transmitter, and the output
+signals are the motor PWM signals for a multicopter model.
+
+(2). The controller uses the sensor estimated states (e.g., attitude, angular velocity,
+position, velocity, and other state information) to achieve stable attitude control.
+
+(3). The input and output signals of the “MulticopterModel” subsystem are consistent
+with those of a real multicopter. For example, the input signals of the “Multicopter
+Model” subsystem are the PWM control signals of eight motors (the multicopter
+model will choose the actual number of motors according to the selected model)
+defined by the Pixhawk autopilot (the data range is 1000–2000 corresponding
+to a throttle command of 0–1), and the output signals are the data from various
+sensors.
+
+(4). “FlightGear Interface” subsystem provides a communication interface to send the
+flight data to FlightGear, where the real-time vehicle attitude and flight trajectory
+can be observed in a realistic 3D scene.
+
+
+Controller
 ---------------------------
 
-"控制器"子系统的内部结构如下图。本例程展示的是一个简单的俯仰和滚转姿态的控制器。它会接收遥控器的控制输入，将多旋翼飞行器控制到指定的俯仰和滚转角度。
+Double-click the “Controller” subsystem in Fig. 3.7 yields the internal structure of the
+controller, as presented in Fig. 3.8. This example shows a simple attitude controller
+for pitch and roll angles. The controller receives the control signals from the RC
+transmitter and controls the multicopter to achieve the desired pitch and roll angles.
 
-.. figure:: /images/3-8.jpg
-    :align: center
+As shown in Fig. 3.8, the 1st–5th input ports are five input channels from the RC
+transmitter (“ch1”–“ch5”); the 6th–8th input ports are the angular velocity (“p”, “q”,
+“r”) from the gyroscope sensor; the 9th–10th input ports are the roll angle and pitch
+angles (“phi”, “theta”) estimated from the inertial sensor. As shown in Fig. 3.8, the
+computing process of the entire “Controller” subsystem is roughly divided into five
+steps.
 
-    图 3.8 控制器内部结构
+    .. figure:: /images/Quan-ch3-Fig3.8.jpg
+        :align: center
 
-第 1∼5 号输入接口对应了遥控器的五个通道的输入("ch1"∼"ch5"）；第 6∼8 号输入接口对应了来自陀螺仪传感器的滚转、俯仰和偏航方向的角速度("p"、"q"和“r")；第 9∼10 号接口对应了滚转角和俯仰角(“phi"和“theta")。四旋翼飞行器的整个控制器模块的计算过程大体分为五个步骤：
+        Fig. 3.8 Internal structure of “Controller” subsystem
 
- | （1）输入接口模块：接收遥控器信号和飞机状态观测信号；
+(1). The “Input Interfaces” module receives the RC transmitter signals and the 
+multicopter state estimation signals. [#f1]_
 
-    .. note:: 在实际自驾仪系统中，这些信号一般未自状态估计相关模块（例如，传感器原始数据、卡尔曼滤波器、互补滤波器等）；在控制器设计的软件在环仿真阶段，为了简便起见，可以先用多旋翼模型输出状态的真值替代。
+(2). The “RC Signal Process” module maps the five-channel signals of the RC 
+transmitter to the desired roll and pitch angle values.
 
- | （2）遥控信号处理模块：将遥控器的五个通道信号映射为期望的滚转和俯仰角度；
- | （3）姿态控制器模块：计算期望输出力和力矩大小来控制多旋翼飞行器姿态到期望角度；
- | （4）电机控制输出分配：模块将力和力矩的控制量映射为四个电机的油门控制量(一般是 1000 ~2000 之间)；
- | （5）输出接口模块：将剩余的四维控制量补齐并映射出 PWM 调制信号(一般是 1000∼2000 微秒)，构成八维(Pixhawk 自驾仪硬件上有八个 PWM 的输出口)的 PWM控制信号作为输出信号。
+(3). The “Attitude Controller” module computes the desired force and torque values
+to control the multicopter to the desired attitude.
 
-    .. note:: 这里 1000∼2000  对应的是高电平的持续时间（单位为微秒），而遥控器单个 PWM 信号的周期一般为 20 毫秒（50Hz），所以用万用表测量的 PWM 信号占空比范围通常是 0.05∼0.1 而不是 0∼1
+(4). The “Motor Control Signal Computation” module maps the force and torque
+values to the control signals (ranging from 1000 to 2000) for the four motors.
 
-多旋翼模型
+(5). The “Output Interfaces” module fills the remaining 4-dimensional control signals
+and generates an 8-dimensional PWM signal (there are eight PWM output ports
+on Pixhawk) ranging from 1000 to 2000µs. [#f2]_
+
+
+Multicopter Model
 -------------------------------
 
- “多旋翼模型"子系统的内部结构如下。该模块模拟真实的多旋翼系统，以电机的 PWM 控制量为输入，以多旋翼的状态和传感器信息为输出。
+Double-click the “Multicopter Model” subsystem in Fig. 3.7, and the internal 
+structure of the multicopter model is presented in Fig. 3.9. The multicopter model 
+simulates a real multicopter system to output the flight state and sensor signals 
+based on the motor PWM controls from the control system.
 
-.. figure:: /images/3-9.jpg
-    :align: center
+    .. figure:: /images/Quan-ch3-Fig3.9.jpg
+        :align: center
 
-    图 3.9 多旋翼模型子系统内部结构
+        Fig. 3.9 Internal structure of “Multicopter Model” subsystem
 
-整个“多旋翼模型"子系统又包含如下七个主要模块：
+As shown in Fig. 3.9, the “Multicopter Model” subsystem contains the following
+seven main modules.
 
- | （1）电机模块：模拟电机动态；
- | （2）力和力矩模块：模拟螺旋桨拉力、机身气动力、自身重力以及地面支撑力等所有的外部力和力矩；
- | （3）刚体运动动态模块：计算多旋翼的速度、位置、姿态等运动学状态；
- | （4）环境模块：计算环境数据，例如重力加速度、空气密度、风干扰和地磁场等；
- | （5）故障模块：主要用于注入模型不确定(质量和转动惯量有关的)和故障数据；
- | （6）电池模块：模拟电池的放电过程；
- | （7）输出接口模块：将数据打包成需要的格式。
+(1). “Motor Model” module: it simulates the motor dynamics.
 
-控制器和多旋翼模型的参数都存储在一个初始化脚本“ `e0/1.SoftwareSimExps/Init_control.m <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/1.SoftwareSimExps/Init_control.m>`_ "中。这个脚本在开始 Simulink 仿真时会自动执行以将所有参数导入工作空间，保证仿真正常运行。读者可以在“CopterSim3DEnvironment.slx"项目中，依次单击 Simulink 菜单栏的“File"-“Model Properties"-“Callbacks"- “InitFcn"选项。
+(2). “Force and Moment Model” module: it simulates all external forces and moments
+acting on the body, such as the propeller thrust, fuselage aerodynamics, gravity,
+and ground supporting force.
 
-.. figure:: /images/3-10.jpg
-    :align: center
+(3). “Rigid Body Kinematics Model” module: it calculates the vehicle kinematics of
+the multicopter, such as speed, position, and attitude.
 
-    图 3.10 调用“Init control.m"脚本表 3.1   
+(4). “Environmental Model” module: it calculates the environmental data, such as
+gravitational acceleration, air density, wind disturbances, and geomagnetic field.
 
-多旋翼模型需要用到的所有参数都存储在文件“ `e0\1.SoftwareSimExps\icon\Init.m <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/1.SoftwareSimExps/icon/Init.m>`_ "中。这个文件在执行 “Init_control.m” 脚本的时候会被自动调用，并将模型参数(自动运行 “icon/Init.m"脚本)自动导入工作空间，保证仿真正常运行。
+(5). “Fault Model” module: it is mainly used to inject model uncertainties (related
+to mass and moment of inertia) as well as faults.
 
-FlightGear 接口
+(6). “Battery Model” module: it simulates the discharge process of the battery.
+
+(7). “Output Interface Model” module: it packs the output signals in the desired
+format.
+
+The controller parameters are stored in an initialization script “e0\1.Software
+SimExps\Init_control.m”. This script will be automatically called to import all
+parameters into the Simulink workspace when the simulation starts. Figure 3.10
+depicts how to proceed to autorun the initialization script. Readers can open the
+UI in Fig. 3.10 by clicking “File”—“Model Properties”—“Callbacks”—“InitFcn” in
+the Simulink menu within the “CopterSim3DEnvironment.slx” project. The source
+code of the “Init_control.m” initialization script is listed in Table 3.1.
+
+    .. figure:: /images/Quan-ch3-Fig3.10.jpg
+        :align: center
+
+        Fig. 3.10 Initialization interface for the “Init_control.m” script   
+
+All the parameters required by the “Multicopter Model” are stored in the script
+“e0\1.SoftwareSimExps\icon\Init.m”. This script will be automatically called when
+the second line (see Table 3.1) of the “Init_control.m” script is executed. The key
+model parameters are listed in Tables 3.2, 3.3, 3.4, 3.5, and 3.6. By modifying the
+above model parameters, multicopters with different sizes and configurations (see
+Table 3.5) can be obtained, and flight simulations under different environments (see
+Table 3.6) can be performed.
+
+
+FlightGear Interface
 ------------------------------
 
-FlightGear 接口模块有三个输入分别对应：多旋翼位置，多旋翼姿态欧拉角和电机的 PWM 信号。该模块会自动向本地的 FlightGear 相关接口发送多旋翼飞行器的飞行数据，打开 FlightGear 之后就能在三维场景中看到多旋翼飞行器的飞行状态。运行步骤如下：
+As shown in Fig. 3.7, the “FlightGear Interface” subsystem has three input ports 
+representing the multicopter position, Euler angles, and motor PWM signals, 
+respectively. This subsystem sends multicopter flight state information to FlightGear to
+observe the flight attitude and trajectory of the multicopter in a 3D scene. The steps
+to follow are described next.
 
- | （1）双击桌面上的 FlightGear-F450 快捷方式，打开 FlightGear 视景窗口；
- | （2）单击 Simulink 工具栏的“运行”按钮即可运行CopterSim3DEnvironment.slx 仿真程序；
+(1). Double-click the FlightGear-F450 shortcut on the desktop to open FlightGear;
 
-    .. figure:: /images/3-11.jpg
+(2). Click the “Run” button on the Simulink toolbar (see Fig. 3.11) to run the 
+“CopterSim3DEnvironment.slx” file;
+
+    .. figure:: /images/Quan-ch3-Fig3.11.jpg
         :align: center
 
-        图 3.11 不同版本 MATLAB 的“运行”按钮
+        Fig. 3.11 Simulink “Run” button for different MATLAB versions
 
- | （3）此时可以在FlightGear 视景中，看到多旋翼飞行器从地面竖直起飞，然后 5 秒后开始以一定的俯仰角向前飞行。
+(3). Then, as shown in Fig. 3.12, the multicopter takes off vertically from the ground
+and starts flying forward at a certain pitch angle after 5 s.
 
-    .. figure:: /images/3-12.jpg
+    .. figure:: /images/Quan-ch3-Fig3.12.jpg
         :align: center
 
-        图 3.12 FlightGear 视景
+        Fig. 3.12 A quadcopter in FlightGear
+
+
+.. rubric:: Notes
+.. [#f1] In a real autopilot system, these signals should be obtained from the modules related to state estimation (e.g., raw sensor data, Kalman filter, and complementary filter). For simplicity, in the controller design during the SIL simulation the true values of the multicopter model can be used first.
+.. [#f2] A value within the range from 1000 to 2000 corresponds to a higher level duration (in microseconds) of PWM signals. Given that the period of an RC PWM signal is usually 20 ms (50 Hz), the duty ratio of the PWM signal measured by a multimeter usually ranges from 0.05 to 0.1 instead of from 0 to 1.
