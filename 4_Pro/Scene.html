@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. 场景 &mdash; RflySimDoc 1.0 documentation</title>
+  <title>2. Scenes &mdash; RflySimDoc 1.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. 集群" href="Cluster.html" />
-    <link rel="prev" title="2. CopterSim" href="CopterSim.html" /> 
+    <link rel="next" title="3. Swarm" href="Cluster.html" />
+    <link rel="prev" title="1. CopterSim" href="CopterSim.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,27 +104,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">高级:</span></p>
+<p class="caption"><span class="caption-text">Platform Advanced Functions:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="SimulationPlatform.html">1. 仿真平台</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">2. CopterSim</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 场景</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ue4">3.1. 基于 UE4 的三维视景介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 基于 UE4 开发三维场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">1. CopterSim</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Scenes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#d-scenes-based-on-ue4">2.1. 3D Scenes Based on UE4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#developing-3d-scenes-through-ue4">2.2. Developing 3D Scenes Through UE4</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Cluster.html">4. 集群</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">5. 基于视觉的控制接口</a></li>
-</ul>
-<p class="caption"><span class="caption-text">课程:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../5_Course/Book.html">1. 教材</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_Course/Content.html">2. 课程内容</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_Course/Course.html">3. 线上线下课程（中文版）</a></li>
-</ul>
-<p class="caption"><span class="caption-text">示例:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../6_Case/ADRC.html">1. ADRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cluster.html">3. Swarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">4. Vision-based Control Interface</a></li>
 </ul>
 <p class="caption"><span class="caption-text">下载和支持:</span></p>
 <ul>
@@ -174,7 +163,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>场景</li>
+      <li><span class="section-number">2. </span>Scenes</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,53 +182,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1><span class="section-number">3. </span>场景<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ue4">
-<h2><span class="section-number">3.1. </span>基于 UE4 的三维视景介绍<a class="headerlink" href="#ue4" title="Permalink to this headline">¶</a></h2>
-<p>CopterSim 提供了选择三维显示场景的功能。3DDisplay默认的场景是基于 Ogre 引擎开发的小巧三维场景，对计算机配置要求低，但是加载速度慢且不够逼真。</p>
-<div class="figure align-center" id="id3">
-<img alt="../_images/A-7.jpg" src="../_images/A-7.jpg" />
-<p class="caption"><span class="caption-text">图 3.1 选择三维场景按钮</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+  <div class="section" id="scenes">
+<h1><span class="section-number">2. </span>Scenes<a class="headerlink" href="#scenes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d-scenes-based-on-ue4">
+<h2><span class="section-number">2.1. </span>3D Scenes Based on UE4<a class="headerlink" href="#d-scenes-based-on-ue4" title="Permalink to this headline">¶</a></h2>
+<p>As shown in Fig.A.2c, CopterSim provides an ability to select different display
+scenes. The default scene is “3DDisplayprogram”, which is based on a lightweight 3D
+engine—Ogre. It has low requirements for computer configurations, but the loading
+speed is slow, and the display performance is not realistic enough. As shown in
+Fig.A.7, click the drop-down box of “3D Scene Selection” to check all other available
+3D scenes (the corresponding installation files are acquired along with the serial
+number), including “MountainTerrain” and “NeighborhoodPark”, which are more
+realistic 3D scenes based on UE4 3D engine.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/Quan-app1-FigA.7.jpg" src="../_images/Quan-app1-FigA.7.jpg" />
+<p class="caption"><span class="caption-text">Fig. A.7 3D scene selection</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>单击“三维显示场景”的下拉框可以看到所有的三维场景，其中“MountainTerrain”和“NeighborhoodPark”两个场景是基于 UE4 开发的更逼真的三维场景。在 CopterSim 中选择相应的场景后，再打开对应三维场景程序，即可实现不同三维场景的切换。</p>
-<div class="figure align-center" id="id4">
-<img alt="../_images/A-8.jpg" src="../_images/A-8.jpg" />
-<p class="caption"><span class="caption-text">图 3.2 基于 UE4 的三维仿真场景</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p>After selecting the corresponding scene,
+manually open the corresponding 3D scene software to switch between different 3D
+scenes. FigureA.8 presents the 3D UE4 simulation scenes, which have more powerful
+functions and more convenient extensibility.</p>
+<div class="figure align-center" id="id2">
+<img alt="../_images/Quan-app1-FigA.8.jpg" src="../_images/Quan-app1-FigA.8.jpg" />
+<p class="caption"><span class="caption-text">Fig. A.8 3D simulation scene based on UE4</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">3.2. </span>基于 UE4 开发三维场景<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>通过UE4 接口插件，读者可以在 UE4 中快速搭建飞行场景。具体方法如下：</p>
+<div class="section" id="developing-3d-scenes-through-ue4">
+<h2><span class="section-number">2.2. </span>Developing 3D Scenes Through UE4<a class="headerlink" href="#developing-3d-scenes-through-ue4" title="Permalink to this headline">¶</a></h2>
+<p>Through the UE4 plugin, readers can quickly build their own flight scenarios in UE4.
+The specific procedure is listed as follows.</p>
+<p>(1). Create a new UE4 scene project. As shown in Fig.A.9, readers can purchase
+or develop a 3D scene project based on UE4 (engine version should be 4.22 or
+above, compiler version should be Visual Studio 2017 or above). The detailed
+process will be not introduced here because it can be found in the <a class="reference external" href="http://api.unrealengine.com/">official tutorial</a> .</p>
+<p>(2). Get the UE4 plugin file. Unzip the “Rfly3DSimPlugin.zip” plugin file (the
+corresponding source code can be acquired along with the serial number) and copy
+it to the “Plugins” folder (create it manually if the folder does not exist) of the
+UE4 project shown in Fig.A.9.</p>
 <blockquote>
-<div><div class="line-block">
-<div class="line">（1）新建 UE4 场景。自定义 UE4 三维场景项目文件夹，读者自行购买或者开发一个基于UE4(引擎版本大于等于 4.22，编译器 Visual Studio 2017 以上)场景工程。这里不介绍详细的流程，请自行查看官方教程（<a class="reference external" href="http://api.unrealengine.com/CHN/">http://api.unrealengine.com/CHN/</a>）。</div>
+<div><div class="figure align-center" id="id3">
+<img alt="../_images/Quan-app1-FigA.9.jpg" src="../_images/Quan-app1-FigA.9.jpg" />
+<p class="caption"><span class="caption-text">Fig. A.9 Custom UE4 3D scene project folder</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
+</div></blockquote>
+<p>(3). Generate a “.exe” executable file. Click the UE4 project file ending with
+“.uproject” (see Fig.A.9) to open the UE4 editor. As shown in Fig.A.10, the plugin
+“Rfly3DSimPlugin” will be automatically loaded to the UE4 project, and the plugin
+contents can be viewed in the UI of the UE4 editor. In the UE4 editor, a “.exe”
+executable file can be obtained by simply setting the initial viewpoint, compiling
+the code, and package the whole project for the Windows environment.</p>
+<blockquote>
+<div><div class="figure align-center" id="id4">
+<img alt="../_images/Quan-app1-FigA.10.jpg" src="../_images/Quan-app1-FigA.10.jpg" />
+<p class="caption"><span class="caption-text">Fig. A.10 UE4 editor</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>(4). Export the map terrain data. Select the terrain file in UE4, exported to a “.png”
+format file, and store three key position points to a “.txt” file. Then, copy the
+resulting “.png” and “.txt” files to the “CopterSimexternalmap” directory (see
+Fig.A.11). Finally, after restarting CopterSim, readers can select the new
+developed 3D scene from the drop-down menu shown in Fig.A.7.</p>
 <blockquote>
 <div><div class="figure align-center" id="id5">
-<img alt="../_images/A-9.jpg" src="../_images/A-9.jpg" />
-<p class="caption"><span class="caption-text">图 3.3 自定义 UE4 三维场景项目文件夹</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<img alt="../_images/Quan-app1-FigA.11.jpg" src="../_images/Quan-app1-FigA.11.jpg" />
+<p class="caption"><span class="caption-text">Fig. A.11 Importing terrain mesh data into CopterSim</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-</div></blockquote>
-<div class="line-block">
-<div class="line">（2）获取接口插件。解压“Rfly3DSimPlugin.zip”插件文件(和安装包)，将其复制到 “Plugins”文件夹(如果没有该文件夹，则手动创建)中。</div>
-<div class="line">（3）生成“.exe”可执行程序。打开 UE4 编辑器，在 UE4 编辑器主界面可以查看自动加载的 “Rfly3DSimPlugin”插件内容。在 UE4 编辑器中简单地设置初始场景，编译代码后，就可以将其打包为“.exe”格式的 Windows 系统可执行程序。</div>
-</div>
-<blockquote>
-<div><div class="figure align-center" id="id6">
-<img alt="../_images/A-10.jpg" src="../_images/A-10.jpg" />
-<p class="caption"><span class="caption-text">图 3.4 UE4 编辑器</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-</div></blockquote>
-<div class="line-block">
-<div class="line">（4）导出地图地形数据。在 UE4 中选中地形文件，并导出为“.png”格式的地形文件，同时选择三个关键位置点的坐标存储到“.txt”文件中。将得到的“.png”和“.txt”文件复制到 “CopterSimexternalmap”目录下。重启 CopterSim 后，就可以在场景下拉菜单中选择三维场景。</div>
-</div>
-<blockquote>
-<div><div class="figure align-center" id="id7">
-<img alt="../_images/A-11.jpg" src="../_images/A-11.jpg" />
-<p class="caption"><span class="caption-text">图 3.5 将地形网格数据导入 CopterSim</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
-</div></blockquote>
 </div></blockquote>
 </div>
 </div>
@@ -252,10 +259,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Cluster.html" class="btn btn-neutral float-right" title="4. 集群" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Cluster.html" class="btn btn-neutral float-right" title="3. Swarm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CopterSim.html" class="btn btn-neutral float-left" title="2. CopterSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CopterSim.html" class="btn btn-neutral float-left" title="1. CopterSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
