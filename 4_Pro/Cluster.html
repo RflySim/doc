@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. 集群 &mdash; RflySimDoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. 基于视觉的控制接口" href="VisualInterface.html" />
+    <link rel="prev" title="3. 场景" href="Scene.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. Overall Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. Software Package Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. Hardware Platform Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Platform Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. Brief Introduction to Experimental Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. Simulink-Based Controller Design and Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk Hardware System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">高级:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SimulationPlatform.html">1. 仿真平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">2. CopterSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scene.html">3. 场景</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 集群</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.1. 多机集群仿真</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.2. 仿真模式设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4.3. 多计算机分布式仿真</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink">4.4. 多机集群的 Simulink 控制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">5. 基于视觉的控制接口</a></li>
+</ul>
+<p class="caption"><span class="caption-text">课程:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Book.html">1. 教材</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Content.html">2. 课程内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Course.html">3. 线上线下课程（中文版）</a></li>
+</ul>
+<p class="caption"><span class="caption-text">示例:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_Case/ADRC.html">1. ADRC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">下载和支持:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. 下载和支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>集群</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/4_Pro/Cluster.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">4. </span>集群<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">4.1. </span>多机集群仿真<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>CopterSim 还支持多机集群仿真功能。只需开启多个 CopterSim，并设置好每个飞机的 ID 值即可。在硬件在环仿真模式下，每个 CopterSim 需要连接一个 Pixhawk 自驾仪，然后分别单击“开始仿真”按钮，即可分别开始仿真。三维视景显示软件（只支持 UE4 开发的视景）会自动从局域网中接收所有的飞机数据，并集中显示在同一个场景中。因此，目前这种分布式仿真构架理论上支持任意多个飞机的硬件在环仿真。限制因素主要在以下几个方面：计算机 USB 接口数量（每个 Pixhawk 自驾仪会占用一个 USB 接口）、计算机内存大小（每个 CopterSim 会占用一定的内存空间）、计算机处理器速度（性能需要保证每个 CopterSim 都能实时运算）。</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/A-18.jpg" src="../_images/A-18.jpg" />
+<p class="caption"><span class="caption-text">图 4.1 CopterSim 多机集群仿真</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>目前，CopterSim 支持两种方式多开运行。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）手动打开方式，每次双击 CopterSim.exe 可以打开一个仿真程序(飞机 ID 会自动累加，不需要手动设置)，重复 N 次可以打开 N 个仿真程序，依次连接串口，并单击开始仿真。</div>
+<div class="line">（2）通过 bat 脚本，一次打开任意多个 CopterSim 并完成软件配置、串口选择与自动运行。用文本编辑器打开“CopterSimAutoStartScriptTemp.bat”脚本，可以看到如下内容：</div>
+</div>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="n">CopterSim</span><span class="o">.</span><span class="n">exe</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">20100</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">235</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span>
+<span class="n">start</span> <span class="n">CopterSim</span><span class="o">.</span><span class="n">exe</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">20102</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">235</span> <span class="mf">0.5</span> <span class="mi">0</span> <span class="mi">5</span>
+<span class="n">start</span> <span class="n">CopterSim</span><span class="o">.</span><span class="n">exe</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">20104</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">235.5</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">6</span>
+<span class="n">start</span> <span class="n">CopterSim</span><span class="o">.</span><span class="n">exe</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">20106</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">235.5</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p>上述代码展示了一次打开四个CopterSim 的 Windows 批处理 bat 脚本。和下图 一一对应，CopterSim.exe 后面跟的第 0 位数字表示“是否自动开始仿真”；第 1 到 9 位对应了所示 CopterSim 主界面的高级功能的每个选项值；第 10 位对应了 Pixhawk 自驾仪的 USB 串口号。</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/A-19.jpg" src="../_images/A-19.jpg" />
+<p class="caption"><span class="caption-text">图 4.2 CopterSim 多开脚本序号对应关系</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">4.2. </span>仿真模式设置<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>除了硬件在环仿真，CopterSim 还支持其他的仿真模式，来提高测试效率，主要支持的仿真模式有以下几种。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）不同自驾仪系统的软硬件在环仿真。本平台不仅可以用于PX4自驾仪的仿真，也可扩展到其他自驾仪系统（例如Ardupilot），只需在这一栏选择对应的自驾仪和仿真模式即可。</div>
+<div class="line">（2）连同 Simulink 进行软件在环仿真。由于 Simulink 中每增加一个多旋翼需要复制一份多旋翼的副本，导致多机仿真的时候运行速度非常慢，不便于实时观察仿真效果。因此，可以通过代码生成的方式，将模型生成 DLL 模型文件放在 CopterSim 中运行，然后 Simulink 通过 UDP 收端口从 CopterSim 中获取传感器数据并发送控制指令，从而形成闭环。在多机集群仿真时， UDP 收端口号需要保证不同的 CopterSim 各不相同，然后 Simulink 通过设定的端口号与 CopterSim 通信。需要注意的是，在DLL 模型文件生成例程中，还提供了生成模型和控制器的完整飞行器模型，可以实现直接发送速度指令，进行顶层决策系统的软件在环仿真。</div>
+</div>
+<blockquote>
+<div><div class="figure align-center" id="id7">
+<img alt="../_images/A-20.jpg" src="../_images/A-20.jpg" />
+<p class="caption"><span class="caption-text">图 4.3 CopterSim 仿真模式的设置</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">（3）连接 PX4 自驾仪进行软件在环仿真。PX4 自驾仪的SITL模式还支持编译成可以在计算机中虚拟运行的模式，在一台计算机中运行 N 个 PX4 自驾仪软件，同时打开 N 个 CopterSim，设置好两两之间的端口连接，即可在同一台计算机上进行多机集群的软件在环仿真。</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">4.3. </span>多计算机分布式仿真<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>单台计算机的计算能力与内存空间等都是有限的，无法支持任意多机的集群仿真。因此，CopterSim 还提供了多台计算机实现局域网分布式仿真的功能。</p>
+<div class="figure align-center" id="id8">
+<img alt="../_images/A-21.jpg" src="../_images/A-21.jpg" />
+<p class="caption"><span class="caption-text">图 4.4 CopterSim 局域网分布式仿真构架</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>勾选 CopterSim 主界面的“联机”按钮，即可开启局域网广播功能，每个 CopterSim 的飞行状态会被局域网内所有计算机接收到。因此，只要在局域网内安置足够多的计算机，每台计算机上运行一定量的硬件在环仿真或软件在环仿真程序，本平台可以实现任意多机的集群分布式仿真。同时，每台计算机上支持开启多个三维视景程序，从多个视角观察所有飞机的飞行效果。注意，如果不勾选“联机”按钮，CopterSim 的飞行信息只能被本台计算机接收到，这样不会干扰其他计算机的仿真效果，适用于实验课程使用。</p>
+</div>
+<div class="section" id="simulink">
+<h2><span class="section-number">4.4. </span>多机集群的 Simulink 控制<a class="headerlink" href="#simulink" title="Permalink to this headline">¶</a></h2>
+<p>对于多机集群仿真而言，通信和实时控制是一件困难的事情。针对上述需求，我们在本平台的高级功能基础上，开发了一系列的课程和例程。</p>
+<div class="figure align-center" id="id9">
+<img alt="../_images/A-22.jpg" src="../_images/A-22.jpg" />
+<p class="caption"><span class="caption-text">图 4.5 Simulink 多机集群控制源码</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>主要实现的功能有以下 4 个。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">（1）初步软件在环仿真。我们提供了 Simulink 的 UDP 接口来直接向 UE4 三维视景软件发送多个多旋翼的显示信息。通过提供的接口，一方面在单个多旋翼进行软/硬件在环仿真时，可以生成运动或静止的障碍物。另一方面，它提供预览多机飞行效果的机会，从而制定出最合理的运动轨迹。</div>
+</div>
+<blockquote>
+<div><div class="figure align-center" id="id10">
+<img alt="../_images/A-23.jpg" src="../_images/A-23.jpg" />
+<p class="caption"><span class="caption-text">图 4.6 Simulink 异构无人系统视景</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">（2）集群控制算法的软件在环仿真。在 Simulink 中通过UDP 协议，向带有控制闭环 (由 Simulink 与模型一起生成，或者与 PX4 SITL控制模式相连接)的 CopterSim 多旋翼模型，发送顶层的速度或者位置等控制信息，同时接收运动状态信息，进行多机集群的软件在 环仿真。</div>
+<div class="line">（3）集群控制算法的硬件在环仿真。在 Simulink 中通过 UDP 协议，向所有 Copter- Sim+Pixhawk 的硬件仿真闭环系统，发送速度或位置等顶层控制的 Mavlink 消息，形成多机集群的硬件在环仿真。我们提供的源码中有在 Simulink 中实现打包和解包 Mavlink 协议的函数，然后 CopterSim 有自动转发Pixhawk 自驾仪的Mavlink 消息包的功能。因此，用户可以控制每个 Pixhawk+CopterSim 的硬件在环系统去完成任意任务。</div>
+<div class="line">（4）通过 Simulink 实时控制真实多旋翼集群。在 Simulink 中通过数据传输模块接收和发送 N  个串口的 Mavlink 消息，实现多个真实多旋翼系统的实时控制。这里 Simulink相当于一个地面控制站的功能，用于控制真实集群飞行系统。相对于用 C/C++ 开发集群控制平台，Simulink 能够更直观地观察集群的效果，且能够实时调整控制器参数。而且，Simulink 也支持生成C/C++ 代码程序，来提高运算速度。</div>
+</div>
+</div></blockquote>
+<p>通过上述的软件模拟 → 软件在环仿真→ 硬件在环仿真→ 实际集群系统控制，开发者可以循序渐进地实现集群控制算法的开发、仿真与真机实验，大大提高了开发效率。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="VisualInterface.html" class="btn btn-neutral float-right" title="5. 基于视觉的控制接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Scene.html" class="btn btn-neutral float-left" title="3. 场景" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

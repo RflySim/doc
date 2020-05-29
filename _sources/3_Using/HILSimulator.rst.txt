@@ -1,72 +1,161 @@
 =========================
-硬件在环仿真器
+HIL Simulation Platform
 =========================
 
-硬件在环仿真器包括一个实时运动仿真软件——CopterSim 和一个三维可视化视景软件——3DDisplay。下面分别对这两个软件进行介绍。
+The HIL simulation platform includes a Real-time Motion Simulation Software—
+CopterSim and a 3D Visual Display Software—3DDisplay.
+
+
 
 CopterSim
 -------------------------
 
-双击桌面的 CopterSim 快捷方式打开 CopterSim。CopterSim的仿真模型和参数与多旋翼软件在环模型相同,因为 CopterSim 是通过 Simulink多旋翼模型代码生成整合而成的。模拟器软件运行在 Windows 64 位计算机平台下，通过USB 数据线与Pixhawk 自驾仪进行串口通信。
+Double-click the CopterSim shortcut on the Windows desktop to open the CopterSim 
+software, whose UI is presented in Fig. 3.50. The default simulation model and
+parameters are the same as for the Simulink multicopter model used in the SIL 
+simulation system (see Fig. 3.1). This is because the CopterSim is developed based on 
+the code generation technique with the Simulink multicopter model. CopterSim needs
+to run on a 64-bit Windows computer platform with a serial port and a MicroUSB
+cable to communicate with the Pixhawk autopilot (see Fig. 3.42).
 
-.. figure:: /images/3-50.jpg
+.. figure:: /images/Quan-ch3-Fig3.50.jpg
     :align: center
 
-    图 3.50 Coptersim 的主界面
+    Fig. 3.50 CopterSim main UI
 
-CopterSim 会发送传感器数据给Pixhawk 自驾仪，然后自驾仪会计算得到的电机 PWM控制信号并返回给 CopterSim。因此 Pixhawk 自驾仪可以实时控制 CopterSim 中的模拟多旋翼，实现和真实飞行同样的效果。与此同时，飞机的姿态与位置信息会以 UDP 协议向本地网络中发送，而 3DDisplay 软件会接收这些信息来完成实时三维视景显示。
+CopterSim sends sensor data to the Pixhawk autopilot, and then the autopilot
+solves the motor PWM control signal and returns it to CopterSim. As a result, the
+Pixhawk autopilot can perform real-time control on the simulated multicopter in
+CopterSim, as well as control a real multicopter. Meanwhile, CopterSim will send
+the attitude and position information of the multicopter to the local network through
+the UDP protocol, and the 3DDisplay receives the multicopter flight information to
+complete the corresponding real-time 3D scene display.
 
-CopterSim 程序的主界面分为两大部分，上半部分是读者自定义选择多旋翼模型的输入界面，下半部分是连接自驾仪进行仿真的界面。注意：本软件仅开放了基本功能，还有许多实用的高级功能（如多机仿真、UE4 高逼真场景、固定翼等其他机型仿真等）需要注册之后才能使用，详见 :ref:`rflySim-label` .
+As shown in Fig. 3.50, the UI of CopterSim is divided into two parts. The upper
+part, presented in Fig. 3.50a, is the input interface to design a multicopter by selecting
+popular components on the market. The lower part presented in Figs. 3.50b–e is the
+interface to connect with the autopilot for HIL simulation. Note that CopterSim
+enables by default only the basic functions required by this book. Registration is
+required to use many other practical functions, such as swarm simulation, high-
+fidelity UE4 scenes, and HIL simulations for other aerial vehicles (e.g., fixed-wing
+aircraft). Please, see Appendix A for more information.
 
-直接单击CopterSim 界面中间位置的“模型参数”按钮，就会弹出模型参数配置页面，这里会显示上一次仿真存储的模型参数。该界面主要包含了悬停信息（悬停时间、油门、输出功率、电机转速等）和飞机模型的基本参数（总质量、转动惯量、尺寸、拉力系数和阻力系数等）。
+Click the “Model Parameter” button in the middle of the CopterSim UI in
+Fig. 3.50b. The model parameter configuration dialog in Fig. 3.51 will pop up; the
+model parameters stored in the previous simulation will be displayed here. The
+parameter dialog in Fig. 3.51 mainly includes two parts: the hover information (hover
+endurance, throttle, output power, motor speed, etc.) and the basic multicopter 
+parameters (total mass, the moment of inertia, size, thrust coefficient, and drag coefficient).
+Clicking the “Restore to Default Params” button on the dialog in Fig. 3.51 will restore
+the model parameters to the default values; clicking the “Save and Apply Params”
+button will store the current parameters to the database for subsequent HIL simulations.
 
-.. figure:: /images/3-51.jpg
+.. figure:: /images/Quan-ch3-Fig3.51.jpg
     :align: center
 
-    图 3.51 模型参数配置界面
+    Fig. 3.51 Model parameter configuration dialog
 
-单击 “还原默认参数”按钮，可以将模型参数还原到默认值；单击“存储并使用参数”按钮可以将当前参数存储到数据库中，作为本次和后续硬件在环仿真的参数。
-CopterSim 也允许在模型参数配置页面中直接修改模型参数，例如，输入与 Simulink 软件在环仿真的多旋翼模型同样的参数（存储在“e0\1.SoftwareSimExps\icon\Init. m”文件中），然后单击 “存储并使用参数”按钮来存储并使用输入的模型参数。 “噪声水平（0-1）”按钮用于设置传感器仿真噪声水平：“0”是不启用噪声，“1”是噪声水平与实际 Pixhawk 自驾仪传感器噪声一致。当然也可以输入 0 到 1 之间的数或大于 1 的数，来表示仿真传感器噪声与实际噪声的比例关系，以便测试控制算法的抗干扰能力。
+CopterSim also allows readers to directly modify the model parameters on the
+right page of Fig. 3.51. For example, enter the same parameters as the multicopter 
+model used in Simulink SIL simulations (the parameters are stored in file
+“e0\1.SoftwareSimExps\icon\Init.m”). Then, click the “Store and Apply parameters” 
+button in Fig. 3.51 to store and apply the model parameters. The “noise level
+(0–1)” in Fig. 3.51 allows selecting the noise level of the simulated sensors, where
+“0” denotes that the sensor noise is not enabled, and “1” denotes that the noise level
+is consistent with the real Pixhawk autopilot. A noise level between 0–1 or larger
+than one can also be selected to represent the noise level of actual sensors. This
+enables the possibility of testing the anti-interference ability of the designed control
+algorithms.
 
-当多旋翼配置并且计算完成后，将 Pixhawk 自驾仪插入到计算机的 USB 口上，在主界面的“飞控选择”下拉菜单中就会出现可连接的 Pixhawk 自驾仪串口。选中需要的 Pixhawk自驾仪串口（通常名字中包含字符串“FMU”），单击“开始仿真”按钮，就可以开始硬件在环仿真。CopterSim 可以接收到 Pixhawk 自驾仪回传的消息，说明硬件仿真正常运行。在仿真过程中也可以单击“停止仿真”来停止硬件在环仿真，或者单击“重新仿真”来初始化多旋翼到原始位置。
+After the multicopter parameters and the noise level are configured, as shown in
+Fig. 3.51, connect the Pixhawk autopilot with the computer. A few seconds later, the
+serial port of the Pixhawk autopilot will be listed in the “Select Pixhawk Com” 
+dropdown menu. Select the Pixhawk serial port (usually described by the text “FMU”),
+and click the “Start Simulation” button to start the HIL simulation. As shown in
+Fig. 3.52, the messages from the Pixhawk are printed on the CopterSim UI, which
+indicates that the HIL simulation is running correctly. During the HIL simulation
+process, clicking the “Stop Simulation” button will stop the HIL simulation, and
+clicking the “Restart Simulation” will re-initialize the multicopter position and states
+to their initial values.
 
-.. figure:: /images/3-52.jpg
+.. figure:: /images/Quan-ch3-Fig3.52.jpg
     :align: center
 
-    图 3.52 CopterSim 的硬件在环仿真界面
+    Fig. 3.52 HIL simulation with CopterSim
+
+
 
 3DDisplay
 --------------------------
-双击桌面的 3DDisplay 快捷方式即可打开 3DDisplay。3DDisplay 主界面界面窗口左侧以 3D 图形的方式展示多旋翼当前的飞行状态；3DDisplay 主界面右上角窗口展示了基本的飞行数据，包括电机转速，位置信息，姿态信息等；3DDisplay 主界面右下角窗口显示多旋翼的飞行轨迹。
 
-.. figure:: /images/3-53.jpg
+Double-click the 3DDisplay shortcut on the Windows desktop to open the 3DDisplay
+software. As shown in Fig. 3.53, the “3D Scene Viewer” on the left side of the
+3DDisplay UI presents the current flight status of the multicopter in the 3D scene.
+The basic flight parameters are displayed in the upper right window of the 3DDisplay
+UI, including motor speed, position, and attitude information. The flight trajectory
+of the multicopter is displayed on the lower right window of the 3DDisplay UI.
+
+.. figure:: /images/Quan-ch3-Fig3.53.jpg
     :align: center
 
-    图 3.53 3DDisplay 的主界面
+    Fig. 3.53 User interface of 3DDisplay
 
-硬件在环飞行测试
---------------------------
 
-在硬件在环仿真中，可以和控制真实飞机一样，通过遥控器仿真的多旋翼完成解锁、起飞、手动飞行、降落等动作。具体步骤如下：
 
- | （1）首先将遥控器电源开关推上去，打开遥控器；
- | （2）正确连接 Pixhawk 软/硬件，并通过 CopterSim 开始硬件在环仿真；
- | （3）将遥控器左侧油门摇杆置于右下角，保持 2∼3 秒来解锁Pixhawk自驾仪；
+Flight Tests with HIL Simulation Platform
+--------------------------------------------
 
-    .. figure:: /images/3-54.jpg
+In the HIL simulation platform, when controlling a real multicopter, it is convenient
+to control the simulated multicopter with a real RC transmitter to perform basic
+actions, such as arming, taking off, manual flight, landing, etc. The detailed steps are
+described next.
+
+(1). Push up the POWER switch to turn on the RC transmitter.
+
+(2). Correctly connect the computer with the Pixhawk hardware system (including
+the Pixhawk autopilot and the RC receiver) and start the HIL simulation in
+CopterSim according to the procedure mentioned above.
+
+(3). As shown in Fig. 3.54a, arm the Pixhawk autopilot by moving the left-hand
+stick on the RC transmitter (CH3) to the lower-right corner for 2–3 s.
+
+    .. figure:: /images/Quan-ch3-Fig3.54.jpg
         :align: center
 
-        图 3.54 通过遥控器解锁与上锁 Pixhawk 自驾仪示意图
+        Fig. 3.54 Arm and disarm of Pixhawk autopilot through RC transmitter
 
- | （4）此时可以看到 Pixhawk 自驾仪上的 LED 灯变为常亮，且 CopterSim 左下角的消息框收到“Detect Px4 Armed"消息，说明解锁成功。若解锁不成功，则断开所有软/硬件连接，重复上述步骤；
+(4). Pixhawk is successfully armed when its LED turns from slow flashing to always
+on, [#f1]_ and the CopterSim print message “Detect Px4 Armed” is received from
+Pixhawk. If arming Pixhawk fails, please disconnect all hardware and software
+and repeat the above steps.
 
-    .. note:: 高版本 Pixhawk 硬件（例如 Pixhawk2/3/4/5)开始不自带 LED 灯模块，需要使用外置LED 灯观察效果。
-    
- | （5）向上拨动遥控器左侧的操纵杆，使多旋翼起飞到一定高度，然后上下拨动油门杆，确认多旋翼的上下运动控制功能；
- | （6）左右拨动遥控器左侧的操纵杆，确认多旋翼的偏航方向转动控制功能；
- | （7）上下拨动遥控器右侧操纵杆，控制多旋翼俯仰角的大小，确认多旋翼的前后运动控制功能；
- | （8）左右拨动遥控器右侧操纵杆，控制多旋翼的滚转角的大小，确认实现多旋翼的左右运动功能；
- | （9）拨动遥控器右上角的三段开关，确认多旋翼的控制模式切换功能；
- | （10）向下拨动遥控器左侧的油门摇杆，使多旋翼降落在地面；
- | （11）将遥控器左侧油门摇杆置于左下角，保持 2∼3 秒来锁定Pixhawk 自驾仪；
- | （12）在 CopterSim 中单击“结束仿真”按钮，退出 硬件在环仿真，然后断开 Pixhawk 自驾仪与计算机硬件连接。
+(5). Pull up the left-hand stick on the RC transmitter (CH3) for the multicopter to
+take off and fly up to a certain altitude. Next, vertically move the left-hand stick
+to verify the vertical motion control of the multicopter.
+
+(6). Horizontally move the left-hand stick on the RC transmitter (CH4) to verify
+the yaw angle motion control of the multicopter.
+
+(7). Vertically move the right-hand stick on the RC transmitter (CH2) to verify the
+pitch angle control as well as the forward and backward motion control of the
+multicopter.
+
+(8). Horizontally move the right-hand stick on the RC transmitter (CH1) to verify the
+roll angle control as well as the left and right motion control of the multicopter.
+
+(9). Change the position of the top-right switch on the RC transmitter (CH6) to
+verify the mode switching control of the multicopter.
+
+(10). Pull down the left-hand stick on the RC transmitter (CH3) to land the 
+multicopter to ground.
+
+(11). As shown in Fig. 3.54b, move the left-hand stick on the RC transmitter (CH3)
+to the lower-left corner for 2–3 s to disarm the Pixhawk.
+
+(12). Click the “Stop Simulation” button on the CopterSim UI to stop the HIL 
+simulation. Then, disconnect all software and hardware connections between the
+computer and Pixhawk.
+
+
+.. rubric:: Notes
+.. [#f1] Higher Pixhawk hardware (e.g., Pixhawk 2/3/4/5) starts to discard LED module, so an external I2C LED module is required to observe the lighting effect.
