@@ -2,7 +2,7 @@
 Getting Started
 =============================
 
-First, go to “Download and Support” for software，then go to “Configuration” 
-to install them. Thirdly, go to “Usage” to learn how to use the platform and 
-finish two demo examples. Finally, go to “Course” to finish all experiments 
-one by one. So far, “Advanced Function” is not free, only open to paying users.
+First, go to  :doc:`Download and Support<../7_DownloadAndSupport/DownloadAndSupport>` for software，then go to  :doc:`Configuration<../2_Configuration/Introduction>`  
+to install them. Thirdly, go to  :doc:`Usage<../3_Using/Introduction>`  to learn how to use the platform and 
+finish two  :doc:`demo examples<../3_Using/Examples>`. Finally, go to "Course" to finish all experiments 
+one by one. So far, :doc:`Advanced Function<../4_Pro/Scene>` is not free, only open to paying users.
