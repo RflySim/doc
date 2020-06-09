@@ -95,3 +95,92 @@ following advantages
     :align: center
 
     Fig. 0.5 Software structure of the commercial-level RflySim platform
+
+
+
+Show Results
+----------------------------------------------
+.. figure:: /images/PlatGif1.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.6 SIL simulation
+
+.. figure:: /images/PlatGif2.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+  
+    Fig. 0.7 automatic code generation
+
+.. figure:: /images/PlatGif3.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.8 HIL simulation
+
+.. figure:: /images/PlatGif4.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+  
+    Fig. 0.9 Flight experiment
+
+.. figure:: /images/PX4SITLSim.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.10 One-key cluster SIL simulation
+
+.. figure:: /images/AutoInstall.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+  
+    Fig. 0.11 One-key installation and simulation
+
+.. figure:: /images/AdvancedGIF1.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.12 Indoor HIL simulation based on UE4
+
+.. figure:: /images/AdvancedGIF2.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+  
+    Fig. 0.13 HIL simulation for unmanned cars
+
+.. figure:: /images/AdvancedGIF3.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.14 Cluster control and HIL simulation
+
+.. figure:: /images/AdvancedGIF4.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+
+    Fig. 0.15 One-key cross rings control
+
+.. figure:: /images/AdvancedGIF9.gif
+    :height: 160px
+    :width: 320px
+    :align: left
+  
+    Fig. 0.16 HIL simulation of motor failure
+
+
+.. figure:: /images/AdvancedGIF10.gif
+    :height: 160px
+    :width: 320px
+    :align: right
+  
+    Fig. 0.17 Indoor cluster flight experiment
