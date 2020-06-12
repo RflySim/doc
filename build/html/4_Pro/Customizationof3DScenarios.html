@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Customization of 3D Scenarios &mdash; RflySimDoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. UAV Swarm Control" href="UAVSwarmControl.html" />
+    <link rel="prev" title="3. Other Types of Vehicles" href="OtherTypesofVehicles.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. Overall Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. Software Package Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. Hardware Platform Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Platform Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. Brief Introduction to Experimental Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. Simulink-Based Controller Design and Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk Hardware System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RflySim Advanced Functions</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="InstallationMethod.html">1. Installation Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Customization of 3D Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design-and-import-3d-scenarios">4.1. Design and Import 3D Scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-and-import-vehicle-3d-models">4.2. Design and Import Vehicle 3D Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UAVSwarmControl.html">5. UAV Swarm Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cluster.html">10. Swarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>Customization of 3D Scenarios</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/4_Pro/Customizationof3DScenarios.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="customization-of-3d-scenarios">
+<h1><span class="section-number">4. </span>Customization of 3D Scenarios<a class="headerlink" href="#customization-of-3d-scenarios" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="design-and-import-3d-scenarios">
+<h2><span class="section-number">4.1. </span>Design and Import 3D Scenarios<a class="headerlink" href="#design-and-import-3d-scenarios" title="Permalink to this headline">¶</a></h2>
+<p>RflySim3D also support to design and import your own 3D scenes, the basic principle is listed as follows:</p>
+<ul class="simple">
+<li><p>Create a 3D Scene in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file) -&gt; imported to UE4 -&gt; imported to RlfySim3D</p></li>
+<li><p>Procedure: UE4 build and package project to files -&gt; copy the scene folder to RflySim3D content folder -&gt; Copy terrain files to CopterSim</p></li>
+</ul>
+<p>In the following video, the procedure to import a quadcopter 3D model from 3Ds Max is introduced.</p>
+<blockquote>
+<div><div class="figure align-center" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced9.png" src="../_images/Advanced9.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>The following figures present the built-in high-fidelity 3D scenes in RflySim3D:</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Advanced10.png" src="../_images/Advanced10.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/Advanced11.png" src="../_images/Advanced11.png" />
+</div>
+</div></blockquote>
+<p>The following video presents how to use Python to send vehicle position&amp;trajectory to RflySim3D’s city night scene to observe the light show effect.</p>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="https://youtu.be/Chpx1uwFVkU"><img alt="../_images/Advanced12.png" src="../_images/Advanced12.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use RflySim3D to simulate light show of UAV swarm flying at city night</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="design-and-import-vehicle-3d-models">
+<h2><span class="section-number">4.2. </span>Design and Import Vehicle 3D Models<a class="headerlink" href="#design-and-import-vehicle-3d-models" title="Permalink to this headline">¶</a></h2>
+<p>RflySim3D also support to design and import your own 3D vehicle models, the basic principle is listed as follows:</p>
+<ul class="simple">
+<li><p>Support to import all vehicle/target/people/obstacle in UE4, then RflySim3D will detect and import UE4 model file and XML configuration file</p></li>
+<li><p>Create a 3D model in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file), then import it to UE4 with writing an XML file, and finally recognized by RlfySim3D</p></li>
+</ul>
+<p>In the following video, we present the procedure to import the 3D model of a quadcopter from 3Ds Max with the XML file from our template.</p>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced13.png" src="../_images/Advanced13.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>The figures below present the build-in high-fidelity vehicle/car/people/target 3D models in RflySim3D.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Advanced14.png" src="../_images/Advanced14.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/Advanced15.png" src="../_images/Advanced15.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/Advanced16.png" src="../_images/Advanced16.png" />
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="UAVSwarmControl.html" class="btn btn-neutral float-right" title="5. UAV Swarm Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OtherTypesofVehicles.html" class="btn btn-neutral float-left" title="3. Other Types of Vehicles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. UAV Swarm Control &mdash; RflySimDoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. UAV Vision/AI Control" href="UAVVisionAIControl.html" />
+    <link rel="prev" title="4. Customization of 3D Scenarios" href="Customizationof3DScenarios.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. Overall Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. Software Package Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. Hardware Platform Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Platform Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. Brief Introduction to Experimental Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. Simulink-Based Controller Design and Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk Hardware System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RflySim Advanced Functions</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="InstallationMethod.html">1. Installation Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Customizationof3DScenarios.html">4. Customization of 3D Scenarios</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. UAV Swarm Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cluster.html">10. Swarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>UAV Swarm Control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/4_Pro/UAVSwarmControl.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uav-swarm-control">
+<h1><span class="section-number">5. </span>UAV Swarm Control<a class="headerlink" href="#uav-swarm-control" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="UAVVisionAIControl.html" class="btn btn-neutral float-right" title="6. UAV Vision/AI Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Customizationof3DScenarios.html" class="btn btn-neutral float-left" title="4. Customization of 3D Scenarios" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

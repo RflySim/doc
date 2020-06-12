@@ -48,7 +48,16 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 1
-   :caption: Platform Advanced Functions: 
+   :caption: RflySim Advanced Functions
+
+   Installation Method <4_Pro/InstallationMethod>
+   Basic Features <4_Pro/BasicFeatures>
+   Other Types of Vehicles <4_Pro/OtherTypesofVehicles>
+   Customization of 3D Scenarios <4_Pro/Customizationof3DScenarios>
+   UAV Swarm Control <4_Pro/UAVSwarmControl>
+   UAV Vision/AI Control <4_Pro/UAVVisionAIControl>
+   Future Plan <4_Pro/FuturePlan>
+
 
    CopterSim <4_Pro/CopterSim>
    Scenes <4_Pro/Scene>
