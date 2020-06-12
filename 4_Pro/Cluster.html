@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. Swarm &mdash; RflySimDoc 1.0 documentation</title>
+  <title>Swarm &mdash; RflySimDoc 1.0 documentation</title>
   
 
   
@@ -34,9 +34,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Vision-based Control Interface" href="VisualInterface.html" />
-    <link rel="prev" title="9. Scenes" href="Scene.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">RflySim Advanced Functions</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="InstallationMethod.html">1. Installation Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
@@ -113,16 +111,6 @@
 <li class="toctree-l1"><a class="reference internal" href="UAVSwarmControl.html">5. UAV Swarm Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Swarm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#swarm-simulation">10.1. Swarm Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#simulation-mode-settings">10.2. Simulation Mode Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#multi-computer-distributed-simulation">10.3. Multi-computer Distributed Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#swarm-control-in-simulink">10.4. Swarm Control in Simulink</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
@@ -172,7 +160,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">10. </span>Swarm</li>
+      <li>Swarm</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,9 +180,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="swarm">
-<h1><span class="section-number">10. </span>Swarm<a class="headerlink" href="#swarm" title="Permalink to this headline">¶</a></h1>
+<h1>Swarm<a class="headerlink" href="#swarm" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="swarm-simulation">
-<h2><span class="section-number">10.1. </span>Swarm Simulation<a class="headerlink" href="#swarm-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>Swarm Simulation<a class="headerlink" href="#swarm-simulation" title="Permalink to this headline">¶</a></h2>
 <p>CopterSim also supports swarm simulations. As shown in Fig.A.18, open multiple
 CopterSim programs and set the ID value of each aircraft to the desired value. Each
 CopterSim needs to connect to a Pixhawk autopilot, and then click the “Start Simulation”
@@ -238,7 +226,7 @@ serial port number.</p>
 </div>
 </div>
 <div class="section" id="simulation-mode-settings">
-<h2><span class="section-number">10.2. </span>Simulation Mode Settings<a class="headerlink" href="#simulation-mode-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Simulation Mode Settings<a class="headerlink" href="#simulation-mode-settings" title="Permalink to this headline">¶</a></h2>
 <p>In addition to HIL simulation, CopterSim also supports other simulation modes to
 improve test efficiency. As shown in Fig.A.20, there are several types of simulation
 modes supported by CopterSim.</p>
@@ -276,7 +264,7 @@ defaults to use the TCP port 4560. <a class="footnote-reference brackets" href="
 in the PX4 startup script to match with the CopterSim programs.</p>
 </div>
 <div class="section" id="multi-computer-distributed-simulation">
-<h2><span class="section-number">10.3. </span>Multi-computer Distributed Simulation<a class="headerlink" href="#multi-computer-distributed-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>Multi-computer Distributed Simulation<a class="headerlink" href="#multi-computer-distributed-simulation" title="Permalink to this headline">¶</a></h2>
 <p>As mentioned in the previous section, the computing performance and memory space
 of a single computer are limited, so it is impossible to support swarm simulation for
 an unlimited amount of vehicles. Therefore, CopterSim also provides the function to
@@ -297,7 +285,7 @@ is more suitable for the use in experimental courses.</p>
 </div>
 </div>
 <div class="section" id="swarm-control-in-simulink">
-<h2><span class="section-number">10.4. </span>Swarm Control in Simulink<a class="headerlink" href="#swarm-control-in-simulink" title="Permalink to this headline">¶</a></h2>
+<h2>Swarm Control in Simulink<a class="headerlink" href="#swarm-control-in-simulink" title="Permalink to this headline">¶</a></h2>
 <p>For swarm simulation, communication and real-time control is a difficult task. In
 response to these needs, we have developed tutorials with source codes (see Fig.A.22)
 based on the advanced functions of this experimental platform. The main implemented
@@ -359,15 +347,6 @@ efficiency for swarm control systems.</p>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="VisualInterface.html" class="btn btn-neutral float-right" title="11. Vision-based Control Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Scene.html" class="btn btn-neutral float-left" title="9. Scenes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

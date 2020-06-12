@@ -59,12 +59,6 @@ Welcome to RflySimDoc's documentation!
    Future Plan <4_Pro/FuturePlan>
 
 
-   CopterSim <4_Pro/CopterSim>
-   Scenes <4_Pro/Scene>
-   Swarm <4_Pro/Cluster>
-   Vision-based Control Interface  <4_Pro/VisualInterface>
-
-
 .. toctree::
    :numbered:
    :maxdepth: 1

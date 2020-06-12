@@ -110,13 +110,16 @@
 <li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Customizationof3DScenarios.html">4. Customization of 3D Scenarios</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. UAV Swarm Control</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. UAV Swarm Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-simulation-framework">5.1. Distributed Simulation Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-problems-and-solutions">5.2. Key Problems and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-control-swarm-on-one-computer">5.3. Simulink Control Swarm on One Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulink-control-swarm-on-multiple-computer">5.4. Simulink Control Swarm on Multiple Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apply-control-algorithm-to-real-swarm-system">5.5. Apply Control Algorithm to Real Swarm System</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cluster.html">10. Swarm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
@@ -187,6 +190,80 @@
             
   <div class="section" id="uav-swarm-control">
 <h1><span class="section-number">5. </span>UAV Swarm Control<a class="headerlink" href="#uav-swarm-control" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="distributed-simulation-framework">
+<h2><span class="section-number">5.1. </span>Distributed Simulation Framework<a class="headerlink" href="#distributed-simulation-framework" title="Permalink to this headline">¶</a></h2>
+<p>RflySim adopts totally distributed framework, you can extend to any number of computers, vehicles, observation views, etc. The basic software structure is presented in the figure below.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Advanced17.png" src="../_images/Advanced17.png" />
+</div>
+</div></blockquote>
+<p>The hardware structure is presented in the following figure.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Quan-app1-FigA.21.jpg" src="../_images/Quan-app1-FigA.21.jpg" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="key-problems-and-solutions">
+<h2><span class="section-number">5.2. </span>Key Problems and Solutions<a class="headerlink" href="#key-problems-and-solutions" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Problem 1</strong>: it is ineffective to create simulated vehicles&amp;Pixhawks one by one</div>
+<div class="line"><strong>Solution</strong>: One-key script to start and initialize all programs and parameters</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 2</strong>: How to display all vehicles in the same 3D program</div>
+<div class="line"><strong>Solution</strong>: we use UDP network to broadcast vehicle states, and RflySim3D dynamically create vehicle 3D model when receiving new data. Users can also create other 3D models such as obstacle, people, tracking target, checker board .</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 3</strong>: The network become congested when vehicle number is too large</div>
+<div class="line"><strong>Solution</strong>: we have multiple communication protocols, simplified message can be applied when vehicle number is large to improve the real-time performance of communication.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 4</strong>: It is too costly and inefficient to perform large scale swarm simulation with Pixhawk hardware.</div>
+<div class="line"><strong>Solution</strong>: we provide PX4 SITL simulation mode, under which the PX4 Autopilot software is running in the windows instead of Pixhawk hardware.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 5</strong>: How much vehicle can be simulated on one computer?</div>
+<div class="line"><strong>Answer</strong>: the QGroundControl and RflySim3D occupy most of the computing resource, and the CopterSim + PX4 SILT only need few computing resources. For normal high-performance PCs, we can run at least 15 vehicles with CopterSim + PX4 SITL, and at least 30 vehicles with CopterSim + PX4 HITL. The number will increase if the QGroundControl, RflySim3D, and MATLAB are not running on this computer</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 6</strong>: Simulink will significantly slow down when too much vehicles to be controlled, which may affect the real-time performance</div>
+<div class="line"><strong>Solution</strong>: we provide script to compile Simulink controller to exe file, which can control large-scale UAV swarm simulation system with few computing resource</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Problem 7</strong>: How to ensure controller can work in real system as in simulation</div>
+<div class="line"><strong>Solution 1</strong>: All vehicle data received by Simulink is the actual data from Pixhawk through Mavlink instead of ideal data from simulator, and the output of Simulink is also Mavlink message to Pixhawk.</div>
+<div class="line"><strong>Solution 2</strong>: Our swarm communication interfaces ensure the Simulink can control actual UAV swarm system when each UAV is connected to the same LAN through WIFI or radio telemetry. User can also generate the Simulink to C/C++ code to developing a swarm ground control system.</div>
+</div>
+</div>
+<div class="section" id="simulink-control-swarm-on-one-computer">
+<h2><span class="section-number">5.3. </span>Simulink Control Swarm on One Computer<a class="headerlink" href="#simulink-control-swarm-on-one-computer" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/AMZNuAtRp2w"><img alt="../_images/Advanced18.png" src="../_images/Advanced18.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use Simulink to control UAV swarms in software-in-the-loop (SIL) simulation mode</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="simulink-control-swarm-on-multiple-computer">
+<h2><span class="section-number">5.4. </span>Simulink Control Swarm on Multiple Computer<a class="headerlink" href="#simulink-control-swarm-on-multiple-computer" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="https://youtu.be/fmzYADSQyj0"><img alt="../_images/Advanced19.png" src="../_images/Advanced19.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform distributed software-in-the-loop simulation (SIL) for UAV swarm with multiple computer</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="apply-control-algorithm-to-real-swarm-system">
+<h2><span class="section-number">5.5. </span>Apply Control Algorithm to Real Swarm System<a class="headerlink" href="#apply-control-algorithm-to-real-swarm-system" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<a class="reference external image-reference" href="https://youtu.be/sLIatdHL6FY"><img alt="../_images/Advanced20.png" src="../_images/Advanced20.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly apply the UAV swarm control algorithms to real UAV systems for indoor flight tests</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 
