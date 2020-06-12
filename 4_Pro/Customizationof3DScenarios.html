@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9. Scenes &mdash; RflySimDoc 1.0 documentation</title>
+  <title>4. Customization of 3D Scenarios &mdash; RflySimDoc 1.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Swarm" href="Cluster.html" />
-    <link rel="prev" title="8. CopterSim" href="CopterSim.html" /> 
+    <link rel="next" title="5. UAV Swarm Control" href="UAVSwarmControl.html" />
+    <link rel="prev" title="3. Other Types of Vehicles" href="OtherTypesofVehicles.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,16 +109,16 @@
 <li class="toctree-l1"><a class="reference internal" href="InstallationMethod.html">1. Installation Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Customizationof3DScenarios.html">4. Customization of 3D Scenarios</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Customization of 3D Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design-and-import-3d-scenarios">4.1. Design and Import 3D Scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-and-import-vehicle-3d-models">4.2. Design and Import Vehicle 3D Models</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="UAVSwarmControl.html">5. UAV Swarm Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Scenes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#d-scenes-based-on-ue4">9.1. 3D Scenes Based on UE4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#developing-3d-scenes-through-ue4">9.2. Developing 3D Scenes Through UE4</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cluster.html">10. Swarm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
 </ul>
@@ -170,13 +170,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">9. </span>Scenes</li>
+      <li><span class="section-number">4. </span>Customization of 3D Scenarios</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/4_Pro/Scene.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/4_Pro/Customizationof3DScenarios.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -189,70 +189,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scenes">
-<h1><span class="section-number">9. </span>Scenes<a class="headerlink" href="#scenes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="d-scenes-based-on-ue4">
-<h2><span class="section-number">9.1. </span>3D Scenes Based on UE4<a class="headerlink" href="#d-scenes-based-on-ue4" title="Permalink to this headline">¶</a></h2>
-<p>As shown in Fig.A.2c, CopterSim provides an ability to select different display
-scenes. The default scene is “3DDisplayprogram”, which is based on a lightweight 3D
-engine—Ogre. It has low requirements for computer configurations, but the loading
-speed is slow, and the display performance is not realistic enough. As shown in
-Fig.A.7, click the drop-down box of “3D Scene Selection” to check all other available
-3D scenes (the corresponding installation files are acquired along with the serial
-number), including “MountainTerrain” and “NeighborhoodPark”, which are more
-realistic 3D scenes based on UE4 3D engine.</p>
-<div class="figure align-center" id="id1">
-<img alt="../_images/Quan-app1-FigA.7.jpg" src="../_images/Quan-app1-FigA.7.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.7 3D scene selection</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+  <div class="section" id="customization-of-3d-scenarios">
+<h1><span class="section-number">4. </span>Customization of 3D Scenarios<a class="headerlink" href="#customization-of-3d-scenarios" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="design-and-import-3d-scenarios">
+<h2><span class="section-number">4.1. </span>Design and Import 3D Scenarios<a class="headerlink" href="#design-and-import-3d-scenarios" title="Permalink to this headline">¶</a></h2>
+<p>RflySim3D also support to design and import your own 3D scenes, the basic principle is listed as follows:</p>
+<ul class="simple">
+<li><p>Create a 3D Scene in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file) -&gt; imported to UE4 -&gt; imported to RlfySim3D</p></li>
+<li><p>Procedure: UE4 build and package project to files -&gt; copy the scene folder to RflySim3D content folder -&gt; Copy terrain files to CopterSim</p></li>
+</ul>
+<p>In the following video, the procedure to import a quadcopter 3D model from 3Ds Max is introduced.</p>
+<blockquote>
+<div><div class="figure align-center" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced9.png" src="../_images/Advanced9.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>After selecting the corresponding scene,
-manually open the corresponding 3D scene software to switch between different 3D
-scenes. FigureA.8 presents the 3D UE4 simulation scenes, which have more powerful
-functions and more convenient extensibility.</p>
-<div class="figure align-center" id="id2">
-<img alt="../_images/Quan-app1-FigA.8.jpg" src="../_images/Quan-app1-FigA.8.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.8 3D simulation scene based on UE4</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div></blockquote>
+<p>The following figures present the built-in high-fidelity 3D scenes in RflySim3D:</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Advanced10.png" src="../_images/Advanced10.png" />
 </div>
+<div class="figure align-center">
+<img alt="../_images/Advanced11.png" src="../_images/Advanced11.png" />
 </div>
-<div class="section" id="developing-3d-scenes-through-ue4">
-<h2><span class="section-number">9.2. </span>Developing 3D Scenes Through UE4<a class="headerlink" href="#developing-3d-scenes-through-ue4" title="Permalink to this headline">¶</a></h2>
-<p>Through the UE4 plugin, readers can quickly build their own flight scenarios in UE4.
-The specific procedure is listed as follows.</p>
-<p>(1). Create a new UE4 scene project. As shown in Fig.A.9, readers can purchase
-or develop a 3D scene project based on UE4 (engine version should be 4.22 or
-above, compiler version should be Visual Studio 2017 or above). The detailed
-process will be not introduced here because it can be found in the <a class="reference external" href="http://api.unrealengine.com/">official tutorial</a> .</p>
-<p>(2). Get the UE4 plugin file. Unzip the “Rfly3DSimPlugin.zip” plugin file (the
-corresponding source code can be acquired along with the serial number) and copy
-it to the “Plugins” folder (create it manually if the folder does not exist) of the
-UE4 project shown in Fig.A.9.</p>
+</div></blockquote>
+<p>The following video presents how to use Python to send vehicle position&amp;trajectory to RflySim3D’s city night scene to observe the light show effect.</p>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="https://youtu.be/Chpx1uwFVkU"><img alt="../_images/Advanced12.png" src="../_images/Advanced12.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use RflySim3D to simulate light show of UAV swarm flying at city night</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="design-and-import-vehicle-3d-models">
+<h2><span class="section-number">4.2. </span>Design and Import Vehicle 3D Models<a class="headerlink" href="#design-and-import-vehicle-3d-models" title="Permalink to this headline">¶</a></h2>
+<p>RflySim3D also support to design and import your own 3D vehicle models, the basic principle is listed as follows:</p>
+<ul class="simple">
+<li><p>Support to import all vehicle/target/people/obstacle in UE4, then RflySim3D will detect and import UE4 model file and XML configuration file</p></li>
+<li><p>Create a 3D model in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file), then import it to UE4 with writing an XML file, and finally recognized by RlfySim3D</p></li>
+</ul>
+<p>In the following video, we present the procedure to import the 3D model of a quadcopter from 3Ds Max with the XML file from our template.</p>
 <blockquote>
 <div><div class="figure align-center" id="id3">
-<img alt="../_images/Quan-app1-FigA.9.jpg" src="../_images/Quan-app1-FigA.9.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.9 Custom UE4 3D scene project folder</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced13.png" src="../_images/Advanced13.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
-<p>(3). Generate a “.exe” executable file. Click the UE4 project file ending with
-“.uproject” (see Fig.A.9) to open the UE4 editor. As shown in Fig.A.10, the plugin
-“Rfly3DSimPlugin” will be automatically loaded to the UE4 project, and the plugin
-contents can be viewed in the UI of the UE4 editor. In the UE4 editor, a “.exe”
-executable file can be obtained by simply setting the initial viewpoint, compiling
-the code, and package the whole project for the Windows environment.</p>
+<p>The figures below present the build-in high-fidelity vehicle/car/people/target 3D models in RflySim3D.</p>
 <blockquote>
-<div><div class="figure align-center" id="id4">
-<img alt="../_images/Quan-app1-FigA.10.jpg" src="../_images/Quan-app1-FigA.10.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.10 UE4 editor</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<div><div class="figure align-center">
+<img alt="../_images/Advanced14.png" src="../_images/Advanced14.png" />
 </div>
-</div></blockquote>
-<p>(4). Export the map terrain data. Select the terrain file in UE4, exported to a “.png”
-format file, and store three key position points to a “.txt” file. Then, copy the
-resulting “.png” and “.txt” files to the “CopterSimexternalmap” directory (see
-Fig.A.11). Finally, after restarting CopterSim, readers can select the new
-developed 3D scene from the drop-down menu shown in Fig.A.7.</p>
-<blockquote>
-<div><div class="figure align-center" id="id5">
-<img alt="../_images/Quan-app1-FigA.11.jpg" src="../_images/Quan-app1-FigA.11.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.11 Importing terrain mesh data into CopterSim</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<div class="figure align-center">
+<img alt="../_images/Advanced15.png" src="../_images/Advanced15.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/Advanced16.png" src="../_images/Advanced16.png" />
 </div>
 </div></blockquote>
 </div>
@@ -266,10 +259,10 @@ developed 3D scene from the drop-down menu shown in Fig.A.7.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Cluster.html" class="btn btn-neutral float-right" title="10. Swarm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="UAVSwarmControl.html" class="btn btn-neutral float-right" title="5. UAV Swarm Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CopterSim.html" class="btn btn-neutral float-left" title="8. CopterSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="OtherTypesofVehicles.html" class="btn btn-neutral float-left" title="3. Other Types of Vehicles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

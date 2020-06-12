@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9. Scenes &mdash; RflySimDoc 1.0 documentation</title>
+  <title>2. Basic Features &mdash; RflySimDoc 1.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Swarm" href="Cluster.html" />
-    <link rel="prev" title="8. CopterSim" href="CopterSim.html" /> 
+    <link rel="next" title="3. Other Types of Vehicles" href="OtherTypesofVehicles.html" />
+    <link rel="prev" title="1. Installation Method" href="InstallationMethod.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,18 +107,20 @@
 <p class="caption"><span class="caption-text">RflySim Advanced Functions</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="InstallationMethod.html">1. Installation Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BasicFeatures.html">2. Basic Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Basic Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hil-simulation-for-one-vehicle">2.1. HIL Simulation for One Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hil-simulation-for-multiple-vehicles">2.2. HIL Simulation for Multiple Vehicles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sil-simulation-for-one-vehicle">2.3. SIL Simulation for One Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sil-simulation-for-multiple-vehicles">2.4. SIL Simulation for Multiple Vehicles</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Customizationof3DScenarios.html">4. Customization of 3D Scenarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAVSwarmControl.html">5. UAV Swarm Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FuturePlan.html">7. Future Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CopterSim.html">8. CopterSim</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Scenes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#d-scenes-based-on-ue4">9.1. 3D Scenes Based on UE4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#developing-3d-scenes-through-ue4">9.2. Developing 3D Scenes Through UE4</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Scene.html">9. Scenes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cluster.html">10. Swarm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VisualInterface.html">11. Vision-based Control Interface</a></li>
 </ul>
@@ -170,13 +172,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">9. </span>Scenes</li>
+      <li><span class="section-number">2. </span>Basic Features</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/4_Pro/Scene.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/4_Pro/BasicFeatures.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -189,70 +191,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scenes">
-<h1><span class="section-number">9. </span>Scenes<a class="headerlink" href="#scenes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="d-scenes-based-on-ue4">
-<h2><span class="section-number">9.1. </span>3D Scenes Based on UE4<a class="headerlink" href="#d-scenes-based-on-ue4" title="Permalink to this headline">¶</a></h2>
-<p>As shown in Fig.A.2c, CopterSim provides an ability to select different display
-scenes. The default scene is “3DDisplayprogram”, which is based on a lightweight 3D
-engine—Ogre. It has low requirements for computer configurations, but the loading
-speed is slow, and the display performance is not realistic enough. As shown in
-Fig.A.7, click the drop-down box of “3D Scene Selection” to check all other available
-3D scenes (the corresponding installation files are acquired along with the serial
-number), including “MountainTerrain” and “NeighborhoodPark”, which are more
-realistic 3D scenes based on UE4 3D engine.</p>
-<div class="figure align-center" id="id1">
-<img alt="../_images/Quan-app1-FigA.7.jpg" src="../_images/Quan-app1-FigA.7.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.7 3D scene selection</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+  <div class="section" id="basic-features">
+<h1><span class="section-number">2. </span>Basic Features<a class="headerlink" href="#basic-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hil-simulation-for-one-vehicle">
+<h2><span class="section-number">2.1. </span>HIL Simulation for One Vehicle<a class="headerlink" href="#hil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
+<p>You can open CopterSim and RflySm3D successively to start hardware-in-the-loop (HIL) simulation, or simple click the Desktop shortcut “HITLRun” and input the com number of the Pixhawk to start HIL simulation. The introduction of RflySim advanced platform and the method to start HIL simulation for one vehicle are presented in the following video:</p>
+<blockquote>
+<div><div class="figure align-center" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/3ytbk63Og5k"><img alt="../_images/Advanced3.png" src="../_images/Advanced3.png" /></a>
+<p class="caption"><span class="caption-text">RflySim: How to use hardware-in-the-loop simulation for one vehicle</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>After selecting the corresponding scene,
-manually open the corresponding 3D scene software to switch between different 3D
-scenes. FigureA.8 presents the 3D UE4 simulation scenes, which have more powerful
-functions and more convenient extensibility.</p>
-<div class="figure align-center" id="id2">
-<img alt="../_images/Quan-app1-FigA.8.jpg" src="../_images/Quan-app1-FigA.8.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.8 3D simulation scene based on UE4</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div></blockquote>
 </div>
+<div class="section" id="hil-simulation-for-multiple-vehicles">
+<h2><span class="section-number">2.2. </span>HIL Simulation for Multiple Vehicles<a class="headerlink" href="#hil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
+<p>You can also connect multiple Pixhawks to start HIL simulation for multiple vehicles, the procedure is presented in the following video:</p>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="https://youtu.be/oZ_-yhEgebA"><img alt="../_images/Advanced4.png" src="../_images/Advanced4.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use hardware-in-the-loop simulation for UAV swarm</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="developing-3d-scenes-through-ue4">
-<h2><span class="section-number">9.2. </span>Developing 3D Scenes Through UE4<a class="headerlink" href="#developing-3d-scenes-through-ue4" title="Permalink to this headline">¶</a></h2>
-<p>Through the UE4 plugin, readers can quickly build their own flight scenarios in UE4.
-The specific procedure is listed as follows.</p>
-<p>(1). Create a new UE4 scene project. As shown in Fig.A.9, readers can purchase
-or develop a 3D scene project based on UE4 (engine version should be 4.22 or
-above, compiler version should be Visual Studio 2017 or above). The detailed
-process will be not introduced here because it can be found in the <a class="reference external" href="http://api.unrealengine.com/">official tutorial</a> .</p>
-<p>(2). Get the UE4 plugin file. Unzip the “Rfly3DSimPlugin.zip” plugin file (the
-corresponding source code can be acquired along with the serial number) and copy
-it to the “Plugins” folder (create it manually if the folder does not exist) of the
-UE4 project shown in Fig.A.9.</p>
+</div></blockquote>
+</div>
+<div class="section" id="sil-simulation-for-one-vehicle">
+<h2><span class="section-number">2.3. </span>SIL Simulation for One Vehicle<a class="headerlink" href="#sil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
+<p>If you don’t have Pixhawk hardware, you can also run PX4 control software on Windows to form a software-in-the-loop simulation system with vehicle model in CopterSim through UDP network. The method to start a PX4&amp;CopterSim SIL simulation for one vehicle is presented in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id3">
-<img alt="../_images/Quan-app1-FigA.9.jpg" src="../_images/Quan-app1-FigA.9.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.9 Custom UE4 3D scene project folder</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<a class="reference external image-reference" href="https://youtu.be/QxNGOwANy-o"><img alt="../_images/Advanced5.png" src="../_images/Advanced5.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop simulation for one UAV</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
-<p>(3). Generate a “.exe” executable file. Click the UE4 project file ending with
-“.uproject” (see Fig.A.9) to open the UE4 editor. As shown in Fig.A.10, the plugin
-“Rfly3DSimPlugin” will be automatically loaded to the UE4 project, and the plugin
-contents can be viewed in the UI of the UE4 editor. In the UE4 editor, a “.exe”
-executable file can be obtained by simply setting the initial viewpoint, compiling
-the code, and package the whole project for the Windows environment.</p>
+</div>
+<div class="section" id="sil-simulation-for-multiple-vehicles">
+<h2><span class="section-number">2.4. </span>SIL Simulation for Multiple Vehicles<a class="headerlink" href="#sil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
+<p>You can also start multiple SIL simulation system by the procedure in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id4">
-<img alt="../_images/Quan-app1-FigA.10.jpg" src="../_images/Quan-app1-FigA.10.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.10 UE4 editor</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-</div></blockquote>
-<p>(4). Export the map terrain data. Select the terrain file in UE4, exported to a “.png”
-format file, and store three key position points to a “.txt” file. Then, copy the
-resulting “.png” and “.txt” files to the “CopterSimexternalmap” directory (see
-Fig.A.11). Finally, after restarting CopterSim, readers can select the new
-developed 3D scene from the drop-down menu shown in Fig.A.7.</p>
-<blockquote>
-<div><div class="figure align-center" id="id5">
-<img alt="../_images/Quan-app1-FigA.11.jpg" src="../_images/Quan-app1-FigA.11.jpg" />
-<p class="caption"><span class="caption-text">Fig. A.11 Importing terrain mesh data into CopterSim</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<a class="reference external image-reference" href="https://youtu.be/88dGpErxPJ8"><img alt="../_images/Advanced6.png" src="../_images/Advanced6.png" /></a>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop (SIL) simulation for UAV swarm</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
 </div>
@@ -266,10 +243,10 @@ developed 3D scene from the drop-down menu shown in Fig.A.7.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Cluster.html" class="btn btn-neutral float-right" title="10. Swarm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="OtherTypesofVehicles.html" class="btn btn-neutral float-right" title="3. Other Types of Vehicles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CopterSim.html" class="btn btn-neutral float-left" title="8. CopterSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="InstallationMethod.html" class="btn btn-neutral float-left" title="1. Installation Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
