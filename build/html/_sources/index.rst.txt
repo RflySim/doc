@@ -62,6 +62,17 @@ Welcome to RflySimDoc's documentation!
 .. toctree::
    :numbered:
    :maxdepth: 1
+   :caption: Cases Study: 
+
+   Control Framwork <6_CasesStudy/ControlFramwork>
+   System Analysis <6_CasesStudy/SystemAnalysis>
+   Debug Functions <6_CasesStudy/DebugFunctions>
+   Attitude Control Based on ADRC Law <6_CasesStudy/AttitudeControlBasedonADRCLaw>
+
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
    :caption: Download & Support: 
 
    Support <7_DownloadAndSupport/DownloadAndSupport>
