@@ -6,6 +6,9 @@
 Welcome to RflySimDoc's documentation!
 ======================================
 
+Language/语言
+`中文 <https://rflysim.com/zh/>`_
+
 .. toctree::
    :numbered:
    :maxdepth: 3
