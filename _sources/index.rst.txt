@@ -65,6 +65,14 @@ Language/语言
 .. toctree::
    :numbered:
    :maxdepth: 1
+   :caption: Course
+
+   Book <5_Course/Book>
+   Course Content <5_Course/CourseContent>
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
    :caption: Cases Study: 
 
    Control Framwork <6_CasesStudy/ControlFramwork>
