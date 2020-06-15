@@ -6,9 +6,9 @@ Download
 ----------------------------------------
 
 You can click the picture below to fill in the relevant information to obtain the download link.
-After you fill in the contact information, we will send the latest "RflySim Basic Edition" download link to your email as soon as possible.
 
-    .. figure:: /images/Download1.jpg
+
+    .. figure:: /images/Download1.png
         :align: center
         :target: https://rflysim.com/course.html#Download
 
