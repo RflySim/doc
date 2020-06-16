@@ -75,10 +75,7 @@ Language/语言
    :maxdepth: 1
    :caption: Cases Study: 
 
-   Control Framwork <6_CasesStudy/ControlFramwork>
-   System Analysis <6_CasesStudy/SystemAnalysis>
-   Debug Functions <6_CasesStudy/DebugFunctions>
-   Attitude Control Based on ADRC Law <6_CasesStudy/AttitudeControlBasedonADRCLaw>
+   Development of Small Autopilot <6_CasesStudy/DevelopmentofSmallAutopilot>
 
 
 .. toctree::
