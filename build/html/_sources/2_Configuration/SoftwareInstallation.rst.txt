@@ -12,8 +12,8 @@ Installation Steps
 The installation steps are summarized below.
 
 (1) Download the installation image file “RFLYExpPspSoftwarePack.iso” of the
-Simulation Software Package from the official website: https://flyeval.com/
-course, and then unzip it or mount it to a virtual drive folder.
+Simulation Software Package from :doc:`Download and Support<../7_DownloadAndSupport/DownloadAndSupport>`, 
+and then unzip it or mount it to a virtual drive folder.
 
 (2) Open MATLAB and click the “Browse for Folder” button (see Fig. 2.3). On the
 folder selection window, select the folder “RFLYExpPspSoftwarePack” obtained

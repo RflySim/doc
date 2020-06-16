@@ -6,7 +6,7 @@ What is RflySim
 About RflySim
 ---------------------------------------
 
-RflySim, launched by BUAA Reliable Flight Control Group, is an ecosystem or a 
+RflySim, launched by `BUAA Reliable Flight Control Group <http://rfly.buaa.edu.cn/>`_ , is an ecosystem or a 
 toolchain mainly for unmanned systems’ control and safety testing following the
 idea of Model-Based Design (MBD). MATLAB/Simulink, supporting the full design 
 phase of MBD, is chosen as the core programming platform for 

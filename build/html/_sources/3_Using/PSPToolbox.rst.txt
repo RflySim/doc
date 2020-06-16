@@ -114,8 +114,8 @@ and buzzers.
         Fig. 3.16 Schematic diagram of PSP toolbox sensor and actuator interface library
 
 As shown in Fig. 3.17, the PSP toolbox also provides many examples
-(see folder “e0\2.PSPOfficialExps”) with an official manual (see document
-“e0\2.PSPOfficialExps\Pixhawk_Pilot_Support_Package.pdf” for details) for 
+(see folder `e0\2.PSPOfficialExps <https://github.com/RflySim/RflyExpCode/tree/master/code/e0/2.PSPOfficialExps>`_ ) with an official manual (see document
+`e0\2.PSPOfficialExps\Pixhawk_Pilot_Support_Package.pdf <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/Pixhawk_Pilot_Support_Package.pdf>`_ for details) for 
 readers to be quickly familiar with functions and usage methods of PSP toolbox.
 
     .. figure:: /images/Quan-ch3-Fig3.17.jpg
@@ -134,8 +134,8 @@ Figure 3.18 presents the RC input module and its parameter setting box. It is
 convenient to select RC channels and other information to be used by Simulink. The
 definition and application of each option can be viewed by clicking the “help”
 button of the box or by consulting the official PDF document. The PSP toolbox
-also provides an example ( see file“e0\2.PSPOfficialExps\px4demo_input_rc.
-slx”) to show how to use this module.
+also provides an example ( see file `e0\2.PSPOfficialExps\px4demo_input_rc.
+slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_input_rc.slx>`_) to show how to use this module.
 
     .. figure:: /images/Quan-ch3-Fig3.18.jpg
         :align: center
@@ -169,7 +169,7 @@ box.
 
 Figure 3.21 presents the Buzzer module, which is used when the buzzer
 is required to make a warning sound. There is an example (see file
-“e0\2.PSPOfficialExps\px4demo_tune.slx”) for detailed information.
+`e0\2.PSPOfficialExps\px4demo_tune.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_tune.slx>`_) for detailed information.
 
     .. figure:: /images/Quan-ch3-Fig3.21.jpg
         :align: center
@@ -181,7 +181,7 @@ is required to make a warning sound. There is an example (see file
 This module can control the blink mode and color of the LED on Pixhawk. As
 shown in Fig. 3.22, the module receives two inputs, namely “Mode” and “Color”
 representing the mode and color of the LED. The PSP toolbox provides an
-example (see file “e0\2.PSPOfficialExps\px4demo_rgbled.slx”) to study this
+example (see file `e0\2.PSPOfficialExps\px4demo_rgbled.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_rgbled.slx>`_) to study this
 module.
 
     .. figure:: /images/Quan-ch3-Fig3.22.jpg
@@ -196,7 +196,7 @@ which can then be used for controller design in Simulink. Available sensor data
 include magnetometers, accelerometers, gyroscopes, barometers, and timestamps. 
 As shown in Fig. 3.23, the sample rate and the required sensor data
 can be configured in the parameter setting box. The PSP toolbox also provides
-an example (see file “e0\2.PSPOfficialExps\px4demo_attitude_control.slx”)
+an example (see file `e0\2.PSPOfficialExps\px4demo_attitude_control.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_attitude_control.slx>`_)
 to study this module.
 
     .. figure:: /images/Quan-ch3-Fig3.23.jpg
@@ -208,7 +208,7 @@ to study this module.
 
 As shown in Fig. 3.24, the attitude data module provides an interface to
 access the attitude estimate (Euler angles and quaternion). The PSP toolbox
-also provides an example (see file “e0\2.PSPOfficialExps\px4demo_attitude_control.slx”) 
+also provides an example (see file `e0\2.PSPOfficialExps\px4demo_attitude_control.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_attitude_control.slx>`_) 
 to study this module.
 
     .. figure:: /images/Quan-ch3-Fig3.24.jpg
@@ -222,7 +222,7 @@ This module, shown in Fig. 3.25, can be used to access the Pixhawk GPS data,
 which are achieved by subscribing to the uORB topic “vehicle_gps”. Therefore,
 in practical operation, it is necessary to ensure that the GPS module is inserted
 into the Pixhawk hardware and then works. The PSP toolbox also provides
-an example (see file “e0\2.PSPOfficialExps\px4demo_gps.slx”) to study this
+an example (see file `e0\2.PSPOfficialExps\px4demo_gps.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_gps.slx>`_) to study this
 module.
 
     .. figure:: /images/Quan-ch3-Fig3.25.jpg
@@ -295,8 +295,8 @@ Theoretically, by using the “uORB Read and Write” modules, all messages and
 intermediate variables used in the PX4 autopilot can be accessed
 by Simulink. This simplifies the implementation of more advanced functions
 for controller design. The PSP toolbox also provides two examples (see
-file “e0\2.PSPOfficialExps\px4demo_fcn_call_uorb_example.slx”, and file
-“e0\2.PSPOfficialExps\px4demo_write_uorb_example.slx”) to study this
+file `e0\2.PSPOfficialExps\px4demo_fcn_call_uorb_example.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_fcn_call_uorb_example.slx>`_, and file
+`e0\2.PSPOfficialExps\px4demo_write_uorb_example.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_write_uorb_example.slx>`_) to study this
 module.
 
 In the PX4 development website, there are detailed documents for creating a
@@ -313,7 +313,7 @@ this way, the parameters of the controller generated by Simulink can be tuned
 online in the GCS software, instead of modifying the controller parameters in
 Simulink, generating code, and uploading the firmware file again. As shown in
 Fig. 3.32, an example of how to access the PX4 internal parameters is presented
-in file “e0\2.PSPOfficialExps\px4demo_Parameter_CSC_example.slx”.
+in file `e0\2.PSPOfficialExps\px4demo_Parameter_CSC_example.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_Parameter_CSC_example.slx>`_.
 
     .. figure:: /images/Quan-ch3-Fig3.32.jpg
         :align: center
@@ -349,7 +349,7 @@ module and uORB modules) interface modules in the PSP module library
 presented in Fig. 3.15.
 
 4). An example of the obtained Simulink controller file is presented in Fig. 3.34.
-The example file is available in “e0\2.PSPOfficialExps\px4demo_attitude_system.slx”.
+The example file is available in `e0\2.PSPOfficialExps\px4demo_attitude_system.slx <https://github.com/RflySim/RflyExpCode/blob/master/code/e0/2.PSPOfficialExps/px4demo_attitude_system.slx>`_.
 
     .. figure:: /images/Quan-ch3-Fig3.34.jpg
         :align: center
