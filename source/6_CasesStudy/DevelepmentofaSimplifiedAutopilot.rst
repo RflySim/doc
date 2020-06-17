@@ -1,6 +1,6 @@
-=================================
-Development of Small Autopilot
-=================================
+======================================
+Develepment of a Simplified Autopilot
+======================================
 
 
 Control Framwork
