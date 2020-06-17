@@ -75,7 +75,7 @@ Language/语言
    :maxdepth: 1
    :caption: Cases Study: 
 
-   Development of Small Autopilot <6_CasesStudy/DevelopmentofSmallAutopilot>
+   Develepment of a Simplified Autopilot <6_CasesStudy/DevelepmentofaSimplifiedAutopilot>
 
 
 .. toctree::

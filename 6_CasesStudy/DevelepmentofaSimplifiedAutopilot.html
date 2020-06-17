@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Develepment of a Simplified Autopilot &mdash; RflySimDoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Download and Support" href="../7_DownloadAndSupport/DownloadAndSupport.html" />
+    <link rel="prev" title="2. Course Content" href="../5_Course/CourseContent.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RflySimDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/WhatIsRflysim.html">1. What is RflySim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_Start/GettingStarted.html">2. Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modeling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_Modeling/Modeling.html">1. Modeling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/Introduction.html">1. Overall Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/SoftwareInstallation.html">2. Software Package Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Configuration/HardwareConfiguration.html">3. Hardware Platform Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experimental Platform Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Introduction.html">1. Brief Introduction to Experimental Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/ControllerDesignAndSimulationPlatform.html">2. Simulink-Based Controller Design and Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PSPToolbox.html">3. PSP Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/PixhawkHardwareSystem.html">4. Pixhawk Hardware System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/HILSimulator.html">5. HIL Simulation Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Using/Examples.html">6. Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RflySim Advanced Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/InstallationMethod.html">1. Installation Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/BasicFeatures.html">2. Basic Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/OtherTypesofVehicles.html">3. Other Types of Vehicles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/Customizationof3DScenarios.html">4. Customization of 3D Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/UAVSwarmControl.html">5. UAV Swarm Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/UAVVisionAIControl.html">6. UAV Vision/AI Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Pro/FuturePlan.html">7. Future Plan</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/Book.html">1. Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Course/CourseContent.html">2. Course Content</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cases Study:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Develepment of a Simplified Autopilot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#control-framwork">1.1. Control Framwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-analysis">1.2. System Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debug-functions">1.3. Debug Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attitude-control-based-on-adrc-law">1.4. Attitude Control Based on ADRC Law</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RflySimDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Develepment of a Simplified Autopilot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/6_CasesStudy/DevelepmentofaSimplifiedAutopilot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="develepment-of-a-simplified-autopilot">
+<h1><span class="section-number">1. </span>Develepment of a Simplified Autopilot<a class="headerlink" href="#develepment-of-a-simplified-autopilot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="control-framwork">
+<h2><span class="section-number">1.1. </span>Control Framwork<a class="headerlink" href="#control-framwork" title="Permalink to this headline">¶</a></h2>
+<p>Using Simulink’s graphical user interface, the hierarchical design of the flight control can be easily carried out, so that the whole system structure is clear and easy to maintain. In general, the overall structure of the flight control system can be divided into two levels: high-level applications include state machine and autonomous flight, and low-level applications include position control, attitude control, and state estimator.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case1.png" src="../_images/Case1.png" />
+</div>
+</div></blockquote>
+<p>At the same time, to focus on the design we are interested in, we do not need to design each part by ourselves from scratch. On the other hand, many functions of Pixhawk/PX4 autopilot have been successfully tested and applied. We can fully use the existing functions of this open-source system. For example, we only design the controller and state machine based on the state estimator from the current estimator in the Pixhawk/PX4 autopilot. Beginners and developers can open the module and replace it with their algorithms or add a new module such as filter for their purpose. It is easy to interact in the GUI interface.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case2.png" src="../_images/Case2.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="system-analysis">
+<h2><span class="section-number">1.2. </span>System Analysis<a class="headerlink" href="#system-analysis" title="Permalink to this headline">¶</a></h2>
+<p>When deploying algorithms in an embedded system, real-time performance of the algorithm is a very noteworthy issue. For control algorithms, the real-time performance is particularly important because it directly affects the bandwidth and robustness of the control system. We use the time-triggered method to ensure the algorithm runs at a stable frequency, and it can be easily implemented in Simulink with Stateflow schedulers. The underlying control logic of flight control generally adopts hierarchical control. The data update frequency of the sensor in Pixhawk/PX4 autopilot is 250Hz, so we set the execution frequency of the attitude controller to 250Hz. The control frequency of the position control is generally lower than the attitude control, and the bandwidth of the attitude control should be 4 to 10 times of position control, so the execution frequency of the position control is set to 50Hz. The high-level controller does not need a high execution frequency, so the execution frequency of the state machine is set to 5 Hz, and the autonomous flight is set to 50 Hz. The estimator in Pixhawk/PX4 autopilot is directly used for state observation. This further demonstrates the superiority of our platform. Instead of building our flight control system from scratch, we focus mainly on the areas we are interested in, such as the design of attitude control, or state machine.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case3.png" src="../_images/Case3.png" />
+</div>
+</div></blockquote>
+<p>Through the data recording function, the execution period of each module is obtained. It can be seen that the execution cycle of each module of the system is controlled very accurately. In addition, considering the hardware resource limitation of Pixhawk, the controller or state estimator we design should not be too complicated. Some online optimization methods such as MPC cannot run in real-time with limited computing resources. The memory usage of main tasks running in Pixhawk/PX4 autopilot is shown as follow. It can be seen that the memory usage of the attitude control and position control we design is half of that the autopilot’s. The CPU usage of our attitude control and position control is slightly higher than that in Pixhawk/PX4 autopilot, but the autopilot’s CPU resource remains idle for 30.95% of the time.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case4.png" src="../_images/Case4.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="debug-functions">
+<h2><span class="section-number">1.3. </span>Debug Functions<a class="headerlink" href="#debug-functions" title="Permalink to this headline">¶</a></h2>
+<p>To improve the development efficiency of the flight controller further, we make full use of the functions of the Pixhawk/PX4 autopilot and add the following functions to the Simulink model we built.</p>
+<p>Online parameter tuning. Beginners and developers can modify the parameters in the Simulink model online through a ground control station, namely QGroundControl (QGC). There is no need to recompile and upload the program after each parameter modification, and it improves the program debugging efficiency.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case5.gif" src="../_images/Case5.gif" />
+</div>
+</div></blockquote>
+<p>Data recording. In order to facilitate experimental analysis, any data in the Simulink model can be recorded to the SD card. The number and frequency of the recorded data can be flexibly adjusted.</p>
+<p>Real-time data inspecting. If beginners and developers need to observe the state of the aircraft or the intermediate variables of the model in real-time during the flight, it is also very convenient to add a real-time data observation module to the Simulink model, and the data can be observed in QGC.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case6.gif" src="../_images/Case6.gif" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="attitude-control-based-on-adrc-law">
+<h2><span class="section-number">1.4. </span>Attitude Control Based on ADRC Law<a class="headerlink" href="#attitude-control-based-on-adrc-law" title="Permalink to this headline">¶</a></h2>
+<p>ADRC law is a more and more popular method in practice, with the structure of ADRC shown as follow. Obviously, it is more complex than PID controllers often used in autopilots. It will be used for testing.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case7.png" src="../_images/Case7.png" />
+</div>
+</div></blockquote>
+<p>The controller is designed in Simulink, and the SIL simulation is performed,. We can easily observe the interested states in Simulink and adjust the model to make it satisfied. After that, in the HIL simulation, only a simple modification of the model’s output is made for C/C++ code generation, but the controller will keep the same as the SIL simulation. The generated C/C++ code will be uploaded to Pixhawk automatically. Then, HIL simulation can be performed. In this process, we can manually control the multicopter and observe the aircraft’s response. Controller parameters can be adjusted according to the HIL simulation performance. Finally, the actual flight test is performed. We add 0.2kg weight to a 1.4kg multicopter as an external disturbance. Under the influence of external disturbance, the multicopter tilts slightly and then begins to adjust its attitude. After the adjustment, the multicopter returns to the horizontal state and rejects disturbance by itself. It should be noted that, based on the proposed platform, the designer only needs to design and improve the controller in Simulink. Basically, they are almost the same in SIL simulation, HIL simulation and real flight. The video can be found at <a class="reference external" href="https://flyeval.com/course/">https://flyeval.com/course/</a>.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../_images/Case8.png" src="../_images/Case8.png" />
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../7_DownloadAndSupport/DownloadAndSupport.html" class="btn btn-neutral float-right" title="1. Download and Support" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../5_Course/CourseContent.html" class="btn btn-neutral float-left" title="2. Course Content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Rfly
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
