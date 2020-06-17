@@ -27,11 +27,11 @@ test phase. By using code-generation technology by MATLAB/Simulink, the
 controller can be easily uploaded to hardware automatically for the HIL 
 simulation and real test phase. 
 
-So far, RflySim has two types, namely education-level RflySim and 
-commercial-level RflySim, depending on how to perform the HIL simulation.
+So far, RflySim has two types, namely **education-level RflySim** and 
+**commercial-level RflySim**, depending on how to perform the HIL simulation.
 
-* The education-level RflySim focuses on the ease-to-access, using personal computers to run the model and the serial port for communication with the control board. 
-* The commercial-level RflySim focuses on reliable performance, using real-time simulator with FPGA to run the models, sensors chips, and high-speed communication interfaces with the control board.
+* The **education-level RflySim** focuses on the ease-to-access, using personal computers to run the model and the serial port for communication with the control board. 
+* The **commercial-level RflySim** focuses on reliable performance, using real-time simulator with FPGA to run the models, sensors chips, and high-speed communication interfaces with the control board.
 
 .. figure:: /images/0-2.jpg
     :align: center
