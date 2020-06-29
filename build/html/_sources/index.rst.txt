@@ -53,7 +53,7 @@ Language/语言
    :maxdepth: 1
    :caption: RflySim Advanced Functions
 
-   Installation Method <4_Pro/InstallationMethod>
+   Installation Method <4_Pro/Advanced>
    Basic Features <4_Pro/BasicFeatures>
    Other Types of Vehicles <4_Pro/OtherTypesofVehicles>
    Customization of 3D Scenarios <4_Pro/Customizationof3DScenarios>
