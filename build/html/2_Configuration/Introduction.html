@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Software Package Installation" href="SoftwareInstallation.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -130,12 +132,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -174,9 +179,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>Overall Introduction</li>
+      <li>1. Overall Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,9 +201,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="overall-introduction">
-<h1><span class="section-number">1. </span>Overall Introduction<a class="headerlink" href="#overall-introduction" title="Permalink to this headline">¶</a></h1>
+<h1>1. Overall Introduction<a class="headerlink" href="#overall-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="hardware-platform">
-<h2><span class="section-number">1.1. </span>Hardware Platform<a class="headerlink" href="#hardware-platform" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Hardware Platform<a class="headerlink" href="#hardware-platform" title="Permalink to this headline">¶</a></h2>
 <p>Because all control algorithms are eventually deployed in a real aerial
 vehicle to perform flight tests, a hardware platform must be prepared for
 the basic flight test requirements. As shown in Fig. 2.1, the experimental
@@ -206,7 +211,7 @@ hardware platform recommended in this book is composed of five main parts.</p>
 <blockquote>
 <div><div class="figure align-center" id="id1">
 <img alt="../_images/Quan-ch2-Fig2.1.jpg" src="../_images/Quan-ch2-Fig2.1.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.1 Composition of experimental hardware platform</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.1 Composition of experimental hardware platform</span></p>
 </div>
 </div></blockquote>
 <p>(1) <strong>Ground computer</strong> : it is a high-performance Personal Computer (PC) with an
@@ -220,13 +225,13 @@ such as sensor calibration, parameter tuning, real-time control, and communicati
 <p>To ensure all the software tools run smoothly on the ground computer, the following
 basic configuration requirements must be satisfied.</p>
 <ul class="simple">
-<li><p>Operating System (OS): Windows 7–10, 64-bit system</p></li>
-<li><p>Processor: Intel I5 series or above</p></li>
-<li><p>Memory: 8G or above</p></li>
-<li><p>Graphics: discrete graphics, memory 2G or more</p></li>
-<li><p>Storage: 30G available space (solid-state drives are recommended)</p></li>
-<li><p>Interface: at least one USB Type-A</p></li>
-<li><p>Monitor: screen resolution 1080P or above</p></li>
+<li>Operating System (OS): Windows 7–10, 64-bit system</li>
+<li>Processor: Intel I5 series or above</li>
+<li>Memory: 8G or above</li>
+<li>Graphics: discrete graphics, memory 2G or more</li>
+<li>Storage: 30G available space (solid-state drives are recommended)</li>
+<li>Interface: at least one USB Type-A</li>
+<li>Monitor: screen resolution 1080P or above</li>
 </ul>
 <p>Noteworthy, for higher development efficiency, computer performance must be
 as high as possible.</p>
@@ -257,7 +262,7 @@ and structural strength to ensure that flight missions are successfully and reli
 accomplished.</p>
 </div>
 <div class="section" id="software-platform">
-<h2><span class="section-number">1.2. </span>Software Platform<a class="headerlink" href="#software-platform" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Software Platform<a class="headerlink" href="#software-platform" title="Permalink to this headline">¶</a></h2>
 <p>This experimental platform relies on many software tools to realize controller design,
 code generation, autopilot code compilation, HIL simulation, and other functions.
 The Simulation Software Package published along with this book has a one-click
@@ -273,18 +278,25 @@ through a modular programming language. The simulation software package
 and source code published along with this book support MATLAB R2017b and
 above. The required MATLAB toolboxes include the following.</p>
 <ul>
-<li><p>MATLAB/Simulink</p></li>
-<li><p>Control System Toolbox</p></li>
-<li><p>Curve Fitting Toolbox</p></li>
-<li><p>Aerospace Blockset</p></li>
-<li><p>Aerospace Toolbox</p></li>
-<li><p>MATLAB Coder</p></li>
-<li><p>Simulink Coder</p></li>
-<li><p>Stateflow</p>
+<li><p class="first">MATLAB/Simulink</p>
+</li>
+<li><p class="first">Control System Toolbox</p>
+</li>
+<li><p class="first">Curve Fitting Toolbox</p>
+</li>
+<li><p class="first">Aerospace Blockset</p>
+</li>
+<li><p class="first">Aerospace Toolbox</p>
+</li>
+<li><p class="first">MATLAB Coder</p>
+</li>
+<li><p class="first">Simulink Coder</p>
+</li>
+<li><p class="first">Stateflow</p>
 <blockquote>
 <div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This book does not provide the installation package or installation process for
+<p class="first admonition-title">Note</p>
+<p class="last">This book does not provide the installation package or installation process for
 MATLAB, so please purchase and install the above-required MATLAB toolboxes by yourself.
 If conditions are permitted, it is recommended to install MATLAB R2017b version with all toolboxes.</p>
 </div>
@@ -330,7 +342,7 @@ independent operation mechanism of CopterSim and 3DDisplay provides future
 compatibility for swarm simulations.</p>
 </div>
 <div class="section" id="relationship-between-software-and-hardware-platforms">
-<h2><span class="section-number">1.3. </span>Relationship Between Software and Hardware Platforms<a class="headerlink" href="#relationship-between-software-and-hardware-platforms" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Relationship Between Software and Hardware Platforms<a class="headerlink" href="#relationship-between-software-and-hardware-platforms" title="Permalink to this headline">¶</a></h2>
 <p>The previous subsection introduced the hardware and software components of the
 required experimental platform. These components seem to be diverse and complex,
 but they are necessary for the development and practical flight experiments of
@@ -343,7 +355,7 @@ roles and application methods of the components presented in Fig. 2.2 are introd
 in detail in the following sections.</p>
 <div class="figure align-center" id="id2">
 <img alt="../_images/Quan-ch2-Fig2.2.jpg" src="../_images/Quan-ch2-Fig2.2.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.2 Hardware and software components used in different phases</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.2 Hardware and software components used in different phases</span></p>
 </div>
 </div>
 </div>
@@ -368,11 +380,19 @@ in detail in the following sections.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -383,7 +403,6 @@ in detail in the following sections.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Other Types of Vehicles" href="OtherTypesofVehicles.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -131,12 +133,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -175,9 +180,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Basic Features</li>
+      <li>2. Basic Features</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,44 +202,44 @@
            <div itemprop="articleBody">
             
   <div class="section" id="basic-features">
-<h1><span class="section-number">2. </span>Basic Features<a class="headerlink" href="#basic-features" title="Permalink to this headline">¶</a></h1>
+<h1>2. Basic Features<a class="headerlink" href="#basic-features" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="hil-simulation-for-one-vehicle">
-<h2><span class="section-number">2.1. </span>HIL Simulation for One Vehicle<a class="headerlink" href="#hil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. HIL Simulation for One Vehicle<a class="headerlink" href="#hil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
 <p>You can open CopterSim and RflySm3D successively to start hardware-in-the-loop (HIL) simulation, or simple click the Desktop shortcut “HITLRun” and input the com number of the Pixhawk to start HIL simulation. The introduction of RflySim advanced platform and the method to start HIL simulation for one vehicle are presented in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id1">
 <a class="reference external image-reference" href="https://youtu.be/3ytbk63Og5k"><img alt="../_images/Advanced3.png" src="../_images/Advanced3.png" /></a>
-<p class="caption"><span class="caption-text">RflySim: How to use hardware-in-the-loop simulation for one vehicle</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim: How to use hardware-in-the-loop simulation for one vehicle</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="hil-simulation-for-multiple-vehicles">
-<h2><span class="section-number">2.2. </span>HIL Simulation for Multiple Vehicles<a class="headerlink" href="#hil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. HIL Simulation for Multiple Vehicles<a class="headerlink" href="#hil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
 <p>You can also connect multiple Pixhawks to start HIL simulation for multiple vehicles, the procedure is presented in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id2">
 <a class="reference external image-reference" href="https://youtu.be/oZ_-yhEgebA"><img alt="../_images/Advanced4.png" src="../_images/Advanced4.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to use hardware-in-the-loop simulation for UAV swarm</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use hardware-in-the-loop simulation for UAV swarm</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="sil-simulation-for-one-vehicle">
-<h2><span class="section-number">2.3. </span>SIL Simulation for One Vehicle<a class="headerlink" href="#sil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. SIL Simulation for One Vehicle<a class="headerlink" href="#sil-simulation-for-one-vehicle" title="Permalink to this headline">¶</a></h2>
 <p>If you don’t have Pixhawk hardware, you can also run PX4 control software on Windows to form a software-in-the-loop simulation system with vehicle model in CopterSim through UDP network. The method to start a PX4&amp;CopterSim SIL simulation for one vehicle is presented in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id3">
 <a class="reference external image-reference" href="https://youtu.be/QxNGOwANy-o"><img alt="../_images/Advanced5.png" src="../_images/Advanced5.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop simulation for one UAV</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop simulation for one UAV</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="sil-simulation-for-multiple-vehicles">
-<h2><span class="section-number">2.4. </span>SIL Simulation for Multiple Vehicles<a class="headerlink" href="#sil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. SIL Simulation for Multiple Vehicles<a class="headerlink" href="#sil-simulation-for-multiple-vehicles" title="Permalink to this headline">¶</a></h2>
 <p>You can also start multiple SIL simulation system by the procedure in the following video:</p>
 <blockquote>
 <div><div class="figure align-center" id="id4">
 <a class="reference external image-reference" href="https://youtu.be/88dGpErxPJ8"><img alt="../_images/Advanced6.png" src="../_images/Advanced6.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop (SIL) simulation for UAV swarm</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to quickly perform software-in-the-loop (SIL) simulation for UAV swarm</span></p>
 </div>
 </div></blockquote>
 </div>
@@ -260,11 +265,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -275,7 +288,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

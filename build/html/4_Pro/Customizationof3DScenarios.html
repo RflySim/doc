@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. UAV Swarm Control" href="UAVSwarmControl.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -129,12 +131,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -173,9 +178,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">4. </span>Customization of 3D Scenarios</li>
+      <li>4. Customization of 3D Scenarios</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,19 +200,19 @@
            <div itemprop="articleBody">
             
   <div class="section" id="customization-of-3d-scenarios">
-<h1><span class="section-number">4. </span>Customization of 3D Scenarios<a class="headerlink" href="#customization-of-3d-scenarios" title="Permalink to this headline">¶</a></h1>
+<h1>4. Customization of 3D Scenarios<a class="headerlink" href="#customization-of-3d-scenarios" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="design-and-import-3d-scenarios">
-<h2><span class="section-number">4.1. </span>Design and Import 3D Scenarios<a class="headerlink" href="#design-and-import-3d-scenarios" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Design and Import 3D Scenarios<a class="headerlink" href="#design-and-import-3d-scenarios" title="Permalink to this headline">¶</a></h2>
 <p>RflySim3D also support to design and import your own 3D scenes, the basic principle is listed as follows:</p>
 <ul class="simple">
-<li><p>Create a 3D Scene in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file) -&gt; imported to UE4 -&gt; imported to RlfySim3D</p></li>
-<li><p>Procedure: UE4 build and package project to files -&gt; copy the scene folder to RflySim3D content folder -&gt; Copy terrain files to CopterSim</p></li>
+<li>Create a 3D Scene in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file) -&gt; imported to UE4 -&gt; imported to RlfySim3D</li>
+<li>Procedure: UE4 build and package project to files -&gt; copy the scene folder to RflySim3D content folder -&gt; Copy terrain files to CopterSim</li>
 </ul>
 <p>In the following video, the procedure to import a quadcopter 3D model from 3Ds Max is introduced.</p>
 <blockquote>
 <div><div class="figure align-center" id="id1">
 <a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced9.png" src="../_images/Advanced9.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span></p>
 </div>
 </div></blockquote>
 <p>The following figures present the built-in high-fidelity 3D scenes in RflySim3D:</p>
@@ -223,22 +228,22 @@
 <blockquote>
 <div><div class="figure align-center" id="id2">
 <a class="reference external image-reference" href="https://youtu.be/Chpx1uwFVkU"><img alt="../_images/Advanced12.png" src="../_images/Advanced12.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to use RflySim3D to simulate light show of UAV swarm flying at city night</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use RflySim3D to simulate light show of UAV swarm flying at city night</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="design-and-import-vehicle-3d-models">
-<h2><span class="section-number">4.2. </span>Design and Import Vehicle 3D Models<a class="headerlink" href="#design-and-import-vehicle-3d-models" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Design and Import Vehicle 3D Models<a class="headerlink" href="#design-and-import-vehicle-3d-models" title="Permalink to this headline">¶</a></h2>
 <p>RflySim3D also support to design and import your own 3D vehicle models, the basic principle is listed as follows:</p>
 <ul class="simple">
-<li><p>Support to import all vehicle/target/people/obstacle in UE4, then RflySim3D will detect and import UE4 model file and XML configuration file</p></li>
-<li><p>Create a 3D model in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file), then import it to UE4 with writing an XML file, and finally recognized by RlfySim3D</p></li>
+<li>Support to import all vehicle/target/people/obstacle in UE4, then RflySim3D will detect and import UE4 model file and XML configuration file</li>
+<li>Create a 3D model in 3Ds Max (or imported from AutoCAD, SketchUp by fbx file), then import it to UE4 with writing an XML file, and finally recognized by RlfySim3D</li>
 </ul>
 <p>In the following video, we present the procedure to import the 3D model of a quadcopter from 3Ds Max with the XML file from our template.</p>
 <blockquote>
 <div><div class="figure align-center" id="id3">
 <a class="reference external image-reference" href="https://youtu.be/mKUehJwqqsU"><img alt="../_images/Advanced13.png" src="../_images/Advanced13.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to import your own 3D vehicle models to the UE4-based RflySim3D program</span></p>
 </div>
 </div></blockquote>
 <p>The figures below present the build-in high-fidelity vehicle/car/people/target 3D models in RflySim3D.</p>
@@ -276,11 +281,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -291,7 +304,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. HIL Simulation Platform" href="HILSimulator.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -133,12 +135,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -177,9 +182,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">4. </span>Pixhawk Hardware System</li>
+      <li>4. Pixhawk Hardware System</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -199,9 +204,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="pixhawk-hardware-system">
-<h1><span class="section-number">4. </span>Pixhawk Hardware System<a class="headerlink" href="#pixhawk-hardware-system" title="Permalink to this headline">¶</a></h1>
+<h1>4. Pixhawk Hardware System<a class="headerlink" href="#pixhawk-hardware-system" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="hardware-system-composition-and-connection">
-<h2><span class="section-number">4.1. </span>Hardware System Composition and Connection<a class="headerlink" href="#hardware-system-composition-and-connection" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Hardware System Composition and Connection<a class="headerlink" href="#hardware-system-composition-and-connection" title="Permalink to this headline">¶</a></h2>
 <p>As shown in Fig. 3.41, the hardware components required by this book include an RC
 transmitter, an RC receiver, a JR signal cable (connecting the Pixhawk autopilot and
 the RC receiver), a Pixhawk autopilot (Pixhawk 1 is recommended for studying, and
@@ -212,16 +217,16 @@ presented in Fig. 3.42.</p>
 <blockquote>
 <div><div class="figure align-center" id="id1">
 <img alt="../_images/Quan-ch3-Fig3.41.jpg" src="../_images/Quan-ch3-Fig3.41.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.41 Pixhawk autopilot, RC transmitter, and RC receiver</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.41 Pixhawk autopilot, RC transmitter, and RC receiver</span></p>
 </div>
 <div class="figure align-center" id="id2">
 <img alt="../_images/Quan-ch3-Fig3.42.jpg" src="../_images/Quan-ch3-Fig3.42.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.42 Connection between Pixhawk hardware and RadioLink receiver</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.42 Connection between Pixhawk hardware and RadioLink receiver</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="basic-operation-method-for-rc-transmitter">
-<h2><span class="section-number">4.2. </span>Basic Operation Method for RC Transmitter<a class="headerlink" href="#basic-operation-method-for-rc-transmitter" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Basic Operation Method for RC Transmitter<a class="headerlink" href="#basic-operation-method-for-rc-transmitter" title="Permalink to this headline">¶</a></h2>
 <p>The RC transmitter used in this book should be set to “Mode 1”. As illustrated in
 Fig. 3.43, the throttle and yaw channels are controlled by the left stick on the RC
 transmitter, whereas the roll and pitch channels are controlled by the right stick.
@@ -232,24 +237,24 @@ corresponds to CH6 for triggering the autopilot to switch flight modes or enable
 functions.</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/Quan-ch3-Fig3.43.jpg" src="../_images/Quan-ch3-Fig3.43.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.43 RC transmitter channels</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.43 RC transmitter channels</span></p>
 </div>
 <p>The following relationships should be remembered when processing the PWM
 input signals from the RC system for designing a controller.</p>
 <ul class="simple">
-<li><p>The throttle stick (CH3) moves from the bottom position to the top position, and the corresponding PWM value of CH3 received by Pixhawk changes from 1100 to 1900;</p></li>
-<li><p>The roll stick (CH1) and the yaw stick (CH4) move from the left position to the right position, and the corresponding PWM values change from 1100 to 1900;</p></li>
-<li><p>The pitch stick (CH2) moves from the bottom position to the top position, and the corresponding PWM value changes from 1900 to 1100;</p></li>
-<li><p>The upper-left switch (CH5) and the upper-right switch (CH6) move from the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), and the corresponding PWM values change from 1100, 1500, to 1900.</p></li>
+<li>The throttle stick (CH3) moves from the bottom position to the top position, and the corresponding PWM value of CH3 received by Pixhawk changes from 1100 to 1900;</li>
+<li>The roll stick (CH1) and the yaw stick (CH4) move from the left position to the right position, and the corresponding PWM values change from 1100 to 1900;</li>
+<li>The pitch stick (CH2) moves from the bottom position to the top position, and the corresponding PWM value changes from 1900 to 1100;</li>
+<li>The upper-left switch (CH5) and the upper-right switch (CH6) move from the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), and the corresponding PWM values change from 1100, 1500, to 1900.</li>
 </ul>
 </div>
 <div class="section" id="method-for-uploading-firmware-through-qgc">
-<h2><span class="section-number">4.3. </span>Method for Uploading Firmware Through QGC<a class="headerlink" href="#method-for-uploading-firmware-through-qgc" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Method for Uploading Firmware Through QGC<a class="headerlink" href="#method-for-uploading-firmware-through-qgc" title="Permalink to this headline">¶</a></h2>
 <p>Find the QGroundControl icon on the desktop and open the <a class="reference external" href="http://qgroundcontrol.com">QGC software</a> , the
 software UI is presented in Fig. 3.44.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch3-Fig3.44.jpg" src="../_images/Quan-ch3-Fig3.44.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.44 QGC firmware upload interface</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.44 QGC firmware upload interface</span></p>
 </div>
 <p>Then, the following procedure presents the
 way to upload a PX4 firmware file to the Pixhawk hardware through QGC.</p>
@@ -269,26 +274,26 @@ hardware.</p>
 <blockquote>
 <div><div class="figure align-center" id="id5">
 <img alt="../_images/Quan-ch3-Fig3.45.jpg" src="../_images/Quan-ch3-Fig3.45.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.45 QGC custom firmware selection page</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.45 QGC custom firmware selection page</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="pixhawk-setting-for-hil-simulation-mode">
-<h2><span class="section-number">4.4. </span>Pixhawk Setting for HIL Simulation Mode<a class="headerlink" href="#pixhawk-setting-for-hil-simulation-mode" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. Pixhawk Setting for HIL Simulation Mode<a class="headerlink" href="#pixhawk-setting-for-hil-simulation-mode" title="Permalink to this headline">¶</a></h2>
 <p>Open the QGC software, and connect the Pixhawk autopilot with a USB cable. Then,
 QGC will automatically recognize the Pixhawk autopilot and create a connection for
 parameter setting and data transmission. Fig. 3.46 presents the UI of QGC after
 connecting with the Pixhawk autopilot.</p>
 <div class="figure align-center" id="id6">
 <img alt="../_images/Quan-ch3-Fig3.46.jpg" src="../_images/Quan-ch3-Fig3.46.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.46 Pixhawk autopilot connected to QGC</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.46 Pixhawk autopilot connected to QGC</span></p>
 </div>
 <p>Click the “Airframe” tab (the third item on the left side in Fig. 3.46) on the QGC
 setting page to confirm that the “HIL Quadcopter X” airframe mode (see Fig. 3.47) is
 selected by default.</p>
 <div class="figure align-center" id="id7">
 <img alt="../_images/Quan-ch3-Fig3.47.jpg" src="../_images/Quan-ch3-Fig3.47.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.47 QGC Airframe setting page</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.47 QGC Airframe setting page</span></p>
 </div>
 <p>This setting is critical for subsequent HIL simulation. Otherwise,
 a manual setup will be required. The airframe setting method is presented below.</p>
@@ -299,7 +304,7 @@ the autopilot will restart to make the new airframe available.</p>
 whether the setting in Fig. 3.47 is correctly established.</p>
 </div>
 <div class="section" id="rc-transmitter-configuration-and-calibration">
-<h2><span class="section-number">4.5. </span>RC Transmitter Configuration and Calibration<a class="headerlink" href="#rc-transmitter-configuration-and-calibration" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. RC Transmitter Configuration and Calibration<a class="headerlink" href="#rc-transmitter-configuration-and-calibration" title="Permalink to this headline">¶</a></h2>
 <p>According to Fig. 3.42, connect the Pixhawk autopilot and the RC receiver. Then,
 connect the Pixhawk autopilot with the computer. Next, turn on the RC transmitter,
 and open QGC. After QGC connects with the Pixhawk autopilot successfully with
@@ -331,11 +336,11 @@ calibrated, click the “Calibrate” button in the middle in Fig. 3.48 and comp
 RC calibration by moving the sticks according to the instructions on QGC.</p>
 <div class="figure align-center" id="id8">
 <img alt="../_images/Quan-ch3-Fig3.48.jpg" src="../_images/Quan-ch3-Fig3.48.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.48 QGC RC transmitter setting and calibration page</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.48 QGC RC transmitter setting and calibration page</span></p>
 </div>
 </div>
 <div class="section" id="flight-mode-settings">
-<h2><span class="section-number">4.6. </span>Flight Mode Settings<a class="headerlink" href="#flight-mode-settings" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. Flight Mode Settings<a class="headerlink" href="#flight-mode-settings" title="Permalink to this headline">¶</a></h2>
 <p>After the RC transmitter is successfully calibrated, enter the “Flight Modes” setting
 page (see Fig. 3.49) and select “Mode Channel” as the previously tested CH6 channel.
 Since the CH6 channel is a three-position switch, the top position (the farthest position
@@ -347,7 +352,7 @@ attitude and altitude control), and “Position” (the loiter mode, including a
 position control).</p>
 <div class="figure align-center" id="id9">
 <img alt="../_images/Quan-ch3-Fig3.49.jpg" src="../_images/Quan-ch3-Fig3.49.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.49 Flight mode setting page in QGC</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.49 Flight mode setting page in QGC</span></p>
 </div>
 </div>
 </div>
@@ -372,11 +377,19 @@ position control).</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -387,7 +400,6 @@ position control).</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

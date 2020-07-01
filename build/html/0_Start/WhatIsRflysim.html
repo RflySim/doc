@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Getting Started" href="GettingStarted.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -134,12 +136,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -178,9 +183,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>What is RflySim</li>
+      <li>1. What is RflySim</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,9 +205,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="what-is-rflysim">
-<h1><span class="section-number">1. </span>What is RflySim<a class="headerlink" href="#what-is-rflysim" title="Permalink to this headline">¶</a></h1>
+<h1>1. What is RflySim<a class="headerlink" href="#what-is-rflysim" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about-rflysim">
-<h2><span class="section-number">1.1. </span>About RflySim<a class="headerlink" href="#about-rflysim" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. About RflySim<a class="headerlink" href="#about-rflysim" title="Permalink to this headline">¶</a></h2>
 <p>RflySim, launched by <a class="reference external" href="http://rfly.buaa.edu.cn/">BUAA Reliable Flight Control Group</a> , is an ecosystem or a
 toolchain mainly for unmanned systems’ control and safety testing following the
 idea of Model-Based Design (MBD). MATLAB/Simulink, supporting the full design
@@ -213,7 +218,7 @@ vision processing. Besides MATLAB/Simulink and Python, the RflySim ecosystem
 has many open-source software and tools we design especially.</p>
 <div class="figure align-center" id="id1">
 <img alt="../_images/0-1.jpg" src="../_images/0-1.jpg" />
-<p class="caption"><span class="caption-text">Fig. 0.1 Experiment process in RflySim platform</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.1 Experiment process in RflySim platform</span></p>
 </div>
 <p>The development based on RflySim generally includes the following five phases:
 modeling phase, controller design phase, Software-In-the-Loop (SIL) simulation
@@ -224,18 +229,18 @@ simulation and real test phase.</p>
 <p>So far, RflySim has two types, namely <strong>education-level RflySim</strong> and
 <strong>commercial-level RflySim</strong>, depending on how to perform the HIL simulation.</p>
 <ul class="simple">
-<li><p>The <strong>education-level RflySim</strong> focuses on the ease-to-access, using personal computers to run the model and the serial port for communication with the control board.</p></li>
-<li><p>The <strong>commercial-level RflySim</strong> focuses on reliable performance, using real-time simulator with FPGA to run the models, sensors chips, and high-speed communication interfaces with the control board.</p></li>
+<li>The <strong>education-level RflySim</strong> focuses on the ease-to-access, using personal computers to run the model and the serial port for communication with the control board.</li>
+<li>The <strong>commercial-level RflySim</strong> focuses on reliable performance, using real-time simulator with FPGA to run the models, sensors chips, and high-speed communication interfaces with the control board.</li>
 </ul>
 <div class="figure align-center" id="id2">
 <img alt="../_images/0-2.jpg" src="../_images/0-2.jpg" />
-<p class="caption"><span class="caption-text">Fig. 0.2 Distributed structure of RflySim Vision&amp;Swarm Platform</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.2 Distributed structure of RflySim Vision&amp;Swarm Platform</span></p>
 </div>
 </div>
 <div class="section" id="features">
-<h2><span class="section-number">1.2. </span>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="advantages-of-education-level-rflysim-platform">
-<h3><span class="section-number">1.2.1. </span>Advantages of education-level RflySim platform<a class="headerlink" href="#advantages-of-education-level-rflysim-platform" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.1. Advantages of education-level RflySim platform<a class="headerlink" href="#advantages-of-education-level-rflysim-platform" title="Permalink to this headline">¶</a></h3>
 <p>Compared with other simulators (AirSim, Gazebo, etc.) in the world, our
 education-level RflySim platform has the following advantages:</p>
 <p>1). <strong>Ease of Use</strong> . One-key installation and simulation in the Windows platform, which is convenient and easy to use for users to focus on algorithm development and test.</p>
@@ -246,11 +251,11 @@ education-level RflySim platform has the following advantages:</p>
 <p>6). <strong>Vision-based control</strong> . Our 3D environments based on UE4 can send real-time images for other programs (Python/C or C++/Simulink) to process the images and feedback the control signals to HIL/SIL simulation platform to achieve vision-based control.</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/0-3.jpg" src="../_images/0-3.jpg" />
-<p class="caption"><span class="caption-text">Fig. 0.3 Unified test framework for different vehicle types</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.3 Unified test framework for different vehicle types</span></p>
 </div>
 </div>
 <div class="section" id="advantages-of-commercial-level-rflysim-platform">
-<h3><span class="section-number">1.2.2. </span>Advantages of commercial-level RflySim platform<a class="headerlink" href="#advantages-of-commercial-level-rflysim-platform" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.2. Advantages of commercial-level RflySim platform<a class="headerlink" href="#advantages-of-commercial-level-rflysim-platform" title="Permalink to this headline">¶</a></h3>
 <p>The commercial-level RflySim platform uses a high-performance real-time
 simulation computer to simulate the vehicle motion and use FPGA to simulate
 and replace all sensor chips on the autopilot (control) system. As shown in
@@ -266,63 +271,63 @@ following advantages</p>
 <p>4). <strong>Automation</strong> : With the simulation model comprehensive and accurate enough, this platform can simulate normal and failure cases of outdoor flight tests. What’s more automatic testing, case traversing, and assessment can be performed to ensure system safety and reliability.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/0-4.jpg" src="../_images/0-4.jpg" />
-<p class="caption"><span class="caption-text">Fig. 0.4 Hardware structure of the commercial-level RflySim platform</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.4 Hardware structure of the commercial-level RflySim platform</span></p>
 </div>
 <div class="figure align-center" id="id5">
 <img alt="../_images/0-5.jpg" src="../_images/0-5.jpg" />
-<p class="caption"><span class="caption-text">Fig. 0.5 Software structure of the commercial-level RflySim platform</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.5 Software structure of the commercial-level RflySim platform</span></p>
 </div>
 </div>
 </div>
 <div class="section" id="show-results">
-<h2><span class="section-number">1.3. </span>Show Results<a class="headerlink" href="#show-results" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Show Results<a class="headerlink" href="#show-results" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-left" id="id6">
 <a class="reference internal image-reference" href="../_images/PlatGif1.gif"><img alt="../_images/PlatGif1.gif" src="../_images/PlatGif1.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.6 SIL simulation</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.6 SIL simulation</span></p>
 </div>
 <div class="figure align-right" id="id7">
 <a class="reference internal image-reference" href="../_images/PlatGif2.gif"><img alt="../_images/PlatGif2.gif" src="../_images/PlatGif2.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.7 automatic code generation</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.7 automatic code generation</span></p>
 </div>
 <div class="figure align-left" id="id8">
 <a class="reference internal image-reference" href="../_images/PlatGif3.gif"><img alt="../_images/PlatGif3.gif" src="../_images/PlatGif3.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.8 HIL simulation</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.8 HIL simulation</span></p>
 </div>
 <div class="figure align-right" id="id9">
 <a class="reference internal image-reference" href="../_images/PlatGif4.gif"><img alt="../_images/PlatGif4.gif" src="../_images/PlatGif4.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.9 Flight experiment</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.9 Flight experiment</span></p>
 </div>
 <div class="figure align-left" id="id10">
 <a class="reference internal image-reference" href="../_images/PX4SITLSim.gif"><img alt="../_images/PX4SITLSim.gif" src="../_images/PX4SITLSim.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.10 One-key cluster SIL simulation</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.10 One-key cluster SIL simulation</span></p>
 </div>
 <div class="figure align-right" id="id11">
 <a class="reference internal image-reference" href="../_images/AutoInstall.gif"><img alt="../_images/AutoInstall.gif" src="../_images/AutoInstall.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.11 One-key installation and simulation</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.11 One-key installation and simulation</span></p>
 </div>
 <div class="figure align-left" id="id12">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF1.gif"><img alt="../_images/AdvancedGIF1.gif" src="../_images/AdvancedGIF1.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.12 Indoor HIL simulation based on UE4</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.12 Indoor HIL simulation based on UE4</span></p>
 </div>
 <div class="figure align-right" id="id13">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF2.gif"><img alt="../_images/AdvancedGIF2.gif" src="../_images/AdvancedGIF2.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.13 HIL simulation for unmanned cars</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.13 HIL simulation for unmanned cars</span></p>
 </div>
 <div class="figure align-left" id="id14">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF3.gif"><img alt="../_images/AdvancedGIF3.gif" src="../_images/AdvancedGIF3.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.14 Cluster control and HIL simulation</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.14 Cluster control and HIL simulation</span></p>
 </div>
 <div class="figure align-right" id="id15">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF4.gif"><img alt="../_images/AdvancedGIF4.gif" src="../_images/AdvancedGIF4.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.15 One-key cross rings control</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.15 One-key cross rings control</span></p>
 </div>
 <div class="figure align-left" id="id16">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF9.gif"><img alt="../_images/AdvancedGIF9.gif" src="../_images/AdvancedGIF9.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.16 HIL simulation of motor failure</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.16 HIL simulation of motor failure</span></p>
 </div>
 <div class="figure align-right" id="id17">
 <a class="reference internal image-reference" href="../_images/AdvancedGIF10.gif"><img alt="../_images/AdvancedGIF10.gif" src="../_images/AdvancedGIF10.gif" style="width: 320px; height: 160px;" /></a>
-<p class="caption"><span class="caption-text">Fig. 0.17 Indoor cluster flight experiment</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 0.17 Indoor cluster flight experiment</span></p>
 </div>
 </div>
 </div>
@@ -347,11 +352,19 @@ following advantages</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -362,7 +375,6 @@ following advantages</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

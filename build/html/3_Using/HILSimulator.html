@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Examples" href="Examples.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -130,12 +132,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -174,9 +179,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">5. </span>HIL Simulation Platform</li>
+      <li>5. HIL Simulation Platform</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,11 +201,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="hil-simulation-platform">
-<h1><span class="section-number">5. </span>HIL Simulation Platform<a class="headerlink" href="#hil-simulation-platform" title="Permalink to this headline">¶</a></h1>
+<h1>5. HIL Simulation Platform<a class="headerlink" href="#hil-simulation-platform" title="Permalink to this headline">¶</a></h1>
 <p>The HIL simulation platform includes a Real-time Motion Simulation Software—
 CopterSim and a 3D Visual Display Software—3DDisplay.</p>
 <div class="section" id="coptersim">
-<h2><span class="section-number">5.1. </span>CopterSim<a class="headerlink" href="#coptersim" title="Permalink to this headline">¶</a></h2>
+<h2>5.1. CopterSim<a class="headerlink" href="#coptersim" title="Permalink to this headline">¶</a></h2>
 <p>Double-click the CopterSim shortcut on the Windows desktop to open the CopterSim
 software, whose UI is presented in Fig. 3.50. The default simulation model and
 parameters are the same as for the Simulink multicopter model used in the SIL
@@ -210,7 +215,7 @@ to run on a 64-bit Windows computer platform with a serial port and a MicroUSB
 cable to communicate with the Pixhawk autopilot (see Fig. 3.42).</p>
 <div class="figure align-center" id="id2">
 <img alt="../_images/Quan-ch3-Fig3.50.jpg" src="../_images/Quan-ch3-Fig3.50.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.50 CopterSim main UI</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.50 CopterSim main UI</span></p>
 </div>
 <p>CopterSim sends sensor data to the Pixhawk autopilot, and then the autopilot
 solves the motor PWM control signal and returns it to CopterSim. As a result, the
@@ -238,7 +243,7 @@ the model parameters to the default values; clicking the “Save and Apply Param
 button will store the current parameters to the database for subsequent HIL simulations.</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/Quan-ch3-Fig3.51.jpg" src="../_images/Quan-ch3-Fig3.51.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.51 Model parameter configuration dialog</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.51 Model parameter configuration dialog</span></p>
 </div>
 <p>CopterSim also allows readers to directly modify the model parameters on the
 right page of Fig. 3.51. For example, enter the same parameters as the multicopter
@@ -263,11 +268,11 @@ clicking the “Restart Simulation” will re-initialize the multicopter positio
 to their initial values.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch3-Fig3.52.jpg" src="../_images/Quan-ch3-Fig3.52.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.52 HIL simulation with CopterSim</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.52 HIL simulation with CopterSim</span></p>
 </div>
 </div>
 <div class="section" id="ddisplay">
-<h2><span class="section-number">5.2. </span>3DDisplay<a class="headerlink" href="#ddisplay" title="Permalink to this headline">¶</a></h2>
+<h2>5.2. 3DDisplay<a class="headerlink" href="#ddisplay" title="Permalink to this headline">¶</a></h2>
 <p>Double-click the 3DDisplay shortcut on the Windows desktop to open the 3DDisplay
 software. As shown in Fig. 3.53, the “3D Scene Viewer” on the left side of the
 3DDisplay UI presents the current flight status of the multicopter in the 3D scene.
@@ -276,11 +281,11 @@ UI, including motor speed, position, and attitude information. The flight trajec
 of the multicopter is displayed on the lower right window of the 3DDisplay UI.</p>
 <div class="figure align-center" id="id5">
 <img alt="../_images/Quan-ch3-Fig3.53.jpg" src="../_images/Quan-ch3-Fig3.53.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.53 User interface of 3DDisplay</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.53 User interface of 3DDisplay</span></p>
 </div>
 </div>
 <div class="section" id="flight-tests-with-hil-simulation-platform">
-<h2><span class="section-number">5.3. </span>Flight Tests with HIL Simulation Platform<a class="headerlink" href="#flight-tests-with-hil-simulation-platform" title="Permalink to this headline">¶</a></h2>
+<h2>5.3. Flight Tests with HIL Simulation Platform<a class="headerlink" href="#flight-tests-with-hil-simulation-platform" title="Permalink to this headline">¶</a></h2>
 <p>In the HIL simulation platform, when controlling a real multicopter, it is convenient
 to control the simulated multicopter with a real RC transmitter to perform basic
 actions, such as arming, taking off, manual flight, landing, etc. The detailed steps are
@@ -294,11 +299,11 @@ stick on the RC transmitter (CH3) to the lower-right corner for 2–3 s.</p>
 <blockquote>
 <div><div class="figure align-center" id="id6">
 <img alt="../_images/Quan-ch3-Fig3.54.jpg" src="../_images/Quan-ch3-Fig3.54.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.54 Arm and disarm of Pixhawk autopilot through RC transmitter</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.54 Arm and disarm of Pixhawk autopilot through RC transmitter</span></p>
 </div>
 </div></blockquote>
 <p>(4). Pixhawk is successfully armed when its LED turns from slow flashing to always
-on, <a class="footnote-reference brackets" href="#f1" id="id1">1</a> and the CopterSim print message “Detect Px4 Armed” is received from
+on, <a class="footnote-reference" href="#f1" id="id1">[1]</a> and the CopterSim print message “Detect Px4 Armed” is received from
 Pixhawk. If arming Pixhawk fails, please disconnect all hardware and software
 and repeat the above steps.</p>
 <p>(5). Pull up the left-hand stick on the RC transmitter (CH3) for the multicopter to
@@ -321,11 +326,12 @@ to the lower-left corner for 2–3 s to disarm the Pixhawk.</p>
 simulation. Then, disconnect all software and hardware connections between the
 computer and Pixhawk.</p>
 <p class="rubric">Notes</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Higher Pixhawk hardware (e.g., Pixhawk 2/3/4/5) starts to discard LED module, so an external I2C LED module is required to observe the lighting effect.</p>
-</dd>
-</dl>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Higher Pixhawk hardware (e.g., Pixhawk 2/3/4/5) starts to discard LED module, so an external I2C LED module is required to observe the lighting effect.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -349,11 +355,19 @@ computer and Pixhawk.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -364,7 +378,6 @@ computer and Pixhawk.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

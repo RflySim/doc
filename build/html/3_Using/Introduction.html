@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Simulink-Based Controller Design and Simulation Platform" href="ControllerDesignAndSimulationPlatform.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -129,12 +131,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -173,9 +178,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>Brief Introduction to Experimental Platforms</li>
+      <li>1. Brief Introduction to Experimental Platforms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,9 +200,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="brief-introduction-to-experimental-platforms">
-<h1><span class="section-number">1. </span>Brief Introduction to Experimental Platforms<a class="headerlink" href="#brief-introduction-to-experimental-platforms" title="Permalink to this headline">¶</a></h1>
+<h1>1. Brief Introduction to Experimental Platforms<a class="headerlink" href="#brief-introduction-to-experimental-platforms" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="platform-composition">
-<h2><span class="section-number">1.1. </span>Platform Composition<a class="headerlink" href="#platform-composition" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Platform Composition<a class="headerlink" href="#platform-composition" title="Permalink to this headline">¶</a></h2>
 <p>The experimental platform is a rapid development platform for multicopter control
 algorithm design based on MATLAB/Simulink and Pixhawk. It is mainly composed
 of the following five parts: the Simulink-based Controller Design and Simulation
@@ -216,7 +221,7 @@ autopilot.</p>
 <blockquote>
 <div><div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch3-Fig3.1.jpg" src="../_images/Quan-ch3-Fig3.1.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.1 Simulink-based controller design and simulation platform</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.1 Simulink-based controller design and simulation platform</span></p>
 </div>
 </div></blockquote>
 <p>(2). HIL Simulation Platform</p>
@@ -230,15 +235,15 @@ cable, thereby establishing a closed-loop control system for HIL simulations.</p
 <blockquote>
 <div><div class="figure align-center" id="id5">
 <img alt="../_images/Quan-ch3-Fig3.2.jpg" src="../_images/Quan-ch3-Fig3.2.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.2 HIL simulation platform</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.2 HIL simulation platform</span></p>
 </div>
 </div></blockquote>
 <p>(3). Pixhawk Autopilot System</p>
 <p>Figure 3.3 illustrates the entire Pixhawk autopilot system that includes a
 Pixhawk autopilot, an RC transmitter, an RC receiver, and a Ground Control
 Station (GCS). The Pixhawk autopilot used in this book is composed of
-Pixhawk 1 (2MB flash version) <a class="footnote-reference brackets" href="#f2" id="id1">1</a> autopilot hardware and PX4 autopilot software.
-The PX4 autopilot software <a class="footnote-reference brackets" href="#f3" id="id2">2</a> has a built-in Real-Time Operating System (RTOS)
+Pixhawk 1 (2MB flash version) <a class="footnote-reference" href="#f2" id="id1">[1]</a> autopilot hardware and PX4 autopilot software.
+The PX4 autopilot software <a class="footnote-reference" href="#f3" id="id2">[2]</a> has a built-in Real-Time Operating System (RTOS)
 to ensure basic functions, such as multi-thread scheduling, low-level drivers, and
 algorithm execution. The Pixhawk autopilot uses an RC receiver to wirelessly
 connect with the corresponding RC transmitter for receiving the control commands
@@ -248,7 +253,7 @@ flight data and mission commands.</p>
 <blockquote>
 <div><div class="figure align-center" id="id6">
 <img alt="../_images/Quan-ch3-Fig3.3.jpg" src="../_images/Quan-ch3-Fig3.3.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.3 Pixhawk autopilot system</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.3 Pixhawk autopilot system</span></p>
 </div>
 </div></blockquote>
 <p>(4). Multicopter Hardware System</p>
@@ -265,15 +270,15 @@ designed for the resulting multicopter hardware system.</p>
 <blockquote>
 <div><div class="figure align-center" id="id7">
 <img alt="../_images/Quan-ch3-Fig3.4.jpg" src="../_images/Quan-ch3-Fig3.4.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.4 Multicopter hardware system</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.4 Multicopter hardware system</span></p>
 </div>
 </div></blockquote>
 <p>(5). Instructional Package</p>
 <p>This book encompasses video tutorials, PowerPoint files, and source code examples.
-The topic is closely related to our previous book <a class="footnote-reference brackets" href="#f8" id="id3">3</a>.</p>
+The topic is closely related to our previous book <a class="footnote-reference" href="#f8" id="id3">[3]</a>.</p>
 </div>
 <div class="section" id="platform-advantage">
-<h2><span class="section-number">1.2. </span>Platform Advantage<a class="headerlink" href="#platform-advantage" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Platform Advantage<a class="headerlink" href="#platform-advantage" title="Permalink to this headline">¶</a></h2>
 <p>This experimental platform provides interfaces for multicopter controller design in
 MATLAB/Simulink. Readers (beginners, students, or engineers) can develop a rapid
 design and verify the control algorithms by SIL simulation. After the control
@@ -287,17 +292,24 @@ completed, indoor and outdoor flight tests can be carried out by assembling the 
 autopilot onto a real multicopter hardware system. The performance of the
 designed controllers can be evaluated through experimental tests.</p>
 <p class="rubric">References</p>
-<dl class="footnote brackets">
-<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>corresponding to the circuit diagram version Pixhawk 2.4.6; for more details, please visit this website: <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk.html">https://docs.px4.io/master/en/flight_controller/pixhawk.html</a>.</p>
-</dd>
-<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>In addition to supporting the PX4 autopilot software used in this book, the Pixhawk series autopilots also support Ardupilot open-source autopilot software; see: <a class="reference external" href="http://ardupilot.org/dev/index.html">http://ardupilot.org/dev/index.html</a>.</p>
-</dd>
-<dt class="label" id="f8"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>© Publishing House of Electronics Industry 2020 Q. Quan et al., Multicopter Design and Control Practice, <a class="reference external" href="https://doi.org/10.1007/978-981-15-3138-5_3">https://doi.org/10.1007/978-981-15-3138-5_3</a></p>
-</dd>
-</dl>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>corresponding to the circuit diagram version Pixhawk 2.4.6; for more details, please visit this website: <a class="reference external" href="https://docs.px4.io/master/en/flight_controller/pixhawk.html">https://docs.px4.io/master/en/flight_controller/pixhawk.html</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>In addition to supporting the PX4 autopilot software used in this book, the Pixhawk series autopilots also support Ardupilot open-source autopilot software; see: <a class="reference external" href="http://ardupilot.org/dev/index.html">http://ardupilot.org/dev/index.html</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>© Publishing House of Electronics Industry 2020 Q. Quan et al., Multicopter Design and Control Practice, <a class="reference external" href="https://doi.org/10.1007/978-981-15-3138-5_3">https://doi.org/10.1007/978-981-15-3138-5_3</a></td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -321,11 +333,19 @@ designed controllers can be evaluated through experimental tests.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -336,7 +356,6 @@ designed controllers can be evaluated through experimental tests.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
