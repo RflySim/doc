@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Brief Introduction to Experimental Platforms" href="../3_Using/Introduction.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -134,12 +136,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -178,9 +183,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>Hardware Platform Configuration</li>
+      <li>3. Hardware Platform Configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,11 +205,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="hardware-platform-configuration">
-<h1><span class="section-number">3. </span>Hardware Platform Configuration<a class="headerlink" href="#hardware-platform-configuration" title="Permalink to this headline">¶</a></h1>
+<h1>3. Hardware Platform Configuration<a class="headerlink" href="#hardware-platform-configuration" title="Permalink to this headline">¶</a></h1>
 <p>This chapter will introduce the RC system configuration, Pixhawk autopilot system
 configuration, airframe, and propulsion system configuration.</p>
 <div class="section" id="rc-system-configuration">
-<h2><span class="section-number">3.1. </span>RC System Configuration<a class="headerlink" href="#rc-system-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. RC System Configuration<a class="headerlink" href="#rc-system-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There are two RC system products presented in this book, which are RadioLink AT9S
 and Futaba T14SG. The receivers of these RC systems have the S.BUS output function
 that can transmit the PWM signals of all channels to the flight control through
@@ -219,7 +224,7 @@ page; thus, readers need to pay attention to this. The following subsections det
 configuration steps of the two RC systems. Other RC systems can be configured in
 a similar way.</p>
 <div class="section" id="radiolink-at9s-configuration-method">
-<h3><span class="section-number">3.1.1. </span>RadioLink AT9S Configuration Method<a class="headerlink" href="#radiolink-at9s-configuration-method" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.1. RadioLink AT9S Configuration Method<a class="headerlink" href="#radiolink-at9s-configuration-method" title="Permalink to this headline">¶</a></h3>
 <p>RadioLink AT9S includes an RC transmitter and an R9DS RC receiver. Other
 necessary accessories include a battery (LiPo lithium polymer battery, 3S, 11.1V), a
 battery charger, a JR line (or DuPont line) for connecting the RC receiver to the
@@ -232,7 +237,7 @@ socket on the charger. Red and green indicator colors represent the “charging�
 and “fully charged” status, respectively. The RC transmitter battery is installed</p>
 <div class="figure align-center" id="id1">
 <img alt="../_images/Quan-ch2-Fig2.14.jpg" src="../_images/Quan-ch2-Fig2.14.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.14 RC transmitter, battery, and charger</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.14 RC transmitter, battery, and charger</span></p>
 </div>
 <p>(2). RC receiver initial setting</p>
 <blockquote>
@@ -243,7 +248,7 @@ line, and the Pixhawk MicroUSB port must be connected to the computer
 USB Type-A interface to supply power to the receiver and the Pixhawk.</p>
 <div class="figure align-center" id="id2">
 <img alt="../_images/Quan-ch2-Fig2.15.jpg" src="../_images/Quan-ch2-Fig2.15.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.15 RC transmitter and receiver configuration</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.15 RC transmitter and receiver configuration</span></p>
 </div>
 <p>2). How to rematch the RC transmitter with an RC receiver (the connection has
 been completed by default, and this step needs to be performed only when
@@ -272,65 +277,66 @@ set.</p>
 <div><p>1). Pull up the “POWER” switch shown in Fig. 2.15 to open the RC transmitter.</p>
 <p>2). Setting the Language and Turning off the Sound</p>
 <ul class="simple">
-<li><p>Press the “Mode” button on the RC transmitter shown in Fig. 2.15 for several seconds to enter the model setting page shown in Fig. 2.16. Roll the “Selection Wheel” on the RC transmitter shown in Fig. 2.15, move the cursor to “PARAMETER”, and press the “OK” button on the RC transmitter shown in Fig. 2.15 to enter the RC transmitter parameter setting page.</p></li>
-<li><p>Scroll the “Selection Wheel” to select the “English” item, click the “OK” button, and then scroll the “Direction Wheel” again to select the desired display language. Then click the “OK” button to confirm the selection.</p></li>
-<li><p>Because this experiment is mainly performed indoor, it is recommended to turn off the speakers of the RC transmitter to prevent disturbing people nearby. As shown in Fig. 2.16, modify the “Sound” option from “ON” to “OFF”.</p></li>
+<li>Press the “Mode” button on the RC transmitter shown in Fig. 2.15 for several seconds to enter the model setting page shown in Fig. 2.16. Roll the “Selection Wheel” on the RC transmitter shown in Fig. 2.15, move the cursor to “PARAMETER”, and press the “OK” button on the RC transmitter shown in Fig. 2.15 to enter the RC transmitter parameter setting page.</li>
+<li>Scroll the “Selection Wheel” to select the “English” item, click the “OK” button, and then scroll the “Direction Wheel” again to select the desired display language. Then click the “OK” button to confirm the selection.</li>
+<li>Because this experiment is mainly performed indoor, it is recommended to turn off the speakers of the RC transmitter to prevent disturbing people nearby. As shown in Fig. 2.16, modify the “Sound” option from “ON” to “OFF”.</li>
 </ul>
 <div class="figure align-center" id="id3">
 <img alt="../_images/Quan-ch2-Fig2.16.jpg" src="../_images/Quan-ch2-Fig2.16.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.16 RC transmitter parameter setting page</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.16 RC transmitter parameter setting page</span></p>
 </div>
 <p>3). Multicopter mode setting</p>
 <ul class="simple">
-<li><p>Press the “Mode” button for several seconds to enter the “BASIC MENU” page, and click the “MODEL TYPE” item to enter the model type selection page shown in Fig. 2.17.</p></li>
-<li><p>Change the “TYPE” item from “HELICOPTER” to “MULTICOPTER”, and then press the “OK” button for several seconds to set the control mode to “Multicopter”.</p></li>
+<li>Press the “Mode” button for several seconds to enter the “BASIC MENU” page, and click the “MODEL TYPE” item to enter the model type selection page shown in Fig. 2.17.</li>
+<li>Change the “TYPE” item from “HELICOPTER” to “MULTICOPTER”, and then press the “OK” button for several seconds to set the control mode to “Multicopter”.</li>
 </ul>
 <div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch2-Fig2.17.jpg" src="../_images/Quan-ch2-Fig2.17.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.17 Multicopter control mode switching of RC transmitter</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.17 Multicopter control mode switching of RC transmitter</span></p>
 </div>
 <p>4). Throttle channel reverse setting</p>
 <ul class="simple">
-<li><p>The throttle channel of the RadioLink transmitter is opposite to normal RC transmitters, and the throttle channel reverse needs to be set. Press the “Mode” button for several seconds to enter the “REVERSE” setting page shown in Fig. 2.18, and change the throttle channel from “NOR” to “REV”.</p></li>
+<li>The throttle channel of the RadioLink transmitter is opposite to normal RC transmitters, and the throttle channel reverse needs to be set. Press the “Mode” button for several seconds to enter the “REVERSE” setting page shown in Fig. 2.18, and change the throttle channel from “NOR” to “REV”.</li>
 </ul>
 <p>5). CH5-CH6 mode switching channel setting</p>
 <ul class="simple">
-<li><p>Because of experimental requirements, CH5 shown in Fig. 2.15 of the RC transmitter needs to be mapped to a three-position switch for mode switching of the Pixhawk. Press the “Mode” button for several seconds, and click the “AUX-CH” item next to the “REVERSE” item shown in Fig. 2.18.</p></li>
-<li><p>As shown in Fig. 2.19, on the “AUX-CH” setting page, click the “CH5” item to enter the channel setting page, and map CH5 to a three-position switch “SwE” on the RC transmitter (switch “E” is located in the top-left corner of the RC transmitter in Fig. 2.15).</p></li>
-<li><p>Similarly, the “CH6” item in Fig. 2.19 must be modified to a three-position switch “SwG” of the RC transmitter (switch “G” is located in the upperright corner of the RC transmitter in Fig. 2.15).</p></li>
+<li>Because of experimental requirements, CH5 shown in Fig. 2.15 of the RC transmitter needs to be mapped to a three-position switch for mode switching of the Pixhawk. Press the “Mode” button for several seconds, and click the “AUX-CH” item next to the “REVERSE” item shown in Fig. 2.18.</li>
+<li>As shown in Fig. 2.19, on the “AUX-CH” setting page, click the “CH5” item to enter the channel setting page, and map CH5 to a three-position switch “SwE” on the RC transmitter (switch “E” is located in the top-left corner of the RC transmitter in Fig. 2.15).</li>
+<li>Similarly, the “CH6” item in Fig. 2.19 must be modified to a three-position switch “SwG” of the RC transmitter (switch “G” is located in the upperright corner of the RC transmitter in Fig. 2.15).</li>
 </ul>
 <div class="figure align-center" id="id5">
 <img alt="../_images/Quan-ch2-Fig2.18.jpg" src="../_images/Quan-ch2-Fig2.18.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.18 Throttle channel reverse setting</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.18 Throttle channel reverse setting</span></p>
 </div>
 <div class="figure align-center" id="id6">
 <img alt="../_images/Quan-ch2-Fig2.19.jpg" src="../_images/Quan-ch2-Fig2.19.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.19 CH5-CH6 mode switching channel setting</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.19 CH5-CH6 mode switching channel setting</span></p>
 </div>
 <p>6). Channel confirmation</p>
 <ul>
-<li><p>Restart the RC transmitter, and press the “Return” button (see Fig. 2.15) on the RC transmitter to enter the “SERVO” page (see Fig. 2.20). In this page, the PWM value of each channel can be verified by moving sticks and switches on the RC transmitter. Note that, as shown in Fig. 2.20, the channel value reaches an upper limit of 100 corresponding to the desired PWM value of 1100 µs; the channel value reaches the lower limit 100, corresponding to the desired output PWM value of 1900 µs. Note that the actual PWM value range received by the RC receiver may not equal to 1100–1900 due to various errors. So RC calibration is important for autopilots to correctly recognize the control commands from the ground pilot. For example, in Fig. 2.20, the third channel is located at an upper limit of 100, which indicates that the PWM value is about 1100 µs; the other three channels are located at 0 positions, which indicates that the corresponding PWM value is about 1500 µs.</p></li>
-<li><p>It is important to understand the correct relationship between the stick position and the PWM value of each channel. Move each channel stick in Fig. 2.15 to confirm that each channel corresponds correctly to the following rules.</p>
+<li><p class="first">Restart the RC transmitter, and press the “Return” button (see Fig. 2.15) on the RC transmitter to enter the “SERVO” page (see Fig. 2.20). In this page, the PWM value of each channel can be verified by moving sticks and switches on the RC transmitter. Note that, as shown in Fig. 2.20, the channel value reaches an upper limit of 100 corresponding to the desired PWM value of 1100 µs; the channel value reaches the lower limit 100, corresponding to the desired output PWM value of 1900 µs. Note that the actual PWM value range received by the RC receiver may not equal to 1100–1900 due to various errors. So RC calibration is important for autopilots to correctly recognize the control commands from the ground pilot. For example, in Fig. 2.20, the third channel is located at an upper limit of 100, which indicates that the PWM value is about 1100 µs; the other three channels are located at 0 positions, which indicates that the corresponding PWM value is about 1500 µs.</p>
+</li>
+<li><p class="first">It is important to understand the correct relationship between the stick position and the PWM value of each channel. Move each channel stick in Fig. 2.15 to confirm that each channel corresponds correctly to the following rules.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>CH1: this corresponds to the horizontal movement of the right-hand stick of the RC transmitter. The right-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
-<li><p>CH2: this corresponds to the vertical movement of the right-hand stick of the RC transmitter. The right-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
-<li><p>CH3: this corresponds to the vertical movement of the left-hand stick of the RC transmitter. The left-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1900 to 1100 (opposite to CH2).</p></li>
-<li><p>CH4: this corresponds to the horizontal movement of the left-hand stick of the RC transmitter. The left-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</p></li>
-<li><p>CH5: this corresponds to the three-position switch on the upper-left side of the RC transmitter. The switch moves from the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding to PWM values of 1100, 1500, and 1900, respectively.</p></li>
-<li><p>CH6: this corresponds to the three-position switch on the upper-right side of the RC transmitter. The switch moves to the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding PWM values of 1100, 1500, and 1900, respectively.</p></li>
+<li>CH1: this corresponds to the horizontal movement of the right-hand stick of the RC transmitter. The right-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</li>
+<li>CH2: this corresponds to the vertical movement of the right-hand stick of the RC transmitter. The right-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1100 to 1900.</li>
+<li>CH3: this corresponds to the vertical movement of the left-hand stick of the RC transmitter. The left-hand stick moves from top to bottom, corresponding to a PWM value that changes from 1900 to 1100 (opposite to CH2).</li>
+<li>CH4: this corresponds to the horizontal movement of the left-hand stick of the RC transmitter. The left-hand stick moves from left to right, corresponding to a PWM value that changes from 1100 to 1900.</li>
+<li>CH5: this corresponds to the three-position switch on the upper-left side of the RC transmitter. The switch moves from the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding to PWM values of 1100, 1500, and 1900, respectively.</li>
+<li>CH6: this corresponds to the three-position switch on the upper-right side of the RC transmitter. The switch moves to the top position (the farthest position from the user), middle position, and bottom position (the closest position from the user), corresponding PWM values of 1100, 1500, and 1900, respectively.</li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
 <div class="figure align-center" id="id7">
 <img alt="../_images/Quan-ch2-Fig2.20.jpg" src="../_images/Quan-ch2-Fig2.20.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.20 RC transmitter stick position and direction</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.20 RC transmitter stick position and direction</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="configuration-for-futaba-t14sg">
-<h3><span class="section-number">3.1.2. </span>Configuration for Futaba T14SG<a class="headerlink" href="#configuration-for-futaba-t14sg" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2. Configuration for Futaba T14SG<a class="headerlink" href="#configuration-for-futaba-t14sg" title="Permalink to this headline">¶</a></h3>
 <p>The connection between the Futaba receiver and the Pixhawk autopilot is slightly
 different from that of the RadioLink receiver. The specific connection is shown in
 Fig. 2.21. In the following paragraphs, the setup process for the Futaba RC transmitter
@@ -338,7 +344,7 @@ is introduced.</p>
 <blockquote>
 <div><div class="figure align-center" id="id8">
 <img alt="../_images/Quan-ch2-Fig2.21.jpg" src="../_images/Quan-ch2-Fig2.21.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.21 Pixhawk and Futaba receiver connection diagram</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.21 Pixhawk and Futaba receiver connection diagram</span></p>
 </div>
 </div></blockquote>
 <p>As shown in Fig. 2.22, the Futaba T14SG RC transmitter needs to use six channels:
@@ -350,7 +356,7 @@ summarized as follows.</p>
 <blockquote>
 <div><div class="figure align-center" id="id9">
 <img alt="../_images/Quan-ch2-Fig2.22.jpg" src="../_images/Quan-ch2-Fig2.22.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.22 Futaba T14SG RC transmitter</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.22 Futaba T14SG RC transmitter</span></p>
 </div>
 </div></blockquote>
 <p>(1). Double-click the “LINK” button on the RC transmitter in Fig. 2.22 to enter
@@ -374,13 +380,13 @@ required by this book.</p>
 <blockquote>
 <div><div class="figure align-center" id="id10">
 <img alt="../_images/Quan-ch2-Fig2.23.jpg" src="../_images/Quan-ch2-Fig2.23.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.23 Futaba T14SG RC transmitter</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.23 Futaba T14SG RC transmitter</span></p>
 </div>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="pixhawk-autopilot-system-configuration">
-<h2><span class="section-number">3.2. </span>Pixhawk Autopilot System Configuration<a class="headerlink" href="#pixhawk-autopilot-system-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. Pixhawk Autopilot System Configuration<a class="headerlink" href="#pixhawk-autopilot-system-configuration" title="Permalink to this headline">¶</a></h2>
 <p>Several basic firmware uploading and configuration operations are required for the
 brand-new Pixhawk to ensure that the Pixhawk autopilot meets the experimental
 requirements and ensure that the operation and configuration of Pixhawk are correct.
@@ -397,7 +403,7 @@ Internet) and burn the latest PX4 firmware into the Pixhawk autopilot hardware.<
 <blockquote>
 <div><div class="figure align-center" id="id11">
 <img alt="../_images/Quan-ch2-Fig2.24.jpg" src="../_images/Quan-ch2-Fig2.24.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.24 Pixhawk autopilot configuration on QGC</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.24 Pixhawk autopilot configuration on QGC</span></p>
 </div>
 </div></blockquote>
 <p>(4). After the firmware is burned, the Pixhawk will automatically restart and reconnect
@@ -408,7 +414,7 @@ for HIL simulation.</p>
 <blockquote>
 <div><div class="figure align-center" id="id12">
 <img alt="../_images/Quan-ch2-Fig2.25.jpg" src="../_images/Quan-ch2-Fig2.25.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.25 Selecting “HIL Quadcopter X” airframe type</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.25 Selecting “HIL Quadcopter X” airframe type</span></p>
 </div>
 </div></blockquote>
 <p>(5). After rebooting, QGC will automatically reconnect to Pixhawk. Check each
@@ -416,7 +422,7 @@ configuration page to ensure that the Pixhawk autopilot has been in the HIL
 simulation mode and that no warnings appear.</p>
 </div>
 <div class="section" id="airframe-and-propulsion-system-configuration">
-<h2><span class="section-number">3.3. </span>Airframe and Propulsion System Configuration<a class="headerlink" href="#airframe-and-propulsion-system-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Airframe and Propulsion System Configuration<a class="headerlink" href="#airframe-and-propulsion-system-configuration" title="Permalink to this headline">¶</a></h2>
 <p>The parameters of the multicopter simulation model in both SIL and HIL simulations
 are from a quadcopter with a diagonal size (opposite motor axis distance) of
 450 mm and a weight of 1.4 kg. For the subsequent flight experiments, it is necessary
@@ -425,34 +431,36 @@ simulation model. The experiments presented in this book select the most popular
 F450 multicopter (see Fig. 2.26) with the following configuration.</p>
 <p>(1). <strong>Airframe</strong> : DJI Flame Wheel F450 airframe</p>
 <ul class="simple">
-<li><p>Airframe weight (fuselage + arm + landing gear): 282 g</p></li>
-<li><p>Protection airframe: weight: 4×32 g</p></li>
-<li><p>Diagonal size: 450 mm</p></li>
-<li><p>Take-off weight: within the range 800–1600 g</p></li>
-<li><p>Recommended propeller: 8–10inches</p></li>
+<li>Airframe weight (fuselage + arm + landing gear): 282 g</li>
+<li>Protection airframe: weight: 4×32 g</li>
+<li>Diagonal size: 450 mm</li>
+<li>Take-off weight: within the range 800–1600 g</li>
+<li>Recommended propeller: 8–10inches</li>
 </ul>
 <p>(2). <strong>Propulsion system</strong> : DJI E310 propulsion suite (four motors, four ESCs, and four propellers)</p>
 <ul class="simple">
-<li><p>Motor size: 23×12 mm, KV value: 960 RPM/V, weight: 60 g</p></li>
-<li><p>Propeller size: 24×12.7 cm (9.4×5.0in), weight: 13 g</p></li>
-<li><p>ESC size: 74×32×10 mm, maximum continuous current: 20 A, weight: 43 g</p></li>
+<li>Motor size: 23×12 mm, KV value: 960 RPM/V, weight: 60 g</li>
+<li>Propeller size: 24×12.7 cm (9.4×5.0in), weight: 13 g</li>
+<li>ESC size: 74×32×10 mm, maximum continuous current: 20 A, weight: 43 g</li>
 </ul>
 <p>(3). <strong>Battery</strong> : GENS ACE LiPo battery</p>
 <ul class="simple">
-<li><p>Capacity: 4000 mAh</p></li>
-<li><p>Voltage: 3S (11.1 V)</p></li>
-<li><p>Discharge rate: 25C</p></li>
-<li><p>Weight: 300 g</p></li>
+<li>Capacity: 4000 mAh</li>
+<li>Voltage: 3S (11.1 V)</li>
+<li>Discharge rate: 25C</li>
+<li>Weight: 300 g</li>
 </ul>
 <p>(4). <strong>Autopilot</strong> : Pixhawk 1 (2MB flash version)</p>
 <ul>
-<li><p>Compiling command: px4fmu-v3_default, size: 81×47×16 mm, weight: 36 g</p></li>
-<li><p>GPS module: UBlox NEO-M8N GPS, module weight: 14 g, weight: 24 g</p></li>
-<li><p>Other accessories: power module, buzzer, safety switch, connector, and antivibration damper weighing a total of 60 g</p>
+<li><p class="first">Compiling command: px4fmu-v3_default, size: 81×47×16 mm, weight: 36 g</p>
+</li>
+<li><p class="first">GPS module: UBlox NEO-M8N GPS, module weight: 14 g, weight: 24 g</p>
+</li>
+<li><p class="first">Other accessories: power module, buzzer, safety switch, connector, and antivibration damper weighing a total of 60 g</p>
 <blockquote>
 <div><div class="figure align-center" id="id13">
 <img alt="../_images/Quan-ch2-Fig2.26.jpg" src="../_images/Quan-ch2-Fig2.26.jpg" />
-<p class="caption"><span class="caption-text">Fig. 2.26 F450 airframe and its components</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 2.26 F450 airframe and its components</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -484,11 +492,19 @@ functions are normal.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -499,7 +515,6 @@ functions are normal.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

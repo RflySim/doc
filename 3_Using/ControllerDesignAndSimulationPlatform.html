@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. PSP Toolbox" href="PSPToolbox.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -130,12 +132,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -174,9 +179,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Simulink-Based Controller Design and Simulation Platform</li>
+      <li>2. Simulink-Based Controller Design and Simulation Platform</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,7 +201,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="simulink-based-controller-design-and-simulation-platform">
-<h1><span class="section-number">2. </span>Simulink-Based Controller Design and Simulation Platform<a class="headerlink" href="#simulink-based-controller-design-and-simulation-platform" title="Permalink to this headline">¶</a></h1>
+<h1>2. Simulink-Based Controller Design and Simulation Platform<a class="headerlink" href="#simulink-based-controller-design-and-simulation-platform" title="Permalink to this headline">¶</a></h1>
 <p>To improve the design efficiency of multicopter controllers, as shown in Fig. 3.5, this
 book provides a high-fidelity simulation environment based on Simulink/FlightGear.
 The main source code file is presented in “e01.SoftwareSimExps
@@ -204,7 +209,7 @@ CopterSim3DEnvironment.slx”.</p>
 <blockquote>
 <div><div class="figure align-center" id="id3">
 <img alt="../_images/Quan-ch3-Fig3.5.jpg" src="../_images/Quan-ch3-Fig3.5.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.5 Files in “SoftwareSimExps” folder</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.5 Files in “SoftwareSimExps” folder</span></p>
 </div>
 </div></blockquote>
 <p>The following steps describe the correct way to open Simulink files (those with
@@ -216,7 +221,7 @@ opened.</p>
 <blockquote>
 <div><div class="figure align-center" id="id4">
 <img alt="../_images/Quan-ch3-Fig3.6.jpg" src="../_images/Quan-ch3-Fig3.6.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.6 Method to correctly open a Simulink slx file</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.6 Method to correctly open a Simulink slx file</span></p>
 </div>
 </div></blockquote>
 <p>(3). Double-click the “.slx” file in the “Current Folder” window (the lower-left side
@@ -226,7 +231,7 @@ correct and that the initialization scripts are successfully loaded.</p>
 <blockquote>
 <div><div class="figure align-center" id="id5">
 <img alt="../_images/Quan-ch3-Fig3.7.jpg" src="../_images/Quan-ch3-Fig3.7.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.7 Simulink SIL simulation example</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.7 Simulink SIL simulation example</span></p>
 </div>
 </div></blockquote>
 <p>Open the “CopterSim3DEnvironment.slx” file according to the above procedure;
@@ -252,7 +257,7 @@ sensors.</p>
 flight data to FlightGear, where the real-time vehicle attitude and flight trajectory
 can be observed in a realistic 3D scene.</p>
 <div class="section" id="controller">
-<h2><span class="section-number">2.1. </span>Controller<a class="headerlink" href="#controller" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Controller<a class="headerlink" href="#controller" title="Permalink to this headline">¶</a></h2>
 <p>Double-click the “Controller” subsystem in Fig. 3.7 yields the internal structure of the
 controller, as presented in Fig. 3.8. This example shows a simple attitude controller
 for pitch and roll angles. The controller receives the control signals from the RC
@@ -266,11 +271,11 @@ steps.</p>
 <blockquote>
 <div><div class="figure align-center" id="id6">
 <img alt="../_images/Quan-ch3-Fig3.8.jpg" src="../_images/Quan-ch3-Fig3.8.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.8 Internal structure of “Controller” subsystem</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.8 Internal structure of “Controller” subsystem</span></p>
 </div>
 </div></blockquote>
 <p>(1). The “Input Interfaces” module receives the RC transmitter signals and the
-multicopter state estimation signals. <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
+multicopter state estimation signals. <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
 <p>(2). The “RC Signal Process” module maps the five-channel signals of the RC
 transmitter to the desired roll and pitch angle values.</p>
 <p>(3). The “Attitude Controller” module computes the desired force and torque values
@@ -279,10 +284,10 @@ to control the multicopter to the desired attitude.</p>
 values to the control signals (ranging from 1000 to 2000) for the four motors.</p>
 <p>(5). The “Output Interfaces” module fills the remaining 4-dimensional control signals
 and generates an 8-dimensional PWM signal (there are eight PWM output ports
-on Pixhawk) ranging from 1000 to 2000µs. <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p>
+on Pixhawk) ranging from 1000 to 2000µs. <a class="footnote-reference" href="#f2" id="id2">[2]</a></p>
 </div>
 <div class="section" id="multicopter-model">
-<h2><span class="section-number">2.2. </span>Multicopter Model<a class="headerlink" href="#multicopter-model" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Multicopter Model<a class="headerlink" href="#multicopter-model" title="Permalink to this headline">¶</a></h2>
 <p>Double-click the “Multicopter Model” subsystem in Fig. 3.7, and the internal
 structure of the multicopter model is presented in Fig. 3.9. The multicopter model
 simulates a real multicopter system to output the flight state and sensor signals
@@ -290,7 +295,7 @@ based on the motor PWM controls from the control system.</p>
 <blockquote>
 <div><div class="figure align-center" id="id7">
 <img alt="../_images/Quan-ch3-Fig3.9.jpg" src="../_images/Quan-ch3-Fig3.9.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.9 Internal structure of “Multicopter Model” subsystem</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.9 Internal structure of “Multicopter Model” subsystem</span></p>
 </div>
 </div></blockquote>
 <p>As shown in Fig. 3.9, the “Multicopter Model” subsystem contains the following
@@ -318,7 +323,7 @@ code of the “Init_control.m” initialization script is listed in Table 3.1.</
 <blockquote>
 <div><div class="figure align-center" id="id8">
 <img alt="../_images/Quan-ch3-Fig3.10.jpg" src="../_images/Quan-ch3-Fig3.10.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.10 Initialization interface for the “Init_control.m” script</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.10 Initialization interface for the “Init_control.m” script</span></p>
 </div>
 </div></blockquote>
 <p>All the parameters required by the “Multicopter Model” are stored in the script
@@ -330,7 +335,7 @@ Table 3.5) can be obtained, and flight simulations under different environments 
 Table 3.6) can be performed.</p>
 </div>
 <div class="section" id="flightgear-interface">
-<h2><span class="section-number">2.3. </span>FlightGear Interface<a class="headerlink" href="#flightgear-interface" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. FlightGear Interface<a class="headerlink" href="#flightgear-interface" title="Permalink to this headline">¶</a></h2>
 <p>As shown in Fig. 3.7, the “FlightGear Interface” subsystem has three input ports
 representing the multicopter position, Euler angles, and motor PWM signals,
 respectively. This subsystem sends multicopter flight state information to FlightGear to
@@ -342,7 +347,7 @@ to follow are described next.</p>
 <blockquote>
 <div><div class="figure align-center" id="id9">
 <img alt="../_images/Quan-ch3-Fig3.11.jpg" src="../_images/Quan-ch3-Fig3.11.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.11 Simulink “Run” button for different MATLAB versions</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.11 Simulink “Run” button for different MATLAB versions</span></p>
 </div>
 </div></blockquote>
 <p>(3). Then, as shown in Fig. 3.12, the multicopter takes off vertically from the ground
@@ -350,18 +355,22 @@ and starts flying forward at a certain pitch angle after 5 s.</p>
 <blockquote>
 <div><div class="figure align-center" id="id10">
 <img alt="../_images/Quan-ch3-Fig3.12.jpg" src="../_images/Quan-ch3-Fig3.12.jpg" />
-<p class="caption"><span class="caption-text">Fig. 3.12 A quadcopter in FlightGear</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Fig. 3.12 A quadcopter in FlightGear</span></p>
 </div>
 </div></blockquote>
 <p class="rubric">Notes</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>In a real autopilot system, these signals should be obtained from the modules related to state estimation (e.g., raw sensor data, Kalman filter, and complementary filter). For simplicity, in the controller design during the SIL simulation the true values of the multicopter model can be used first.</p>
-</dd>
-<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>A value within the range from 1000 to 2000 corresponds to a higher level duration (in microseconds) of PWM signals. Given that the period of an RC PWM signal is usually 20 ms (50 Hz), the duty ratio of the PWM signal measured by a multimeter usually ranges from 0.05 to 0.1 instead of from 0 to 1.</p>
-</dd>
-</dl>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>In a real autopilot system, these signals should be obtained from the modules related to state estimation (e.g., raw sensor data, Kalman filter, and complementary filter). For simplicity, in the controller design during the SIL simulation the true values of the multicopter model can be used first.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>A value within the range from 1000 to 2000 corresponds to a higher level duration (in microseconds) of PWM signals. Given that the period of an RC PWM signal is usually 20 ms (50 Hz), the duty ratio of the PWM signal measured by a multimeter usually ranges from 0.05 to 0.1 instead of from 0 to 1.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -385,11 +394,19 @@ and starts flying forward at a certain pitch angle after 5 s.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -400,7 +417,6 @@ and starts flying forward at a certain pitch angle after 5 s.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

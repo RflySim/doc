@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7. Future Plan" href="FuturePlan.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RflySimDoc
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RflySimDoc
           
 
           
@@ -73,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -131,12 +133,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Download &amp; Support:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html">1. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#faq">2. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_DownloadAndSupport/DownloadAndSupport.html#support">3. Support</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -175,9 +180,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">6. </span>UAV Vision/AI Control</li>
+      <li>6. UAV Vision/AI Control</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,9 +202,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="uav-vision-ai-control">
-<h1><span class="section-number">6. </span>UAV Vision/AI Control<a class="headerlink" href="#uav-vision-ai-control" title="Permalink to this headline">¶</a></h1>
+<h1>6. UAV Vision/AI Control<a class="headerlink" href="#uav-vision-ai-control" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="key-problems-and-solutions">
-<h2><span class="section-number">6.1. </span>Key Problems and Solutions<a class="headerlink" href="#key-problems-and-solutions" title="Permalink to this headline">¶</a></h2>
+<h2>6.1. Key Problems and Solutions<a class="headerlink" href="#key-problems-and-solutions" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Problem 1</strong>: How to capture images from UE4-based program RflySim3D with high frame rate</div>
 <div class="line"><strong>Solution</strong>: we use Python/C/Simulink to directly read screen images from windows API which is independent from RflySim3D, so our interface will not slow down the efficiency of RflySim3D, and we can read the images with a very high frame rate (within 5ms, more than 200Hz ) outside the RflySim3D</div>
@@ -218,25 +223,25 @@
 </div>
 </div>
 <div class="section" id="vision-based-control-with-monocular-camera">
-<h2><span class="section-number">6.2. </span>Vision-based Control with Monocular Camera<a class="headerlink" href="#vision-based-control-with-monocular-camera" title="Permalink to this headline">¶</a></h2>
+<h2>6.2. Vision-based Control with Monocular Camera<a class="headerlink" href="#vision-based-control-with-monocular-camera" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><div class="figure align-center" id="id1">
 <a class="reference external image-reference" href="https://youtu.be/PvxEfY7oMq4"><img alt="../_images/Advanced21.png" src="../_images/Advanced21.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to use Python/OpenCV to perform vision-based control of a multicopter UAV</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to use Python/OpenCV to perform vision-based control of a multicopter UAV</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="vision-based-control-with-binocular-camera">
-<h2><span class="section-number">6.3. </span>Vision-based Control with Binocular Camera<a class="headerlink" href="#vision-based-control-with-binocular-camera" title="Permalink to this headline">¶</a></h2>
+<h2>6.3. Vision-based Control with Binocular Camera<a class="headerlink" href="#vision-based-control-with-binocular-camera" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><div class="figure align-center" id="id2">
 <a class="reference external image-reference" href="https://youtu.be/hm6i6UCQjCI"><img alt="../_images/Advanced22.png" src="../_images/Advanced22.png" /></a>
-<p class="caption"><span class="caption-text">RflySim Advance Function: How to perform binocular vision control and apply to real multicopter system</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">RflySim Advance Function: How to perform binocular vision control and apply to real multicopter system</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="apply-vision-algorithm-to-real-vehicle-system">
-<h2><span class="section-number">6.4. </span>Apply Vision Algorithm to Real Vehicle System<a class="headerlink" href="#apply-vision-algorithm-to-real-vehicle-system" title="Permalink to this headline">¶</a></h2>
+<h2>6.4. Apply Vision Algorithm to Real Vehicle System<a class="headerlink" href="#apply-vision-algorithm-to-real-vehicle-system" title="Permalink to this headline">¶</a></h2>
 <p>We also provide a serial of multicopter vision flight platform to ensure algorithm can be successfully applied to real vehicle systems.</p>
 <blockquote>
 <div><div class="figure align-center">
@@ -266,11 +271,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Rfly
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -281,7 +294,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
