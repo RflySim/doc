@@ -7,7 +7,11 @@ This course includes twelve lessons: the first four lessons introduce the softwa
     .. figure:: /images/Course3.jpg
         :align: center
 
-After obtaining the installation package from the :doc:`Download Page <../7_DownloadAndSupport/DownloadAndSupport>` , the following four lessons will tell you how to install and apply the toolbox:
+After obtaining the installation package from the 
+
+.. centered:: :doc:`Download Page <../7_DownloadAndSupport/DownloadAndSupport>` 
+
+the following four lessons will tell you how to install and apply the toolbox:
 
 
 ================================================ ==================================================================================================== ==========================================================
