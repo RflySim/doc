@@ -2,7 +2,7 @@
 Download
 ----------------------------------------
 
-You can click the picture below to fill in the relevant information to obtain the download link.
+You can click the picture below to fill in the relevant information to obtain the `download link <https://rflysim.com/download.html>`_.
 
 
     .. figure:: /images/Download1.png

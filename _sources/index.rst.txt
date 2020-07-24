@@ -9,6 +9,18 @@ Welcome to RflySimDoc's documentation!
 Language/语言
 `中文 <https://rflysim.com/zh/>`_
 
+Download Toolbox and PPT
+-----------------------------
+Go to
+
+.. centered:: `Download Page <https://rflysim.com/download.html>`_
+
+to download RflySim Toolbox. Go to 
+
+.. centered:: :doc:`Course<../5_Course/CourseContent>`
+
+to download PPT and Code.
+
 .. toctree::
    :numbered:
    :maxdepth: 3
