@@ -4,8 +4,7 @@ Course Content
 
 This course includes twelve lessons: the first four lessons introduce the software and hardware platform of the experiments; the last eight lessons present eight experiments. The course experiments can be classified into four parts: design and modeling, estimation, control, and decision-making experiments.
 
-    .. figure:: /images/Course3.jpg
-        :align: center
+
 
 After obtaining the installation package from the 
 
@@ -44,7 +43,11 @@ In the appendix, we introduce the advanced functions of RflySim platform. You ca
 ========================================================= ======================================================================================================== ==========================================================
 Appendix                                                   PDF                                                                                                      Code
 ========================================================= ======================================================================================================== ==========================================================
-Lesson13: Appendix.A RflySim Platform Advanced Features.  :download:`[pdf] <https://flyeval.com/doc/Lesson_13_RflySim_Platform_Advanced_Features.pdf>`              
+Lesson13: Appendix.A RflySim Platform Advanced Features.  :download:`[pdf] <https://flyeval.com/doc/Lesson_13_RflySim_Platform_Advanced_Features.pdf>`
+PPT ALL in ONE                                            :download:`[zip] <https://bhpan.buaa.edu.cn:443/link/C8C2CF8C9F7BF066C5FDB7317B6C3EAE>`                                
 ========================================================= ======================================================================================================== ==========================================================
 
 The latest source code and pdfs also available at our Github Page: https://github.com/RflySim/RflyExpCode
+
+    .. figure:: /images/Course3.jpg
+        :align: center

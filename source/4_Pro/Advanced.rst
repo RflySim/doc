@@ -27,7 +27,7 @@ Product Price List
 
 You can read our latest document about the advanced features of RflySim platform: https://flyeval.com/doc/Lesson_13_RflySim_Platform_Advanced_Features.pdf
 
-Coming Soon…
+Please Contact with rflysim@163.com for Price.
 
 
 Effect after Installation

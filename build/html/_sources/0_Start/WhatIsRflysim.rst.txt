@@ -15,6 +15,9 @@ top-level vision/swarm control because it is free and has a rich library of
 vision processing. Besides MATLAB/Simulink and Python, the RflySim ecosystem 
 has many open-source software and tools we design especially. 
 
+RflySim education edition is designed for `PX4 <https://px4.io/>`_  which is an open source flight control software for drones and other unmanned vehicles. 
+
+
 .. figure:: /images/0-1.jpg
     :align: center
 

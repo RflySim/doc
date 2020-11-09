@@ -82,12 +82,12 @@ to download PPT and Code.
    Book <5_Course/Book>
    Course Content <5_Course/CourseContent>
 
-.. toctree::
-   :numbered:
-   :maxdepth: 1
-   :caption: Cases Study: 
+.. .. toctree::
+..    :numbered:
+..    :maxdepth: 1
+..    :caption: Cases Study: 
 
-   Develepment of a Simplified Autopilot <6_CasesStudy/DevelepmentofaSimplifiedAutopilot>
+..    Develepment of a Simplified Autopilot <6_CasesStudy/DevelepmentofaSimplifiedAutopilot>
 
 
 .. toctree::
